@@ -1,0 +1,2017 @@
+[
+  {
+    "id": "share_1788876551471_734x3k",
+    "title": "AI Tutor: What is DBMS?",
+    "messages": [
+      {
+        "id": "1788872415601",
+        "role": "user",
+        "content": "What is DBMS?",
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872415609",
+        "role": "assistant",
+        "content": "**DBMS (Database Management System)** is software designed to store, retrieve, manage, and manipulate data systematically! 🗄️\n\n### Key Features of DBMS:\n- **Data Persistence**: Stores information permanently on disk.\n- **Concurrency Control**: Allows multiple users to access data simultaneously without conflicts.\n- **Data Security**: Restricts access based on user roles and permissions.\n- **Backup & Recovery**: Provides tools to recover data after system crashes.",
+        "keyPoints": [
+          "Replaces traditional file systems to eliminate data inconsistency.",
+          "Provides query interfaces (like SQL) for data retrieval.",
+          "Enforces security, authentication, and backup mechanisms."
+        ],
+        "sources": [
+          "DBMS_Fundamentals_Ch1.pdf",
+          "Database_Systems_Overview.pdf"
+        ],
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872419308",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872419342",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **hii**:\n\nUnderstanding **hii** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872556865",
+        "role": "user",
+        "content": "What is deadlock?",
+        "timestamp": "06:32 pm"
+      },
+      {
+        "id": "1788872556875",
+        "role": "assistant",
+        "content": "A **Deadlock** in Operating Systems occurs when two or more processes are permanently blocked because each holds a resource that the other requires! 🔄\n\n### 4 Coffman Conditions Required for Deadlock:\n1. **Mutual Exclusion**: At least one resource must be held in a non-shareable mode.\n2. **Hold and Wait**: A process holds a resource while requesting additional resources.\n3. **No Preemption**: Resources cannot be forcibly taken from a process.\n4. **Circular Wait**: A closed chain of processes exists where each process waits for a resource held by the next.",
+        "keyPoints": [
+          "Requires all 4 Coffman conditions to occur simultaneously.",
+          "Handling strategies: Prevention, Avoidance (Banker's Algorithm), Detection & Recovery.",
+          "Commonly asked in operating system exams and concurrency interviews."
+        ],
+        "sources": [
+          "OS_Unit3_Deadlocks.pdf",
+          "Operating_System_Concepts.pdf"
+        ],
+        "timestamp": "06:32 pm"
+      },
+      {
+        "id": "1788872935646",
+        "role": "user",
+        "content": "What is DBMS?",
+        "timestamp": "06:38 pm"
+      },
+      {
+        "id": "1788872935654",
+        "role": "assistant",
+        "content": "**DBMS (Database Management System)** is software designed to store, retrieve, manage, and manipulate data systematically! 🗄️\n\n### Key Features of DBMS:\n- **Data Persistence**: Stores information permanently on disk.\n- **Concurrency Control**: Allows multiple users to access data simultaneously without conflicts.\n- **Data Security**: Restricts access based on user roles and permissions.\n- **Backup & Recovery**: Provides tools to recover data after system crashes.",
+        "keyPoints": [
+          "Replaces traditional file systems to eliminate data inconsistency.",
+          "Provides query interfaces (like SQL) for data retrieval.",
+          "Enforces security, authentication, and backup mechanisms."
+        ],
+        "sources": [
+          "DBMS_Fundamentals_Ch1.pdf",
+          "Database_Systems_Overview.pdf"
+        ],
+        "timestamp": "06:38 pm"
+      },
+      {
+        "id": "1788873231541",
+        "role": "user",
+        "content": "What is DBMS?",
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873231551",
+        "role": "assistant",
+        "content": "**DBMS (Database Management System)** is software designed to store, retrieve, manage, and manipulate data systematically! 🗄️\n\n### Key Features of DBMS:\n- **Data Persistence**: Stores information permanently on disk.\n- **Concurrency Control**: Allows multiple users to access data simultaneously without conflicts.\n- **Data Security**: Restricts access based on user roles and permissions.\n- **Backup & Recovery**: Provides tools to recover data after system crashes.",
+        "keyPoints": [
+          "Replaces traditional file systems to eliminate data inconsistency.",
+          "Provides query interfaces (like SQL) for data retrieval.",
+          "Enforces security, authentication, and backup mechanisms."
+        ],
+        "sources": [
+          "DBMS_Fundamentals_Ch1.pdf",
+          "Database_Systems_Overview.pdf"
+        ],
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873236892",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873236901",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **hii**:\n\nUnderstanding **hii** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873248245",
+        "role": "user",
+        "content": "What is normalization in DBMS?",
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873248253",
+        "role": "assistant",
+        "content": "**Database Normalization** is a technique of organizing database tables to minimize data redundancy and prevent data anomalies! 📊\n\n### Normal Forms Breakdown:\n- **1NF (First Normal Form)**: Ensures all columns contain atomic (indivisible) values and eliminates repeating groups.\n- **2NF (Second Normal Form)**: Must be in 1NF + removes partial dependencies (non-key attributes must depend on the whole primary key).\n- **3NF (Third Normal Form)**: Must be in 2NF + removes transitive dependencies (non-key attributes depending on other non-key attributes).\n- **BCNF (Boyce-Codd Normal Form)**: A stricter version of 3NF where for every functional dependency X → Y, X must be a super key.",
+        "keyPoints": [
+          "Goal: Reduce data duplication and ensure data integrity.",
+          "Eliminates Insertion, Update, and Deletion anomalies.",
+          "1NF → 2NF → 3NF → BCNF represent progressive levels of database refinement."
+        ],
+        "sources": [
+          "DBMS_Normalization_Guide.pdf",
+          "Database_Design_Ch4.pdf"
+        ],
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873263758",
+        "role": "user",
+        "content": "explain 1nf in detail",
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873263768",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **explain 1nf in detail**:\n\nUnderstanding **explain 1nf in detail** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873472421",
+        "role": "user",
+        "content": "What is photosynthesis?",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873472460",
+        "role": "assistant",
+        "content": "**Photosynthesis** is the biological process by which green plants, algae, and certain bacteria convert light energy into chemical energy! 🌿☀️\n\n### Chemical Equation:\n$$6\\text{CO}_2 + 6\\text{H}_2\\text{O} \\xrightarrow{\\text{Light}} \\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2$$\n\n### Two Main Stages:\n1. **Light-Dependent Reactions**: Occur in the thylakoid membranes of chloroplasts, converting sunlight into ATP and NADPH while releasing Oxygen ($O_2$).\n2. **Light-Independent Reactions (Calvin Cycle)**: Occur in the stroma, using ATP and NADPH to convert Carbon Dioxide ($CO_2$) into Glucose ($C_6H_{12}O_6$).",
+        "keyPoints": [
+          "Takes place inside plant chloroplasts containing chlorophyll pigments.",
+          "Converts carbon dioxide and water into glucose and oxygen using sunlight.",
+          "Primary source of oxygen in the Earth's atmosphere."
+        ],
+        "sources": [
+          "Plant_Biology_Ch5.pdf",
+          "General_Science_Notes.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873472895",
+        "role": "user",
+        "content": "Explain computer networks",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873472906",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **Explain computer networks**:\n\nUnderstanding **Explain computer networks** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473089",
+        "role": "user",
+        "content": "What is inheritance in Java?",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473107",
+        "role": "assistant",
+        "content": "**Inheritance in Java** is a fundamental Object-Oriented Programming (OOP) pillar where one class derives fields and methods from another class! ☕\n\n### Key Concepts:\n- **Superclass (Parent)**: The class whose features are inherited.\n- **Subclass (Child)**: The class that inherits features from the superclass using the `extends` keyword.\n- **Code Reusability**: Allows child classes to reuse parent logic without duplicating code.\n\n```java\nclass Animal {\n    void eat() { System.out.println(\"Eating...\"); }\n}\n\nclass Dog extends Animal {\n    void bark() { System.out.println(\"Barking...\"); }\n}\n```",
+        "keyPoints": [
+          "Uses the `extends` keyword in Java.",
+          "Promotes code reusability and method overriding.",
+          "Java supports single inheritance for classes (multiple inheritance is achieved via interfaces)."
+        ],
+        "sources": [
+          "Java_OOP_Inheritance.pdf",
+          "Java_Programming_Guide.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473282",
+        "role": "user",
+        "content": "How do I prepare for exams?",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473292",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **How do I prepare for exams?**:\n\nUnderstanding **How do I prepare for exams?** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873674816",
+        "role": "user",
+        "content": "Explain computer networks",
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873674828",
+        "role": "assistant",
+        "content": "**Computer Networks** connect devices so they can exchange data and share resources.\n\n### Core ideas:\n- **OSI model**: Application, Presentation, Session, Transport, Network, Data Link, and Physical layers.\n- **TCP**: Reliable, ordered delivery using acknowledgements and retransmission.\n- **IP**: Addresses devices and routes packets between networks.\n- **DNS**: Translates domain names such as example.com into IP addresses.",
+        "keyPoints": [
+          "TCP provides reliable delivery; IP handles addressing and routing.",
+          "The OSI model separates networking responsibilities into layers.",
+          "DNS maps human-readable domains to IP addresses."
+        ],
+        "sources": [
+          "Computer_Networks_Fundamentals.pdf",
+          "OSI_TCP_IP_Notes.pdf"
+        ],
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873674910",
+        "role": "user",
+        "content": "How do I prepare for exams?",
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873674917",
+        "role": "assistant",
+        "content": "A practical exam-preparation plan:\n\n1. List each topic and mark it as **not started**, **learning**, or **reviewed**.\n2. Study in focused 45-minute blocks, followed by a short break.\n3. After each topic, close your notes and recall the main definitions from memory.\n4. Solve practice questions under a time limit.\n5. Review mistakes and revisit only the weak areas.\n\nStart with the nearest deadline and the topics that carry the most marks.",
+        "keyPoints": [
+          "Use active recall instead of rereading only.",
+          "Practice questions reveal gaps faster than passive study.",
+          "Prioritize deadlines, marks, and weak topics."
+        ],
+        "sources": [
+          "Exam_Preparation_Strategy.pdf"
+        ],
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873968712",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "06:56 pm"
+      },
+      {
+        "id": "1788873968718",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **hii**:\n\nUnderstanding **hii** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:56 pm"
+      },
+      {
+        "id": "1788874937420",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "07:12 pm"
+      },
+      {
+        "id": "1788874941102",
+        "role": "assistant",
+        "content": "Hey there! How can I help you today? Whether you have questions about a topic, need help studying, or want to work through a project, feel free to ask!",
+        "keyPoints": [],
+        "sources": [],
+        "timestamp": "07:12 pm"
+      },
+      {
+        "id": "1788874976154",
+        "role": "user",
+        "content": "what is class and object in java",
+        "timestamp": "07:12 pm"
+      },
+      {
+        "id": "1788874984057",
+        "role": "assistant",
+        "content": "{\n    \"content\": \"In Java, **Class** and **Object** are the core building blocks of Object-Oriented Programming (OOP).\\n\\n### 1. Class (The Blueprint)\\nA **Class** is a user-defined template or blueprint. It defines what attributes (data) and methods (behaviors) objects created from it will have, but it doesn't occupy memory for data until an object is created.\\n\\n### 2. Object (The Instance)\\nAn **Object** is a specific instance of a class. When an object is created, memory is allocated, and it holds actual values for the attributes defined in the class.\\n\\n---\\n\\n### Real-World Analogy\\n- **Class:** A architectural blueprint for a house.\\n- **Object:** The actual physical house built using that blueprint. You can build multiple houses (objects) from a single blueprint (class).\\n\\n---\\n\\n### Java Code Example\\n\\n```java\n// Class definition\nclass Car {\n    // Attributes (fields)\n    String color;\n    int speed;\n\n    // Behavior (method)\n    void drive() {\n        System.out.println(\"The \" + color + \" car is driving at \" + speed + \" mph.\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // Creating an Object of the Car class\n        Car myCar = new Car(); \n        \n        // Setting state/attributes\n        myCar.color = \"Red\";\n        myCar.speed = 60;\n\n        // Calling method\n        myCar.drive(); // Output: The Red car is driving at 60 mph.\n    }\n}\n```\",\n    \"keyPoints\": [\n        \"A class is a logical blueprint; an object is a physical instance that occupies memory.\",\n        \"Classes contain attributes (data) and methods (behavior).\",\n        \"Objects are created using the `new` keyword in Java (e.g., `Car myCar = new Car();`).\"\n    ],\n    \"sources\": []\n}",
+        "keyPoints": [
+          "Academic key point",
+          "Core definition & application"
+        ],
+        "sources": [],
+        "timestamp": "07:13 pm"
+      },
+      {
+        "id": "1788875017292",
+        "role": "user",
+        "content": "explain  classes in java",
+        "timestamp": "07:13 pm"
+      },
+      {
+        "id": "1788875056978",
+        "role": "assistant",
+        "content": "A **Class** in Java is the fundamental building block of Object-Oriented Programming (OOP). It serves as a blueprint or template from which individual objects are created.\n\n### Anatomy of a Java Class\n\nA class typically consists of four main components:\n\n1. **Fields (Attributes):** Variables that define the state or properties of an object.\n2. **Methods (Behaviors):** Functions that define what actions an object can perform or how it processes data.\n3. **Constructors:** Special methods used to initialize new objects when they are created using the `new` keyword.\n4. **Access Modifiers:** Keywords (`public`, `private`, `protected`) that control visibility and access to the class members.\n\n---\n\n### Detailed Code Example\n\nHere is a complete Java class demonstrating fields, a constructor, and a method:\n\njava\n// Class definition using 'public' access modifier\npublic class Student {\n    \n    // 1. Fields (Private for encapsulation)\n    private String name;\n    private int age;\n    private double gpa;\n\n    // 2. Constructor (Initializes the object)\n    public Student(String studentName, int studentAge, double studentGpa) {\n        this.name = studentName;\n        this.age = studentAge;\n        this.gpa = studentGpa;\n    }\n\n    // 3. Methods (Behaviors)\n    public void displayDetails() {\n        System.out.println(\"Student: \" + name + \" | Age: \" + age + \" | GPA: \" + gpa);\n    }\n\n    public boolean isHonorsStudent() {\n        return gpa >= 3.5;\n    }\n}\n\n\n### How a Class is Declared\n- **`class` Keyword:** Used to define a class followed by the class name (by convention, ClassNames use PascalCase).\n- **Encapsulation:** Fields are often declared `private` to protect the data, and accessed via public methods or constructors.",
+        "keyPoints": [
+          "A class defines fields (state), methods (behavior), and constructors (initialization).",
+          "Constructors have the same name as the class and no return type.",
+          "Class names in Java follow PascalCase convention (e.g., `StudentAccount`)."
+        ],
+        "sources": [],
+        "timestamp": "07:14 pm"
+      }
+    ],
+    "createdAt": "2026-09-08T14:09:11.472Z",
+    "sharedBy": "nandini"
+  },
+  {
+    "id": "share_1788877659607_hu7hin",
+    "title": "AI Tutor: What is DBMS?",
+    "messages": [
+      {
+        "id": "1788872415601",
+        "role": "user",
+        "content": "What is DBMS?",
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872415609",
+        "role": "assistant",
+        "content": "**DBMS (Database Management System)** is software designed to store, retrieve, manage, and manipulate data systematically! 🗄️\n\n### Key Features of DBMS:\n- **Data Persistence**: Stores information permanently on disk.\n- **Concurrency Control**: Allows multiple users to access data simultaneously without conflicts.\n- **Data Security**: Restricts access based on user roles and permissions.\n- **Backup & Recovery**: Provides tools to recover data after system crashes.",
+        "keyPoints": [
+          "Replaces traditional file systems to eliminate data inconsistency.",
+          "Provides query interfaces (like SQL) for data retrieval.",
+          "Enforces security, authentication, and backup mechanisms."
+        ],
+        "sources": [
+          "DBMS_Fundamentals_Ch1.pdf",
+          "Database_Systems_Overview.pdf"
+        ],
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872419308",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872419342",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **hii**:\n\nUnderstanding **hii** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872556865",
+        "role": "user",
+        "content": "What is deadlock?",
+        "timestamp": "06:32 pm"
+      },
+      {
+        "id": "1788872556875",
+        "role": "assistant",
+        "content": "A **Deadlock** in Operating Systems occurs when two or more processes are permanently blocked because each holds a resource that the other requires! 🔄\n\n### 4 Coffman Conditions Required for Deadlock:\n1. **Mutual Exclusion**: At least one resource must be held in a non-shareable mode.\n2. **Hold and Wait**: A process holds a resource while requesting additional resources.\n3. **No Preemption**: Resources cannot be forcibly taken from a process.\n4. **Circular Wait**: A closed chain of processes exists where each process waits for a resource held by the next.",
+        "keyPoints": [
+          "Requires all 4 Coffman conditions to occur simultaneously.",
+          "Handling strategies: Prevention, Avoidance (Banker's Algorithm), Detection & Recovery.",
+          "Commonly asked in operating system exams and concurrency interviews."
+        ],
+        "sources": [
+          "OS_Unit3_Deadlocks.pdf",
+          "Operating_System_Concepts.pdf"
+        ],
+        "timestamp": "06:32 pm"
+      },
+      {
+        "id": "1788872935646",
+        "role": "user",
+        "content": "What is DBMS?",
+        "timestamp": "06:38 pm"
+      },
+      {
+        "id": "1788872935654",
+        "role": "assistant",
+        "content": "**DBMS (Database Management System)** is software designed to store, retrieve, manage, and manipulate data systematically! 🗄️\n\n### Key Features of DBMS:\n- **Data Persistence**: Stores information permanently on disk.\n- **Concurrency Control**: Allows multiple users to access data simultaneously without conflicts.\n- **Data Security**: Restricts access based on user roles and permissions.\n- **Backup & Recovery**: Provides tools to recover data after system crashes.",
+        "keyPoints": [
+          "Replaces traditional file systems to eliminate data inconsistency.",
+          "Provides query interfaces (like SQL) for data retrieval.",
+          "Enforces security, authentication, and backup mechanisms."
+        ],
+        "sources": [
+          "DBMS_Fundamentals_Ch1.pdf",
+          "Database_Systems_Overview.pdf"
+        ],
+        "timestamp": "06:38 pm"
+      },
+      {
+        "id": "1788873231541",
+        "role": "user",
+        "content": "What is DBMS?",
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873231551",
+        "role": "assistant",
+        "content": "**DBMS (Database Management System)** is software designed to store, retrieve, manage, and manipulate data systematically! 🗄️\n\n### Key Features of DBMS:\n- **Data Persistence**: Stores information permanently on disk.\n- **Concurrency Control**: Allows multiple users to access data simultaneously without conflicts.\n- **Data Security**: Restricts access based on user roles and permissions.\n- **Backup & Recovery**: Provides tools to recover data after system crashes.",
+        "keyPoints": [
+          "Replaces traditional file systems to eliminate data inconsistency.",
+          "Provides query interfaces (like SQL) for data retrieval.",
+          "Enforces security, authentication, and backup mechanisms."
+        ],
+        "sources": [
+          "DBMS_Fundamentals_Ch1.pdf",
+          "Database_Systems_Overview.pdf"
+        ],
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873236892",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873236901",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **hii**:\n\nUnderstanding **hii** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873248245",
+        "role": "user",
+        "content": "What is normalization in DBMS?",
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873248253",
+        "role": "assistant",
+        "content": "**Database Normalization** is a technique of organizing database tables to minimize data redundancy and prevent data anomalies! 📊\n\n### Normal Forms Breakdown:\n- **1NF (First Normal Form)**: Ensures all columns contain atomic (indivisible) values and eliminates repeating groups.\n- **2NF (Second Normal Form)**: Must be in 1NF + removes partial dependencies (non-key attributes must depend on the whole primary key).\n- **3NF (Third Normal Form)**: Must be in 2NF + removes transitive dependencies (non-key attributes depending on other non-key attributes).\n- **BCNF (Boyce-Codd Normal Form)**: A stricter version of 3NF where for every functional dependency X → Y, X must be a super key.",
+        "keyPoints": [
+          "Goal: Reduce data duplication and ensure data integrity.",
+          "Eliminates Insertion, Update, and Deletion anomalies.",
+          "1NF → 2NF → 3NF → BCNF represent progressive levels of database refinement."
+        ],
+        "sources": [
+          "DBMS_Normalization_Guide.pdf",
+          "Database_Design_Ch4.pdf"
+        ],
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873263758",
+        "role": "user",
+        "content": "explain 1nf in detail",
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873263768",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **explain 1nf in detail**:\n\nUnderstanding **explain 1nf in detail** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873472421",
+        "role": "user",
+        "content": "What is photosynthesis?",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873472460",
+        "role": "assistant",
+        "content": "**Photosynthesis** is the biological process by which green plants, algae, and certain bacteria convert light energy into chemical energy! 🌿☀️\n\n### Chemical Equation:\n$$6\\text{CO}_2 + 6\\text{H}_2\\text{O} \\xrightarrow{\\text{Light}} \\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2$$\n\n### Two Main Stages:\n1. **Light-Dependent Reactions**: Occur in the thylakoid membranes of chloroplasts, converting sunlight into ATP and NADPH while releasing Oxygen ($O_2$).\n2. **Light-Independent Reactions (Calvin Cycle)**: Occur in the stroma, using ATP and NADPH to convert Carbon Dioxide ($CO_2$) into Glucose ($C_6H_{12}O_6$).",
+        "keyPoints": [
+          "Takes place inside plant chloroplasts containing chlorophyll pigments.",
+          "Converts carbon dioxide and water into glucose and oxygen using sunlight.",
+          "Primary source of oxygen in the Earth's atmosphere."
+        ],
+        "sources": [
+          "Plant_Biology_Ch5.pdf",
+          "General_Science_Notes.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873472895",
+        "role": "user",
+        "content": "Explain computer networks",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873472906",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **Explain computer networks**:\n\nUnderstanding **Explain computer networks** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473089",
+        "role": "user",
+        "content": "What is inheritance in Java?",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473107",
+        "role": "assistant",
+        "content": "**Inheritance in Java** is a fundamental Object-Oriented Programming (OOP) pillar where one class derives fields and methods from another class! ☕\n\n### Key Concepts:\n- **Superclass (Parent)**: The class whose features are inherited.\n- **Subclass (Child)**: The class that inherits features from the superclass using the `extends` keyword.\n- **Code Reusability**: Allows child classes to reuse parent logic without duplicating code.\n\n```java\nclass Animal {\n    void eat() { System.out.println(\"Eating...\"); }\n}\n\nclass Dog extends Animal {\n    void bark() { System.out.println(\"Barking...\"); }\n}\n```",
+        "keyPoints": [
+          "Uses the `extends` keyword in Java.",
+          "Promotes code reusability and method overriding.",
+          "Java supports single inheritance for classes (multiple inheritance is achieved via interfaces)."
+        ],
+        "sources": [
+          "Java_OOP_Inheritance.pdf",
+          "Java_Programming_Guide.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473282",
+        "role": "user",
+        "content": "How do I prepare for exams?",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473292",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **How do I prepare for exams?**:\n\nUnderstanding **How do I prepare for exams?** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873674816",
+        "role": "user",
+        "content": "Explain computer networks",
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873674828",
+        "role": "assistant",
+        "content": "**Computer Networks** connect devices so they can exchange data and share resources.\n\n### Core ideas:\n- **OSI model**: Application, Presentation, Session, Transport, Network, Data Link, and Physical layers.\n- **TCP**: Reliable, ordered delivery using acknowledgements and retransmission.\n- **IP**: Addresses devices and routes packets between networks.\n- **DNS**: Translates domain names such as example.com into IP addresses.",
+        "keyPoints": [
+          "TCP provides reliable delivery; IP handles addressing and routing.",
+          "The OSI model separates networking responsibilities into layers.",
+          "DNS maps human-readable domains to IP addresses."
+        ],
+        "sources": [
+          "Computer_Networks_Fundamentals.pdf",
+          "OSI_TCP_IP_Notes.pdf"
+        ],
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873674910",
+        "role": "user",
+        "content": "How do I prepare for exams?",
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873674917",
+        "role": "assistant",
+        "content": "A practical exam-preparation plan:\n\n1. List each topic and mark it as **not started**, **learning**, or **reviewed**.\n2. Study in focused 45-minute blocks, followed by a short break.\n3. After each topic, close your notes and recall the main definitions from memory.\n4. Solve practice questions under a time limit.\n5. Review mistakes and revisit only the weak areas.\n\nStart with the nearest deadline and the topics that carry the most marks.",
+        "keyPoints": [
+          "Use active recall instead of rereading only.",
+          "Practice questions reveal gaps faster than passive study.",
+          "Prioritize deadlines, marks, and weak topics."
+        ],
+        "sources": [
+          "Exam_Preparation_Strategy.pdf"
+        ],
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873968712",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "06:56 pm"
+      },
+      {
+        "id": "1788873968718",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **hii**:\n\nUnderstanding **hii** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:56 pm"
+      },
+      {
+        "id": "1788874937420",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "07:12 pm"
+      },
+      {
+        "id": "1788874941102",
+        "role": "assistant",
+        "content": "Hey there! How can I help you today? Whether you have questions about a topic, need help studying, or want to work through a project, feel free to ask!",
+        "keyPoints": [],
+        "sources": [],
+        "timestamp": "07:12 pm"
+      },
+      {
+        "id": "1788874976154",
+        "role": "user",
+        "content": "what is class and object in java",
+        "timestamp": "07:12 pm"
+      },
+      {
+        "id": "1788874984057",
+        "role": "assistant",
+        "content": "{\n    \"content\": \"In Java, **Class** and **Object** are the core building blocks of Object-Oriented Programming (OOP).\\n\\n### 1. Class (The Blueprint)\\nA **Class** is a user-defined template or blueprint. It defines what attributes (data) and methods (behaviors) objects created from it will have, but it doesn't occupy memory for data until an object is created.\\n\\n### 2. Object (The Instance)\\nAn **Object** is a specific instance of a class. When an object is created, memory is allocated, and it holds actual values for the attributes defined in the class.\\n\\n---\\n\\n### Real-World Analogy\\n- **Class:** A architectural blueprint for a house.\\n- **Object:** The actual physical house built using that blueprint. You can build multiple houses (objects) from a single blueprint (class).\\n\\n---\\n\\n### Java Code Example\\n\\n```java\n// Class definition\nclass Car {\n    // Attributes (fields)\n    String color;\n    int speed;\n\n    // Behavior (method)\n    void drive() {\n        System.out.println(\"The \" + color + \" car is driving at \" + speed + \" mph.\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // Creating an Object of the Car class\n        Car myCar = new Car(); \n        \n        // Setting state/attributes\n        myCar.color = \"Red\";\n        myCar.speed = 60;\n\n        // Calling method\n        myCar.drive(); // Output: The Red car is driving at 60 mph.\n    }\n}\n```\",\n    \"keyPoints\": [\n        \"A class is a logical blueprint; an object is a physical instance that occupies memory.\",\n        \"Classes contain attributes (data) and methods (behavior).\",\n        \"Objects are created using the `new` keyword in Java (e.g., `Car myCar = new Car();`).\"\n    ],\n    \"sources\": []\n}",
+        "keyPoints": [
+          "Academic key point",
+          "Core definition & application"
+        ],
+        "sources": [],
+        "timestamp": "07:13 pm"
+      },
+      {
+        "id": "1788875017292",
+        "role": "user",
+        "content": "explain  classes in java",
+        "timestamp": "07:13 pm"
+      },
+      {
+        "id": "1788875056978",
+        "role": "assistant",
+        "content": "A **Class** in Java is the fundamental building block of Object-Oriented Programming (OOP). It serves as a blueprint or template from which individual objects are created.\n\n### Anatomy of a Java Class\n\nA class typically consists of four main components:\n\n1. **Fields (Attributes):** Variables that define the state or properties of an object.\n2. **Methods (Behaviors):** Functions that define what actions an object can perform or how it processes data.\n3. **Constructors:** Special methods used to initialize new objects when they are created using the `new` keyword.\n4. **Access Modifiers:** Keywords (`public`, `private`, `protected`) that control visibility and access to the class members.\n\n---\n\n### Detailed Code Example\n\nHere is a complete Java class demonstrating fields, a constructor, and a method:\n\njava\n// Class definition using 'public' access modifier\npublic class Student {\n    \n    // 1. Fields (Private for encapsulation)\n    private String name;\n    private int age;\n    private double gpa;\n\n    // 2. Constructor (Initializes the object)\n    public Student(String studentName, int studentAge, double studentGpa) {\n        this.name = studentName;\n        this.age = studentAge;\n        this.gpa = studentGpa;\n    }\n\n    // 3. Methods (Behaviors)\n    public void displayDetails() {\n        System.out.println(\"Student: \" + name + \" | Age: \" + age + \" | GPA: \" + gpa);\n    }\n\n    public boolean isHonorsStudent() {\n        return gpa >= 3.5;\n    }\n}\n\n\n### How a Class is Declared\n- **`class` Keyword:** Used to define a class followed by the class name (by convention, ClassNames use PascalCase).\n- **Encapsulation:** Fields are often declared `private` to protect the data, and accessed via public methods or constructors.",
+        "keyPoints": [
+          "A class defines fields (state), methods (behavior), and constructors (initialization).",
+          "Constructors have the same name as the class and no return type.",
+          "Class names in Java follow PascalCase convention (e.g., `StudentAccount`)."
+        ],
+        "sources": [],
+        "timestamp": "07:14 pm"
+      }
+    ],
+    "createdAt": "2026-09-08T14:27:39.607Z",
+    "sharedBy": "nandini"
+  },
+  {
+    "id": "share_1788877764287_wwit65",
+    "title": "AI Tutor: What is DBMS?",
+    "messages": [
+      {
+        "id": "1788872415601",
+        "role": "user",
+        "content": "What is DBMS?",
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872415609",
+        "role": "assistant",
+        "content": "**DBMS (Database Management System)** is software designed to store, retrieve, manage, and manipulate data systematically! 🗄️\n\n### Key Features of DBMS:\n- **Data Persistence**: Stores information permanently on disk.\n- **Concurrency Control**: Allows multiple users to access data simultaneously without conflicts.\n- **Data Security**: Restricts access based on user roles and permissions.\n- **Backup & Recovery**: Provides tools to recover data after system crashes.",
+        "keyPoints": [
+          "Replaces traditional file systems to eliminate data inconsistency.",
+          "Provides query interfaces (like SQL) for data retrieval.",
+          "Enforces security, authentication, and backup mechanisms."
+        ],
+        "sources": [
+          "DBMS_Fundamentals_Ch1.pdf",
+          "Database_Systems_Overview.pdf"
+        ],
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872419308",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872419342",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **hii**:\n\nUnderstanding **hii** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872556865",
+        "role": "user",
+        "content": "What is deadlock?",
+        "timestamp": "06:32 pm"
+      },
+      {
+        "id": "1788872556875",
+        "role": "assistant",
+        "content": "A **Deadlock** in Operating Systems occurs when two or more processes are permanently blocked because each holds a resource that the other requires! 🔄\n\n### 4 Coffman Conditions Required for Deadlock:\n1. **Mutual Exclusion**: At least one resource must be held in a non-shareable mode.\n2. **Hold and Wait**: A process holds a resource while requesting additional resources.\n3. **No Preemption**: Resources cannot be forcibly taken from a process.\n4. **Circular Wait**: A closed chain of processes exists where each process waits for a resource held by the next.",
+        "keyPoints": [
+          "Requires all 4 Coffman conditions to occur simultaneously.",
+          "Handling strategies: Prevention, Avoidance (Banker's Algorithm), Detection & Recovery.",
+          "Commonly asked in operating system exams and concurrency interviews."
+        ],
+        "sources": [
+          "OS_Unit3_Deadlocks.pdf",
+          "Operating_System_Concepts.pdf"
+        ],
+        "timestamp": "06:32 pm"
+      },
+      {
+        "id": "1788872935646",
+        "role": "user",
+        "content": "What is DBMS?",
+        "timestamp": "06:38 pm"
+      },
+      {
+        "id": "1788872935654",
+        "role": "assistant",
+        "content": "**DBMS (Database Management System)** is software designed to store, retrieve, manage, and manipulate data systematically! 🗄️\n\n### Key Features of DBMS:\n- **Data Persistence**: Stores information permanently on disk.\n- **Concurrency Control**: Allows multiple users to access data simultaneously without conflicts.\n- **Data Security**: Restricts access based on user roles and permissions.\n- **Backup & Recovery**: Provides tools to recover data after system crashes.",
+        "keyPoints": [
+          "Replaces traditional file systems to eliminate data inconsistency.",
+          "Provides query interfaces (like SQL) for data retrieval.",
+          "Enforces security, authentication, and backup mechanisms."
+        ],
+        "sources": [
+          "DBMS_Fundamentals_Ch1.pdf",
+          "Database_Systems_Overview.pdf"
+        ],
+        "timestamp": "06:38 pm"
+      },
+      {
+        "id": "1788873231541",
+        "role": "user",
+        "content": "What is DBMS?",
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873231551",
+        "role": "assistant",
+        "content": "**DBMS (Database Management System)** is software designed to store, retrieve, manage, and manipulate data systematically! 🗄️\n\n### Key Features of DBMS:\n- **Data Persistence**: Stores information permanently on disk.\n- **Concurrency Control**: Allows multiple users to access data simultaneously without conflicts.\n- **Data Security**: Restricts access based on user roles and permissions.\n- **Backup & Recovery**: Provides tools to recover data after system crashes.",
+        "keyPoints": [
+          "Replaces traditional file systems to eliminate data inconsistency.",
+          "Provides query interfaces (like SQL) for data retrieval.",
+          "Enforces security, authentication, and backup mechanisms."
+        ],
+        "sources": [
+          "DBMS_Fundamentals_Ch1.pdf",
+          "Database_Systems_Overview.pdf"
+        ],
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873236892",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873236901",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **hii**:\n\nUnderstanding **hii** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873248245",
+        "role": "user",
+        "content": "What is normalization in DBMS?",
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873248253",
+        "role": "assistant",
+        "content": "**Database Normalization** is a technique of organizing database tables to minimize data redundancy and prevent data anomalies! 📊\n\n### Normal Forms Breakdown:\n- **1NF (First Normal Form)**: Ensures all columns contain atomic (indivisible) values and eliminates repeating groups.\n- **2NF (Second Normal Form)**: Must be in 1NF + removes partial dependencies (non-key attributes must depend on the whole primary key).\n- **3NF (Third Normal Form)**: Must be in 2NF + removes transitive dependencies (non-key attributes depending on other non-key attributes).\n- **BCNF (Boyce-Codd Normal Form)**: A stricter version of 3NF where for every functional dependency X → Y, X must be a super key.",
+        "keyPoints": [
+          "Goal: Reduce data duplication and ensure data integrity.",
+          "Eliminates Insertion, Update, and Deletion anomalies.",
+          "1NF → 2NF → 3NF → BCNF represent progressive levels of database refinement."
+        ],
+        "sources": [
+          "DBMS_Normalization_Guide.pdf",
+          "Database_Design_Ch4.pdf"
+        ],
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873263758",
+        "role": "user",
+        "content": "explain 1nf in detail",
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873263768",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **explain 1nf in detail**:\n\nUnderstanding **explain 1nf in detail** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873472421",
+        "role": "user",
+        "content": "What is photosynthesis?",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873472460",
+        "role": "assistant",
+        "content": "**Photosynthesis** is the biological process by which green plants, algae, and certain bacteria convert light energy into chemical energy! 🌿☀️\n\n### Chemical Equation:\n$$6\\text{CO}_2 + 6\\text{H}_2\\text{O} \\xrightarrow{\\text{Light}} \\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2$$\n\n### Two Main Stages:\n1. **Light-Dependent Reactions**: Occur in the thylakoid membranes of chloroplasts, converting sunlight into ATP and NADPH while releasing Oxygen ($O_2$).\n2. **Light-Independent Reactions (Calvin Cycle)**: Occur in the stroma, using ATP and NADPH to convert Carbon Dioxide ($CO_2$) into Glucose ($C_6H_{12}O_6$).",
+        "keyPoints": [
+          "Takes place inside plant chloroplasts containing chlorophyll pigments.",
+          "Converts carbon dioxide and water into glucose and oxygen using sunlight.",
+          "Primary source of oxygen in the Earth's atmosphere."
+        ],
+        "sources": [
+          "Plant_Biology_Ch5.pdf",
+          "General_Science_Notes.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873472895",
+        "role": "user",
+        "content": "Explain computer networks",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873472906",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **Explain computer networks**:\n\nUnderstanding **Explain computer networks** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473089",
+        "role": "user",
+        "content": "What is inheritance in Java?",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473107",
+        "role": "assistant",
+        "content": "**Inheritance in Java** is a fundamental Object-Oriented Programming (OOP) pillar where one class derives fields and methods from another class! ☕\n\n### Key Concepts:\n- **Superclass (Parent)**: The class whose features are inherited.\n- **Subclass (Child)**: The class that inherits features from the superclass using the `extends` keyword.\n- **Code Reusability**: Allows child classes to reuse parent logic without duplicating code.\n\n```java\nclass Animal {\n    void eat() { System.out.println(\"Eating...\"); }\n}\n\nclass Dog extends Animal {\n    void bark() { System.out.println(\"Barking...\"); }\n}\n```",
+        "keyPoints": [
+          "Uses the `extends` keyword in Java.",
+          "Promotes code reusability and method overriding.",
+          "Java supports single inheritance for classes (multiple inheritance is achieved via interfaces)."
+        ],
+        "sources": [
+          "Java_OOP_Inheritance.pdf",
+          "Java_Programming_Guide.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473282",
+        "role": "user",
+        "content": "How do I prepare for exams?",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473292",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **How do I prepare for exams?**:\n\nUnderstanding **How do I prepare for exams?** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873674816",
+        "role": "user",
+        "content": "Explain computer networks",
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873674828",
+        "role": "assistant",
+        "content": "**Computer Networks** connect devices so they can exchange data and share resources.\n\n### Core ideas:\n- **OSI model**: Application, Presentation, Session, Transport, Network, Data Link, and Physical layers.\n- **TCP**: Reliable, ordered delivery using acknowledgements and retransmission.\n- **IP**: Addresses devices and routes packets between networks.\n- **DNS**: Translates domain names such as example.com into IP addresses.",
+        "keyPoints": [
+          "TCP provides reliable delivery; IP handles addressing and routing.",
+          "The OSI model separates networking responsibilities into layers.",
+          "DNS maps human-readable domains to IP addresses."
+        ],
+        "sources": [
+          "Computer_Networks_Fundamentals.pdf",
+          "OSI_TCP_IP_Notes.pdf"
+        ],
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873674910",
+        "role": "user",
+        "content": "How do I prepare for exams?",
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873674917",
+        "role": "assistant",
+        "content": "A practical exam-preparation plan:\n\n1. List each topic and mark it as **not started**, **learning**, or **reviewed**.\n2. Study in focused 45-minute blocks, followed by a short break.\n3. After each topic, close your notes and recall the main definitions from memory.\n4. Solve practice questions under a time limit.\n5. Review mistakes and revisit only the weak areas.\n\nStart with the nearest deadline and the topics that carry the most marks.",
+        "keyPoints": [
+          "Use active recall instead of rereading only.",
+          "Practice questions reveal gaps faster than passive study.",
+          "Prioritize deadlines, marks, and weak topics."
+        ],
+        "sources": [
+          "Exam_Preparation_Strategy.pdf"
+        ],
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873968712",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "06:56 pm"
+      },
+      {
+        "id": "1788873968718",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **hii**:\n\nUnderstanding **hii** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:56 pm"
+      },
+      {
+        "id": "1788874937420",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "07:12 pm"
+      },
+      {
+        "id": "1788874941102",
+        "role": "assistant",
+        "content": "Hey there! How can I help you today? Whether you have questions about a topic, need help studying, or want to work through a project, feel free to ask!",
+        "keyPoints": [],
+        "sources": [],
+        "timestamp": "07:12 pm"
+      },
+      {
+        "id": "1788874976154",
+        "role": "user",
+        "content": "what is class and object in java",
+        "timestamp": "07:12 pm"
+      },
+      {
+        "id": "1788874984057",
+        "role": "assistant",
+        "content": "{\n    \"content\": \"In Java, **Class** and **Object** are the core building blocks of Object-Oriented Programming (OOP).\\n\\n### 1. Class (The Blueprint)\\nA **Class** is a user-defined template or blueprint. It defines what attributes (data) and methods (behaviors) objects created from it will have, but it doesn't occupy memory for data until an object is created.\\n\\n### 2. Object (The Instance)\\nAn **Object** is a specific instance of a class. When an object is created, memory is allocated, and it holds actual values for the attributes defined in the class.\\n\\n---\\n\\n### Real-World Analogy\\n- **Class:** A architectural blueprint for a house.\\n- **Object:** The actual physical house built using that blueprint. You can build multiple houses (objects) from a single blueprint (class).\\n\\n---\\n\\n### Java Code Example\\n\\n```java\n// Class definition\nclass Car {\n    // Attributes (fields)\n    String color;\n    int speed;\n\n    // Behavior (method)\n    void drive() {\n        System.out.println(\"The \" + color + \" car is driving at \" + speed + \" mph.\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // Creating an Object of the Car class\n        Car myCar = new Car(); \n        \n        // Setting state/attributes\n        myCar.color = \"Red\";\n        myCar.speed = 60;\n\n        // Calling method\n        myCar.drive(); // Output: The Red car is driving at 60 mph.\n    }\n}\n```\",\n    \"keyPoints\": [\n        \"A class is a logical blueprint; an object is a physical instance that occupies memory.\",\n        \"Classes contain attributes (data) and methods (behavior).\",\n        \"Objects are created using the `new` keyword in Java (e.g., `Car myCar = new Car();`).\"\n    ],\n    \"sources\": []\n}",
+        "keyPoints": [
+          "Academic key point",
+          "Core definition & application"
+        ],
+        "sources": [],
+        "timestamp": "07:13 pm"
+      },
+      {
+        "id": "1788875017292",
+        "role": "user",
+        "content": "explain  classes in java",
+        "timestamp": "07:13 pm"
+      },
+      {
+        "id": "1788875056978",
+        "role": "assistant",
+        "content": "A **Class** in Java is the fundamental building block of Object-Oriented Programming (OOP). It serves as a blueprint or template from which individual objects are created.\n\n### Anatomy of a Java Class\n\nA class typically consists of four main components:\n\n1. **Fields (Attributes):** Variables that define the state or properties of an object.\n2. **Methods (Behaviors):** Functions that define what actions an object can perform or how it processes data.\n3. **Constructors:** Special methods used to initialize new objects when they are created using the `new` keyword.\n4. **Access Modifiers:** Keywords (`public`, `private`, `protected`) that control visibility and access to the class members.\n\n---\n\n### Detailed Code Example\n\nHere is a complete Java class demonstrating fields, a constructor, and a method:\n\njava\n// Class definition using 'public' access modifier\npublic class Student {\n    \n    // 1. Fields (Private for encapsulation)\n    private String name;\n    private int age;\n    private double gpa;\n\n    // 2. Constructor (Initializes the object)\n    public Student(String studentName, int studentAge, double studentGpa) {\n        this.name = studentName;\n        this.age = studentAge;\n        this.gpa = studentGpa;\n    }\n\n    // 3. Methods (Behaviors)\n    public void displayDetails() {\n        System.out.println(\"Student: \" + name + \" | Age: \" + age + \" | GPA: \" + gpa);\n    }\n\n    public boolean isHonorsStudent() {\n        return gpa >= 3.5;\n    }\n}\n\n\n### How a Class is Declared\n- **`class` Keyword:** Used to define a class followed by the class name (by convention, ClassNames use PascalCase).\n- **Encapsulation:** Fields are often declared `private` to protect the data, and accessed via public methods or constructors.",
+        "keyPoints": [
+          "A class defines fields (state), methods (behavior), and constructors (initialization).",
+          "Constructors have the same name as the class and no return type.",
+          "Class names in Java follow PascalCase convention (e.g., `StudentAccount`)."
+        ],
+        "sources": [],
+        "timestamp": "07:14 pm"
+      }
+    ],
+    "createdAt": "2026-09-08T14:29:24.287Z",
+    "sharedBy": "nandini"
+  },
+  {
+    "id": "share_1788877810942_ke9a0l",
+    "title": "AI Tutor: What is DBMS?",
+    "messages": [
+      {
+        "id": "1788872415601",
+        "role": "user",
+        "content": "What is DBMS?",
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872415609",
+        "role": "assistant",
+        "content": "**DBMS (Database Management System)** is software designed to store, retrieve, manage, and manipulate data systematically! 🗄️\n\n### Key Features of DBMS:\n- **Data Persistence**: Stores information permanently on disk.\n- **Concurrency Control**: Allows multiple users to access data simultaneously without conflicts.\n- **Data Security**: Restricts access based on user roles and permissions.\n- **Backup & Recovery**: Provides tools to recover data after system crashes.",
+        "keyPoints": [
+          "Replaces traditional file systems to eliminate data inconsistency.",
+          "Provides query interfaces (like SQL) for data retrieval.",
+          "Enforces security, authentication, and backup mechanisms."
+        ],
+        "sources": [
+          "DBMS_Fundamentals_Ch1.pdf",
+          "Database_Systems_Overview.pdf"
+        ],
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872419308",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872419342",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **hii**:\n\nUnderstanding **hii** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872556865",
+        "role": "user",
+        "content": "What is deadlock?",
+        "timestamp": "06:32 pm"
+      },
+      {
+        "id": "1788872556875",
+        "role": "assistant",
+        "content": "A **Deadlock** in Operating Systems occurs when two or more processes are permanently blocked because each holds a resource that the other requires! 🔄\n\n### 4 Coffman Conditions Required for Deadlock:\n1. **Mutual Exclusion**: At least one resource must be held in a non-shareable mode.\n2. **Hold and Wait**: A process holds a resource while requesting additional resources.\n3. **No Preemption**: Resources cannot be forcibly taken from a process.\n4. **Circular Wait**: A closed chain of processes exists where each process waits for a resource held by the next.",
+        "keyPoints": [
+          "Requires all 4 Coffman conditions to occur simultaneously.",
+          "Handling strategies: Prevention, Avoidance (Banker's Algorithm), Detection & Recovery.",
+          "Commonly asked in operating system exams and concurrency interviews."
+        ],
+        "sources": [
+          "OS_Unit3_Deadlocks.pdf",
+          "Operating_System_Concepts.pdf"
+        ],
+        "timestamp": "06:32 pm"
+      },
+      {
+        "id": "1788872935646",
+        "role": "user",
+        "content": "What is DBMS?",
+        "timestamp": "06:38 pm"
+      },
+      {
+        "id": "1788872935654",
+        "role": "assistant",
+        "content": "**DBMS (Database Management System)** is software designed to store, retrieve, manage, and manipulate data systematically! 🗄️\n\n### Key Features of DBMS:\n- **Data Persistence**: Stores information permanently on disk.\n- **Concurrency Control**: Allows multiple users to access data simultaneously without conflicts.\n- **Data Security**: Restricts access based on user roles and permissions.\n- **Backup & Recovery**: Provides tools to recover data after system crashes.",
+        "keyPoints": [
+          "Replaces traditional file systems to eliminate data inconsistency.",
+          "Provides query interfaces (like SQL) for data retrieval.",
+          "Enforces security, authentication, and backup mechanisms."
+        ],
+        "sources": [
+          "DBMS_Fundamentals_Ch1.pdf",
+          "Database_Systems_Overview.pdf"
+        ],
+        "timestamp": "06:38 pm"
+      },
+      {
+        "id": "1788873231541",
+        "role": "user",
+        "content": "What is DBMS?",
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873231551",
+        "role": "assistant",
+        "content": "**DBMS (Database Management System)** is software designed to store, retrieve, manage, and manipulate data systematically! 🗄️\n\n### Key Features of DBMS:\n- **Data Persistence**: Stores information permanently on disk.\n- **Concurrency Control**: Allows multiple users to access data simultaneously without conflicts.\n- **Data Security**: Restricts access based on user roles and permissions.\n- **Backup & Recovery**: Provides tools to recover data after system crashes.",
+        "keyPoints": [
+          "Replaces traditional file systems to eliminate data inconsistency.",
+          "Provides query interfaces (like SQL) for data retrieval.",
+          "Enforces security, authentication, and backup mechanisms."
+        ],
+        "sources": [
+          "DBMS_Fundamentals_Ch1.pdf",
+          "Database_Systems_Overview.pdf"
+        ],
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873236892",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873236901",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **hii**:\n\nUnderstanding **hii** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873248245",
+        "role": "user",
+        "content": "What is normalization in DBMS?",
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873248253",
+        "role": "assistant",
+        "content": "**Database Normalization** is a technique of organizing database tables to minimize data redundancy and prevent data anomalies! 📊\n\n### Normal Forms Breakdown:\n- **1NF (First Normal Form)**: Ensures all columns contain atomic (indivisible) values and eliminates repeating groups.\n- **2NF (Second Normal Form)**: Must be in 1NF + removes partial dependencies (non-key attributes must depend on the whole primary key).\n- **3NF (Third Normal Form)**: Must be in 2NF + removes transitive dependencies (non-key attributes depending on other non-key attributes).\n- **BCNF (Boyce-Codd Normal Form)**: A stricter version of 3NF where for every functional dependency X → Y, X must be a super key.",
+        "keyPoints": [
+          "Goal: Reduce data duplication and ensure data integrity.",
+          "Eliminates Insertion, Update, and Deletion anomalies.",
+          "1NF → 2NF → 3NF → BCNF represent progressive levels of database refinement."
+        ],
+        "sources": [
+          "DBMS_Normalization_Guide.pdf",
+          "Database_Design_Ch4.pdf"
+        ],
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873263758",
+        "role": "user",
+        "content": "explain 1nf in detail",
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873263768",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **explain 1nf in detail**:\n\nUnderstanding **explain 1nf in detail** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873472421",
+        "role": "user",
+        "content": "What is photosynthesis?",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873472460",
+        "role": "assistant",
+        "content": "**Photosynthesis** is the biological process by which green plants, algae, and certain bacteria convert light energy into chemical energy! 🌿☀️\n\n### Chemical Equation:\n$$6\\text{CO}_2 + 6\\text{H}_2\\text{O} \\xrightarrow{\\text{Light}} \\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2$$\n\n### Two Main Stages:\n1. **Light-Dependent Reactions**: Occur in the thylakoid membranes of chloroplasts, converting sunlight into ATP and NADPH while releasing Oxygen ($O_2$).\n2. **Light-Independent Reactions (Calvin Cycle)**: Occur in the stroma, using ATP and NADPH to convert Carbon Dioxide ($CO_2$) into Glucose ($C_6H_{12}O_6$).",
+        "keyPoints": [
+          "Takes place inside plant chloroplasts containing chlorophyll pigments.",
+          "Converts carbon dioxide and water into glucose and oxygen using sunlight.",
+          "Primary source of oxygen in the Earth's atmosphere."
+        ],
+        "sources": [
+          "Plant_Biology_Ch5.pdf",
+          "General_Science_Notes.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873472895",
+        "role": "user",
+        "content": "Explain computer networks",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873472906",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **Explain computer networks**:\n\nUnderstanding **Explain computer networks** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473089",
+        "role": "user",
+        "content": "What is inheritance in Java?",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473107",
+        "role": "assistant",
+        "content": "**Inheritance in Java** is a fundamental Object-Oriented Programming (OOP) pillar where one class derives fields and methods from another class! ☕\n\n### Key Concepts:\n- **Superclass (Parent)**: The class whose features are inherited.\n- **Subclass (Child)**: The class that inherits features from the superclass using the `extends` keyword.\n- **Code Reusability**: Allows child classes to reuse parent logic without duplicating code.\n\n```java\nclass Animal {\n    void eat() { System.out.println(\"Eating...\"); }\n}\n\nclass Dog extends Animal {\n    void bark() { System.out.println(\"Barking...\"); }\n}\n```",
+        "keyPoints": [
+          "Uses the `extends` keyword in Java.",
+          "Promotes code reusability and method overriding.",
+          "Java supports single inheritance for classes (multiple inheritance is achieved via interfaces)."
+        ],
+        "sources": [
+          "Java_OOP_Inheritance.pdf",
+          "Java_Programming_Guide.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473282",
+        "role": "user",
+        "content": "How do I prepare for exams?",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473292",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **How do I prepare for exams?**:\n\nUnderstanding **How do I prepare for exams?** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873674816",
+        "role": "user",
+        "content": "Explain computer networks",
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873674828",
+        "role": "assistant",
+        "content": "**Computer Networks** connect devices so they can exchange data and share resources.\n\n### Core ideas:\n- **OSI model**: Application, Presentation, Session, Transport, Network, Data Link, and Physical layers.\n- **TCP**: Reliable, ordered delivery using acknowledgements and retransmission.\n- **IP**: Addresses devices and routes packets between networks.\n- **DNS**: Translates domain names such as example.com into IP addresses.",
+        "keyPoints": [
+          "TCP provides reliable delivery; IP handles addressing and routing.",
+          "The OSI model separates networking responsibilities into layers.",
+          "DNS maps human-readable domains to IP addresses."
+        ],
+        "sources": [
+          "Computer_Networks_Fundamentals.pdf",
+          "OSI_TCP_IP_Notes.pdf"
+        ],
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873674910",
+        "role": "user",
+        "content": "How do I prepare for exams?",
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873674917",
+        "role": "assistant",
+        "content": "A practical exam-preparation plan:\n\n1. List each topic and mark it as **not started**, **learning**, or **reviewed**.\n2. Study in focused 45-minute blocks, followed by a short break.\n3. After each topic, close your notes and recall the main definitions from memory.\n4. Solve practice questions under a time limit.\n5. Review mistakes and revisit only the weak areas.\n\nStart with the nearest deadline and the topics that carry the most marks.",
+        "keyPoints": [
+          "Use active recall instead of rereading only.",
+          "Practice questions reveal gaps faster than passive study.",
+          "Prioritize deadlines, marks, and weak topics."
+        ],
+        "sources": [
+          "Exam_Preparation_Strategy.pdf"
+        ],
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873968712",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "06:56 pm"
+      },
+      {
+        "id": "1788873968718",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **hii**:\n\nUnderstanding **hii** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:56 pm"
+      },
+      {
+        "id": "1788874937420",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "07:12 pm"
+      },
+      {
+        "id": "1788874941102",
+        "role": "assistant",
+        "content": "Hey there! How can I help you today? Whether you have questions about a topic, need help studying, or want to work through a project, feel free to ask!",
+        "keyPoints": [],
+        "sources": [],
+        "timestamp": "07:12 pm"
+      },
+      {
+        "id": "1788874976154",
+        "role": "user",
+        "content": "what is class and object in java",
+        "timestamp": "07:12 pm"
+      },
+      {
+        "id": "1788874984057",
+        "role": "assistant",
+        "content": "{\n    \"content\": \"In Java, **Class** and **Object** are the core building blocks of Object-Oriented Programming (OOP).\\n\\n### 1. Class (The Blueprint)\\nA **Class** is a user-defined template or blueprint. It defines what attributes (data) and methods (behaviors) objects created from it will have, but it doesn't occupy memory for data until an object is created.\\n\\n### 2. Object (The Instance)\\nAn **Object** is a specific instance of a class. When an object is created, memory is allocated, and it holds actual values for the attributes defined in the class.\\n\\n---\\n\\n### Real-World Analogy\\n- **Class:** A architectural blueprint for a house.\\n- **Object:** The actual physical house built using that blueprint. You can build multiple houses (objects) from a single blueprint (class).\\n\\n---\\n\\n### Java Code Example\\n\\n```java\n// Class definition\nclass Car {\n    // Attributes (fields)\n    String color;\n    int speed;\n\n    // Behavior (method)\n    void drive() {\n        System.out.println(\"The \" + color + \" car is driving at \" + speed + \" mph.\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // Creating an Object of the Car class\n        Car myCar = new Car(); \n        \n        // Setting state/attributes\n        myCar.color = \"Red\";\n        myCar.speed = 60;\n\n        // Calling method\n        myCar.drive(); // Output: The Red car is driving at 60 mph.\n    }\n}\n```\",\n    \"keyPoints\": [\n        \"A class is a logical blueprint; an object is a physical instance that occupies memory.\",\n        \"Classes contain attributes (data) and methods (behavior).\",\n        \"Objects are created using the `new` keyword in Java (e.g., `Car myCar = new Car();`).\"\n    ],\n    \"sources\": []\n}",
+        "keyPoints": [
+          "Academic key point",
+          "Core definition & application"
+        ],
+        "sources": [],
+        "timestamp": "07:13 pm"
+      },
+      {
+        "id": "1788875017292",
+        "role": "user",
+        "content": "explain  classes in java",
+        "timestamp": "07:13 pm"
+      },
+      {
+        "id": "1788875056978",
+        "role": "assistant",
+        "content": "A **Class** in Java is the fundamental building block of Object-Oriented Programming (OOP). It serves as a blueprint or template from which individual objects are created.\n\n### Anatomy of a Java Class\n\nA class typically consists of four main components:\n\n1. **Fields (Attributes):** Variables that define the state or properties of an object.\n2. **Methods (Behaviors):** Functions that define what actions an object can perform or how it processes data.\n3. **Constructors:** Special methods used to initialize new objects when they are created using the `new` keyword.\n4. **Access Modifiers:** Keywords (`public`, `private`, `protected`) that control visibility and access to the class members.\n\n---\n\n### Detailed Code Example\n\nHere is a complete Java class demonstrating fields, a constructor, and a method:\n\njava\n// Class definition using 'public' access modifier\npublic class Student {\n    \n    // 1. Fields (Private for encapsulation)\n    private String name;\n    private int age;\n    private double gpa;\n\n    // 2. Constructor (Initializes the object)\n    public Student(String studentName, int studentAge, double studentGpa) {\n        this.name = studentName;\n        this.age = studentAge;\n        this.gpa = studentGpa;\n    }\n\n    // 3. Methods (Behaviors)\n    public void displayDetails() {\n        System.out.println(\"Student: \" + name + \" | Age: \" + age + \" | GPA: \" + gpa);\n    }\n\n    public boolean isHonorsStudent() {\n        return gpa >= 3.5;\n    }\n}\n\n\n### How a Class is Declared\n- **`class` Keyword:** Used to define a class followed by the class name (by convention, ClassNames use PascalCase).\n- **Encapsulation:** Fields are often declared `private` to protect the data, and accessed via public methods or constructors.",
+        "keyPoints": [
+          "A class defines fields (state), methods (behavior), and constructors (initialization).",
+          "Constructors have the same name as the class and no return type.",
+          "Class names in Java follow PascalCase convention (e.g., `StudentAccount`)."
+        ],
+        "sources": [],
+        "timestamp": "07:14 pm"
+      },
+      {
+        "id": "1788877781053",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "07:59 pm"
+      },
+      {
+        "id": "1788877787837",
+        "role": "assistant",
+        "content": "Hi again! How can I help you next? Do you have more questions about Java, or is there something else you'd like to work on?",
+        "keyPoints": [],
+        "sources": [],
+        "timestamp": "07:59 pm"
+      },
+      {
+        "id": "1788877794501",
+        "role": "user",
+        "content": "how to make tea",
+        "timestamp": "07:59 pm"
+      },
+      {
+        "id": "1788877802691",
+        "role": "assistant",
+        "content": "Making a classic cup of tea is quick and simple! Here is a straightforward guide using a tea bag or loose tea leaves:\n\n### What You Need:\n- 1 tea bag (or 1 tsp loose tea leaves)\n- 1 cup of fresh water\n- **Optional:** Milk, sugar, honey, or lemon\n\n---\n\n### Steps to Make Tea:\n\n1. **Boil Water:** Heat water in a kettle or saucepan.\n   - *Black Tea / Herbal Tea:* Use freshly boiled water (100°C / 212°F).\n   - *Green Tea:* Let the boiled water cool for a minute (around 80°C / 175°F) to avoid a bitter taste.\n2. **Steep:** Place the tea bag in your mug and pour the hot water over it.\n   - *Black Tea:* Steep for 3–5 minutes.\n   - *Green Tea:* Steep for 2–3 minutes.\n   - *Herbal Tea:* Steep for 5–7 minutes.\n3. **Remove the Tea:** Take out the tea bag or strain loose leaves. (Avoid squeezing the bag too hard, as it can make the tea bitter).\n4. **Add Extras & Serve:** Add milk, honey, sugar, or lemon to taste, stir well, and enjoy!",
+        "keyPoints": [
+          "Steep time affects strength: 3-5 mins for black tea, 2-3 mins for green tea.",
+          "Use slightly cooler water for green tea to prevent bitterness.",
+          "Customize with milk, sweetener, or lemon to your preference."
+        ],
+        "sources": [],
+        "timestamp": "08:00 pm"
+      }
+    ],
+    "createdAt": "2026-09-08T14:30:10.942Z",
+    "sharedBy": "nandini"
+  },
+  {
+    "id": "share_1788883626345_yk6929",
+    "title": "AI Tutor: What is DBMS?",
+    "messages": [
+      {
+        "id": "1788872415601",
+        "role": "user",
+        "content": "What is DBMS?",
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872415609",
+        "role": "assistant",
+        "content": "**DBMS (Database Management System)** is software designed to store, retrieve, manage, and manipulate data systematically! 🗄️\n\n### Key Features of DBMS:\n- **Data Persistence**: Stores information permanently on disk.\n- **Concurrency Control**: Allows multiple users to access data simultaneously without conflicts.\n- **Data Security**: Restricts access based on user roles and permissions.\n- **Backup & Recovery**: Provides tools to recover data after system crashes.",
+        "keyPoints": [
+          "Replaces traditional file systems to eliminate data inconsistency.",
+          "Provides query interfaces (like SQL) for data retrieval.",
+          "Enforces security, authentication, and backup mechanisms."
+        ],
+        "sources": [
+          "DBMS_Fundamentals_Ch1.pdf",
+          "Database_Systems_Overview.pdf"
+        ],
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872419308",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872419342",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **hii**:\n\nUnderstanding **hii** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:30 pm"
+      },
+      {
+        "id": "1788872556865",
+        "role": "user",
+        "content": "What is deadlock?",
+        "timestamp": "06:32 pm"
+      },
+      {
+        "id": "1788872556875",
+        "role": "assistant",
+        "content": "A **Deadlock** in Operating Systems occurs when two or more processes are permanently blocked because each holds a resource that the other requires! 🔄\n\n### 4 Coffman Conditions Required for Deadlock:\n1. **Mutual Exclusion**: At least one resource must be held in a non-shareable mode.\n2. **Hold and Wait**: A process holds a resource while requesting additional resources.\n3. **No Preemption**: Resources cannot be forcibly taken from a process.\n4. **Circular Wait**: A closed chain of processes exists where each process waits for a resource held by the next.",
+        "keyPoints": [
+          "Requires all 4 Coffman conditions to occur simultaneously.",
+          "Handling strategies: Prevention, Avoidance (Banker's Algorithm), Detection & Recovery.",
+          "Commonly asked in operating system exams and concurrency interviews."
+        ],
+        "sources": [
+          "OS_Unit3_Deadlocks.pdf",
+          "Operating_System_Concepts.pdf"
+        ],
+        "timestamp": "06:32 pm"
+      },
+      {
+        "id": "1788872935646",
+        "role": "user",
+        "content": "What is DBMS?",
+        "timestamp": "06:38 pm"
+      },
+      {
+        "id": "1788872935654",
+        "role": "assistant",
+        "content": "**DBMS (Database Management System)** is software designed to store, retrieve, manage, and manipulate data systematically! 🗄️\n\n### Key Features of DBMS:\n- **Data Persistence**: Stores information permanently on disk.\n- **Concurrency Control**: Allows multiple users to access data simultaneously without conflicts.\n- **Data Security**: Restricts access based on user roles and permissions.\n- **Backup & Recovery**: Provides tools to recover data after system crashes.",
+        "keyPoints": [
+          "Replaces traditional file systems to eliminate data inconsistency.",
+          "Provides query interfaces (like SQL) for data retrieval.",
+          "Enforces security, authentication, and backup mechanisms."
+        ],
+        "sources": [
+          "DBMS_Fundamentals_Ch1.pdf",
+          "Database_Systems_Overview.pdf"
+        ],
+        "timestamp": "06:38 pm"
+      },
+      {
+        "id": "1788873231541",
+        "role": "user",
+        "content": "What is DBMS?",
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873231551",
+        "role": "assistant",
+        "content": "**DBMS (Database Management System)** is software designed to store, retrieve, manage, and manipulate data systematically! 🗄️\n\n### Key Features of DBMS:\n- **Data Persistence**: Stores information permanently on disk.\n- **Concurrency Control**: Allows multiple users to access data simultaneously without conflicts.\n- **Data Security**: Restricts access based on user roles and permissions.\n- **Backup & Recovery**: Provides tools to recover data after system crashes.",
+        "keyPoints": [
+          "Replaces traditional file systems to eliminate data inconsistency.",
+          "Provides query interfaces (like SQL) for data retrieval.",
+          "Enforces security, authentication, and backup mechanisms."
+        ],
+        "sources": [
+          "DBMS_Fundamentals_Ch1.pdf",
+          "Database_Systems_Overview.pdf"
+        ],
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873236892",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873236901",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **hii**:\n\nUnderstanding **hii** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:43 pm"
+      },
+      {
+        "id": "1788873248245",
+        "role": "user",
+        "content": "What is normalization in DBMS?",
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873248253",
+        "role": "assistant",
+        "content": "**Database Normalization** is a technique of organizing database tables to minimize data redundancy and prevent data anomalies! 📊\n\n### Normal Forms Breakdown:\n- **1NF (First Normal Form)**: Ensures all columns contain atomic (indivisible) values and eliminates repeating groups.\n- **2NF (Second Normal Form)**: Must be in 1NF + removes partial dependencies (non-key attributes must depend on the whole primary key).\n- **3NF (Third Normal Form)**: Must be in 2NF + removes transitive dependencies (non-key attributes depending on other non-key attributes).\n- **BCNF (Boyce-Codd Normal Form)**: A stricter version of 3NF where for every functional dependency X → Y, X must be a super key.",
+        "keyPoints": [
+          "Goal: Reduce data duplication and ensure data integrity.",
+          "Eliminates Insertion, Update, and Deletion anomalies.",
+          "1NF → 2NF → 3NF → BCNF represent progressive levels of database refinement."
+        ],
+        "sources": [
+          "DBMS_Normalization_Guide.pdf",
+          "Database_Design_Ch4.pdf"
+        ],
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873263758",
+        "role": "user",
+        "content": "explain 1nf in detail",
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873263768",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **explain 1nf in detail**:\n\nUnderstanding **explain 1nf in detail** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:44 pm"
+      },
+      {
+        "id": "1788873472421",
+        "role": "user",
+        "content": "What is photosynthesis?",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873472460",
+        "role": "assistant",
+        "content": "**Photosynthesis** is the biological process by which green plants, algae, and certain bacteria convert light energy into chemical energy! 🌿☀️\n\n### Chemical Equation:\n$$6\\text{CO}_2 + 6\\text{H}_2\\text{O} \\xrightarrow{\\text{Light}} \\text{C}_6\\text{H}_{12}\\text{O}_6 + 6\\text{O}_2$$\n\n### Two Main Stages:\n1. **Light-Dependent Reactions**: Occur in the thylakoid membranes of chloroplasts, converting sunlight into ATP and NADPH while releasing Oxygen ($O_2$).\n2. **Light-Independent Reactions (Calvin Cycle)**: Occur in the stroma, using ATP and NADPH to convert Carbon Dioxide ($CO_2$) into Glucose ($C_6H_{12}O_6$).",
+        "keyPoints": [
+          "Takes place inside plant chloroplasts containing chlorophyll pigments.",
+          "Converts carbon dioxide and water into glucose and oxygen using sunlight.",
+          "Primary source of oxygen in the Earth's atmosphere."
+        ],
+        "sources": [
+          "Plant_Biology_Ch5.pdf",
+          "General_Science_Notes.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873472895",
+        "role": "user",
+        "content": "Explain computer networks",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873472906",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **Explain computer networks**:\n\nUnderstanding **Explain computer networks** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473089",
+        "role": "user",
+        "content": "What is inheritance in Java?",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473107",
+        "role": "assistant",
+        "content": "**Inheritance in Java** is a fundamental Object-Oriented Programming (OOP) pillar where one class derives fields and methods from another class! ☕\n\n### Key Concepts:\n- **Superclass (Parent)**: The class whose features are inherited.\n- **Subclass (Child)**: The class that inherits features from the superclass using the `extends` keyword.\n- **Code Reusability**: Allows child classes to reuse parent logic without duplicating code.\n\n```java\nclass Animal {\n    void eat() { System.out.println(\"Eating...\"); }\n}\n\nclass Dog extends Animal {\n    void bark() { System.out.println(\"Barking...\"); }\n}\n```",
+        "keyPoints": [
+          "Uses the `extends` keyword in Java.",
+          "Promotes code reusability and method overriding.",
+          "Java supports single inheritance for classes (multiple inheritance is achieved via interfaces)."
+        ],
+        "sources": [
+          "Java_OOP_Inheritance.pdf",
+          "Java_Programming_Guide.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473282",
+        "role": "user",
+        "content": "How do I prepare for exams?",
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873473292",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **How do I prepare for exams?**:\n\nUnderstanding **How do I prepare for exams?** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:47 pm"
+      },
+      {
+        "id": "1788873674816",
+        "role": "user",
+        "content": "Explain computer networks",
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873674828",
+        "role": "assistant",
+        "content": "**Computer Networks** connect devices so they can exchange data and share resources.\n\n### Core ideas:\n- **OSI model**: Application, Presentation, Session, Transport, Network, Data Link, and Physical layers.\n- **TCP**: Reliable, ordered delivery using acknowledgements and retransmission.\n- **IP**: Addresses devices and routes packets between networks.\n- **DNS**: Translates domain names such as example.com into IP addresses.",
+        "keyPoints": [
+          "TCP provides reliable delivery; IP handles addressing and routing.",
+          "The OSI model separates networking responsibilities into layers.",
+          "DNS maps human-readable domains to IP addresses."
+        ],
+        "sources": [
+          "Computer_Networks_Fundamentals.pdf",
+          "OSI_TCP_IP_Notes.pdf"
+        ],
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873674910",
+        "role": "user",
+        "content": "How do I prepare for exams?",
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873674917",
+        "role": "assistant",
+        "content": "A practical exam-preparation plan:\n\n1. List each topic and mark it as **not started**, **learning**, or **reviewed**.\n2. Study in focused 45-minute blocks, followed by a short break.\n3. After each topic, close your notes and recall the main definitions from memory.\n4. Solve practice questions under a time limit.\n5. Review mistakes and revisit only the weak areas.\n\nStart with the nearest deadline and the topics that carry the most marks.",
+        "keyPoints": [
+          "Use active recall instead of rereading only.",
+          "Practice questions reveal gaps faster than passive study.",
+          "Prioritize deadlines, marks, and weak topics."
+        ],
+        "sources": [
+          "Exam_Preparation_Strategy.pdf"
+        ],
+        "timestamp": "06:51 pm"
+      },
+      {
+        "id": "1788873968712",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "06:56 pm"
+      },
+      {
+        "id": "1788873968718",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **hii**:\n\nUnderstanding **hii** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "06:56 pm"
+      },
+      {
+        "id": "1788874937420",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "07:12 pm"
+      },
+      {
+        "id": "1788874941102",
+        "role": "assistant",
+        "content": "Hey there! How can I help you today? Whether you have questions about a topic, need help studying, or want to work through a project, feel free to ask!",
+        "keyPoints": [],
+        "sources": [],
+        "timestamp": "07:12 pm"
+      },
+      {
+        "id": "1788874976154",
+        "role": "user",
+        "content": "what is class and object in java",
+        "timestamp": "07:12 pm"
+      },
+      {
+        "id": "1788874984057",
+        "role": "assistant",
+        "content": "{\n    \"content\": \"In Java, **Class** and **Object** are the core building blocks of Object-Oriented Programming (OOP).\\n\\n### 1. Class (The Blueprint)\\nA **Class** is a user-defined template or blueprint. It defines what attributes (data) and methods (behaviors) objects created from it will have, but it doesn't occupy memory for data until an object is created.\\n\\n### 2. Object (The Instance)\\nAn **Object** is a specific instance of a class. When an object is created, memory is allocated, and it holds actual values for the attributes defined in the class.\\n\\n---\\n\\n### Real-World Analogy\\n- **Class:** A architectural blueprint for a house.\\n- **Object:** The actual physical house built using that blueprint. You can build multiple houses (objects) from a single blueprint (class).\\n\\n---\\n\\n### Java Code Example\\n\\n```java\n// Class definition\nclass Car {\n    // Attributes (fields)\n    String color;\n    int speed;\n\n    // Behavior (method)\n    void drive() {\n        System.out.println(\"The \" + color + \" car is driving at \" + speed + \" mph.\");\n    }\n}\n\npublic class Main {\n    public static void main(String[] args) {\n        // Creating an Object of the Car class\n        Car myCar = new Car(); \n        \n        // Setting state/attributes\n        myCar.color = \"Red\";\n        myCar.speed = 60;\n\n        // Calling method\n        myCar.drive(); // Output: The Red car is driving at 60 mph.\n    }\n}\n```\",\n    \"keyPoints\": [\n        \"A class is a logical blueprint; an object is a physical instance that occupies memory.\",\n        \"Classes contain attributes (data) and methods (behavior).\",\n        \"Objects are created using the `new` keyword in Java (e.g., `Car myCar = new Car();`).\"\n    ],\n    \"sources\": []\n}",
+        "keyPoints": [
+          "Academic key point",
+          "Core definition & application"
+        ],
+        "sources": [],
+        "timestamp": "07:13 pm"
+      },
+      {
+        "id": "1788875017292",
+        "role": "user",
+        "content": "explain  classes in java",
+        "timestamp": "07:13 pm"
+      },
+      {
+        "id": "1788875056978",
+        "role": "assistant",
+        "content": "A **Class** in Java is the fundamental building block of Object-Oriented Programming (OOP). It serves as a blueprint or template from which individual objects are created.\n\n### Anatomy of a Java Class\n\nA class typically consists of four main components:\n\n1. **Fields (Attributes):** Variables that define the state or properties of an object.\n2. **Methods (Behaviors):** Functions that define what actions an object can perform or how it processes data.\n3. **Constructors:** Special methods used to initialize new objects when they are created using the `new` keyword.\n4. **Access Modifiers:** Keywords (`public`, `private`, `protected`) that control visibility and access to the class members.\n\n---\n\n### Detailed Code Example\n\nHere is a complete Java class demonstrating fields, a constructor, and a method:\n\njava\n// Class definition using 'public' access modifier\npublic class Student {\n    \n    // 1. Fields (Private for encapsulation)\n    private String name;\n    private int age;\n    private double gpa;\n\n    // 2. Constructor (Initializes the object)\n    public Student(String studentName, int studentAge, double studentGpa) {\n        this.name = studentName;\n        this.age = studentAge;\n        this.gpa = studentGpa;\n    }\n\n    // 3. Methods (Behaviors)\n    public void displayDetails() {\n        System.out.println(\"Student: \" + name + \" | Age: \" + age + \" | GPA: \" + gpa);\n    }\n\n    public boolean isHonorsStudent() {\n        return gpa >= 3.5;\n    }\n}\n\n\n### How a Class is Declared\n- **`class` Keyword:** Used to define a class followed by the class name (by convention, ClassNames use PascalCase).\n- **Encapsulation:** Fields are often declared `private` to protect the data, and accessed via public methods or constructors.",
+        "keyPoints": [
+          "A class defines fields (state), methods (behavior), and constructors (initialization).",
+          "Constructors have the same name as the class and no return type.",
+          "Class names in Java follow PascalCase convention (e.g., `StudentAccount`)."
+        ],
+        "sources": [],
+        "timestamp": "07:14 pm"
+      },
+      {
+        "id": "1788877781053",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "07:59 pm"
+      },
+      {
+        "id": "1788877787837",
+        "role": "assistant",
+        "content": "Hi again! How can I help you next? Do you have more questions about Java, or is there something else you'd like to work on?",
+        "keyPoints": [],
+        "sources": [],
+        "timestamp": "07:59 pm"
+      },
+      {
+        "id": "1788877794501",
+        "role": "user",
+        "content": "how to make tea",
+        "timestamp": "07:59 pm"
+      },
+      {
+        "id": "1788877802691",
+        "role": "assistant",
+        "content": "Making a classic cup of tea is quick and simple! Here is a straightforward guide using a tea bag or loose tea leaves:\n\n### What You Need:\n- 1 tea bag (or 1 tsp loose tea leaves)\n- 1 cup of fresh water\n- **Optional:** Milk, sugar, honey, or lemon\n\n---\n\n### Steps to Make Tea:\n\n1. **Boil Water:** Heat water in a kettle or saucepan.\n   - *Black Tea / Herbal Tea:* Use freshly boiled water (100°C / 212°F).\n   - *Green Tea:* Let the boiled water cool for a minute (around 80°C / 175°F) to avoid a bitter taste.\n2. **Steep:** Place the tea bag in your mug and pour the hot water over it.\n   - *Black Tea:* Steep for 3–5 minutes.\n   - *Green Tea:* Steep for 2–3 minutes.\n   - *Herbal Tea:* Steep for 5–7 minutes.\n3. **Remove the Tea:** Take out the tea bag or strain loose leaves. (Avoid squeezing the bag too hard, as it can make the tea bitter).\n4. **Add Extras & Serve:** Add milk, honey, sugar, or lemon to taste, stir well, and enjoy!",
+        "keyPoints": [
+          "Steep time affects strength: 3-5 mins for black tea, 2-3 mins for green tea.",
+          "Use slightly cooler water for green tea to prevent bitterness.",
+          "Customize with milk, sweetener, or lemon to your preference."
+        ],
+        "sources": [],
+        "timestamp": "08:00 pm"
+      },
+      {
+        "id": "1788878556426",
+        "role": "user",
+        "content": "Draft an official academic notice circular regarding Mid-Term Exam Schedule and Guidelines",
+        "timestamp": "08:12 pm"
+      },
+      {
+        "id": "1788878581310",
+        "role": "assistant",
+        "content": "**OFFICE OF THE CONTROLLER OF EXAMINATIONS**  \n**[Name of University / College]**  \n\n**Ref. No.:** COE/EXAM/2023-24/MID-01 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Date:** October 24, 2023  \n\n---\n\n### **CIRCULAR**\n\n**Subject: Mid-Term Examination Schedule & Guidelines – Fall 2023**\n\nAll undergraduate and postgraduate students are hereby informed that the **Mid-Term Examinations for the Fall 2023 Semester** are scheduled to be conducted from **November 6, 2023, to November 11, 2023**.\n\nDetailed course-wise timetables and room allocations will be published on the official student portal and college notice boards by **October 30, 2023**.\n\n---\n\n### **Important Examination Guidelines**\n\n1. **Admit Card & ID Mandatory:**  \n   Students must carry their official **College ID Card** and physical **Admit Card** to every examination session. Entry will be denied without these documents.\n\n2. **Reporting Time:**  \n   Students must be seated in their designated examination halls **at least 15 minutes prior** to the commencement of the exam. Late entry beyond 15 minutes after the exam starts will not be permitted.\n\n3. **Prohibited Items:**  \n   Electronic gadgets, including mobile phones, smartwatches, Bluetooth devices, and programmable calculators (unless specifically permitted for an exam), are strictly prohibited inside the examination hall.\n\n4. **Unfair Means (UFM):**  \n   Any instance of cheating, possession of unauthorized material, or communication during the exam will be treated as Unfair Means (UFM) and reported directly to the Disciplinary Committee for strict action.\n\n5. **Medical Leave & Make-Up Exams:**  \n   In case of absence due to valid medical reasons, students must submit a formal application along with medical certificates approved by the Chief Medical Officer within 48 hours of the missed examination to be considered for a re-examination.\n\nFor any queries regarding hall tickets or scheduling conflicts, please contact the Office of the Controller of Examinations.\n\n\n\n**[Signature]**  \n\n**Controller of Examinations**  \n*[Name of University / College]*  \n\n**Copy to:**\n- Office of the Principal / Dean\n- All Heads of Departments (HoDs)\n- Student Notice Boards & Digital Portal",
+        "keyPoints": [
+          "Mid-Term Exam dates: November 6 to November 11, 2023.",
+          "College ID card and Admit Card are mandatory for entry.",
+          "Mobile phones, smartwatches, and unauthorized electronics are strictly banned.",
+          "Medical absences require documentation submitted within 48 hours."
+        ],
+        "sources": [],
+        "timestamp": "08:13 pm"
+      },
+      {
+        "id": "1788882638654",
+        "role": "user",
+        "content": "Draft an official academic notice circular regarding Mid-Term Exam Schedule and Guidelines",
+        "timestamp": "09:20 pm"
+      },
+      {
+        "id": "1788882663200",
+        "role": "assistant",
+        "content": "================================================================================\n                    AI COLLEGE OF ENGINEERING & TECHNOLOGY\n                     OFFICIAL ACADEMIC NOTICE & CIRCULAR\n================================================================================\nRef No: ACET/CSE/2026/CIRCULAR-618                                      Date: 08 Sept 2026\nTarget Audience: All Students (B.Tech CSE - 3rd & 4th Year)\n--------------------------------------------------------------------------------\n\nSUBJECT: MANDATORY MID-TERM EXAMINATION SCHEDULE & LAB PROJECT SUBMISSION GUIDELINES\n\nDear Students,\n\nThis is an official academic circular to notify all enrolled students of the Department of Computer Science & Engineering regarding the upcoming Mid-Term Examinations and Laboratory Project Evaluations.\n\n1. EXAMINATION SCHEDULE:\n   - Dates: 22nd September 2026 – 28th September 2026\n   - Timing: 10:00 AM to 01:00 PM (Morning Shift)\n   - Venue: Examination Block B (Halls 301 - 305)\n\n2. SUBMISSION DEADLINES:\n   - All pending lab assignments and mini-project documentation must be uploaded on the AI College Copilot portal no later than 20th September 2026, 11:59 PM.\n   - Submissions received past the deadline will be subject to late penalty evaluation.\n\n3. MANDATORY INSTRUCTIONS:\n   - Students must carry their valid College Identity Cards and Examination Hall Tickets.\n   - Electronic gadgets (smartwatches, programmable calculators) are strictly prohibited inside the hall.\n   - Minimum 75% attendance criteria applies for examination eligibility.\n\nFor slot allocations or seating queries, contact the Departmental Office or your Class Coordinator.\n\n--------------------------------------------------------------------------------\nIssued By:\nDr. A. K. Sharma / Departmental Faculty Coordinator\nDepartment of Computer Science & Engineering\nAI College of Engineering & Technology\n================================================================================",
+        "keyPoints": [
+          "Official College Circular issued by Faculty Coordinator.",
+          "Contains Ref No, Date, Target Audience, Structured Directives, and Signoff.",
+          "Downloadable as printable .txt file or publishable directly to Student Noticeboard."
+        ],
+        "sources": [
+          "Academic_Regulations_2026.pdf",
+          "Departmental_Notice_Guidelines.pdf"
+        ],
+        "timestamp": "09:21 pm"
+      },
+      {
+        "id": "1788883493524",
+        "role": "user",
+        "content": "what is your name",
+        "timestamp": "09:34 pm"
+      },
+      {
+        "id": "1788883515177",
+        "role": "assistant",
+        "content": "I'm your AI College Copilot! You can think of me as your friendly AI tutor and academic assistant. How can I help you today?",
+        "keyPoints": [
+          "Identity: AI College Copilot / AI Tutor"
+        ],
+        "sources": [],
+        "timestamp": "09:35 pm"
+      },
+      {
+        "id": "1788883531108",
+        "role": "user",
+        "content": "generate a quize for me",
+        "timestamp": "09:35 pm"
+      },
+      {
+        "id": "1788883534060",
+        "role": "assistant",
+        "content": "Here is a clear academic overview of **generate a quize for me**:\n\nUnderstanding **generate a quize for me** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**",
+        "keyPoints": [
+          "Core Principle: Focus on fundamental concepts and definitions.",
+          "Application: Analyze real-world software & engineering implementations.",
+          "Next Step: Ask for a simplified explanation, example, or quiz."
+        ],
+        "sources": [
+          "Course_Syllabus_2025.pdf",
+          "Academic_Reference_Notes.pdf"
+        ],
+        "timestamp": "09:35 pm"
+      },
+      {
+        "id": "1788883564248",
+        "role": "user",
+        "content": "give quiz questions to practice dbms",
+        "timestamp": "09:36 pm"
+      },
+      {
+        "id": "1788883598946",
+        "role": "assistant",
+        "content": "Here is a 5-question practice quiz on Database Management Systems (DBMS) covering key concepts like SQL, Normalization, and ACID properties:\n\n---\n\n### **DBMS Practice Quiz**\n\n#### **Question 1: ACID Properties**\nWhat does the **'I'** stand for in the **ACID** properties of a database transaction?\n- A) Integrity\n- B) Isolation\n- C) Independence\n- D) Indexing\n\n<details>\n<summary><b>View Answer & Explanation</b></summary>\n\n**Correct Answer:** **B) Isolation**  \n**Explanation:** ACID stands for Atomicity, Consistency, Isolation, and Durability. Isolation ensures that concurrent execution of transactions leaves the database in the same state as if they were executed sequentially.\n</details>\n\n---\n\n#### **Question 2: Normalization**\nWhich Normal Form (NF) deals with removing **partial functional dependencies** (i.e., non-key attributes dependent on part of a composite primary key)?\n- A) 1NF\n- B) 2NF\n- C) 3NF\n- D) BCNF\n\n<details>\n<summary><b>View Answer & Explanation</b></summary>\n\n**Correct Answer:** **B) 2NF**  \n**Explanation:** A table is in 2NF if it is already in 1NF and all non-key attributes are fully functionally dependent on the entire primary key, eliminating partial dependencies.\n</details>\n\n---\n\n#### **Question 3: SQL Commands**\nWhich SQL command is used to permanently delete a table, including its structure and all data, from the database?\n- A) `DELETE`\n- B) `REMOVE`\n- C) `DROP`\n- D) `TRUNCATE`\n\n<details>\n<summary><b>View Answer & Explanation</b></summary>\n\n**Correct Answer:** **C) DROP**  \n**Explanation:** `DROP TABLE` deletes the entire table definition along with all its data. `DELETE` removes rows based on a condition, and `TRUNCATE` deletes all rows while keeping the structure.\n</details>\n\n---\n\n#### **Question 4: Joins**\nWhich JOIN returns all records from the left table and the matched records from the right table?\n- A) INNER JOIN\n- B) FULL OUTER JOIN\n- C) LEFT JOIN\n- D) RIGHT JOIN\n\n<details>\n<summary><b>View Answer & Explanation</b></summary>\n\n**Correct Answer:** **C) LEFT JOIN**  \n**Explanation:** `LEFT JOIN` (or `LEFT OUTER JOIN`) returns all rows from the left table, and NULL values for non-matching rows from the right table.\n</details>\n\n---\n\n#### **Question 5: Keys**\nWhat is a minimal super key called?\n- A) Foreign Key\n- B) Secondary Key\n- C) Candidate Key\n- D) Composite Key\n\n<details>\n<summary><b>View Answer & Explanation</b></summary>\n\n**Correct Answer:** **C) Candidate Key**  \n**Explanation:** A super key with no redundant attributes is called a Candidate Key. One of the candidate keys is selected as the Primary Key.\n</details>\n\n---\n\nWould you like another set focusing on specific topics like **Indexing, Relational Algebra, or SQL queries**?",
+        "keyPoints": [
+          "ACID Properties: Atomicity, Consistency, Isolation, Durability",
+          "2NF eliminates partial dependencies",
+          "DROP removes table structure; DELETE/TRUNCATE deal with table data",
+          "Candidate Keys are minimal super keys"
+        ],
+        "sources": [],
+        "timestamp": "09:36 pm"
+      }
+    ],
+    "createdAt": "2026-09-08T16:07:06.345Z",
+    "sharedBy": "nandini"
+  }
+]

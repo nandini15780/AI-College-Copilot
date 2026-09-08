@@ -1,69 +1,143 @@
-import Image from "next/image";
+import { LucideGraduationCap, LucideBot, LucideSparkles, LucideArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
+    <main className="min-h-screen bg-neutral-950 text-neutral-50 overflow-hidden font-sans">
+      {/* TOP NAVIGATION BAR */}
+      <header className="relative z-20 border-b border-neutral-800/80 bg-neutral-950/80 backdrop-blur-md px-6 py-4">
+        <div className="mx-auto flex max-w-7xl items-center justify-between">
+          <Link href="/" className="flex items-center gap-3 text-lg font-bold text-white">
+            <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 text-white font-black shadow-md">
+              A
+            </div>
+            <span>AI College Copilot</span>
+          </Link>
+
+          <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-neutral-300">
+            <Link href="/student/dashboard" className="hover:text-indigo-400 transition">
+              Student Portal
+            </Link>
+            <Link href="/faculty-dashboard" className="hover:text-purple-400 transition">
+              Faculty Portal
+            </Link>
+            <Link href="/Admin-dashboard" className="hover:text-pink-400 transition">
+              Admin Portal
+            </Link>
+            <Link href="/student/ai-tutor" className="hover:text-indigo-400 transition">
+              AI Tutor
+            </Link>
+          </nav>
+
+          <div className="flex items-center gap-3">
+            <Link
+              href="/login"
+              className="rounded-full border border-neutral-700 px-5 py-2 text-sm font-semibold text-neutral-200 hover:bg-neutral-800 transition"
+            >
+              Log In
+            </Link>
+            <Link
+              href="/register"
+              className="rounded-full bg-gradient-to-r from-indigo-500 to-purple-600 px-5 py-2 text-sm font-bold text-white shadow-md hover:brightness-110 transition"
+            >
+              Register
+            </Link>
+          </div>
+        </div>
+      </header>
+
+      <div className="relative mx-auto max-w-7xl px-6 py-20 sm:py-28 lg:px-8">
+        {/* Background glow effects */}
+        <div className="absolute -top-40 left-1/2 -z-10 -translate-x-1/2 transform-gpu blur-3xl sm:-top-80" aria-hidden="true">
+          <div
+            className="aspect-[1155/678] w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20"
+            style={{
+              clipPath:
+                "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)",
+            }}
+          />
+        </div>
+
+        {/* Hero Section */}
+        <div className="mx-auto max-w-2xl text-center flex flex-col items-center">
+          <div className="mb-8 inline-flex items-center rounded-full border border-neutral-800 bg-neutral-900/50 px-4 py-1.5 text-sm font-medium text-neutral-300 ring-1 ring-inset ring-neutral-800/20 backdrop-blur">
+            <span className="flex items-center gap-2">
+              <LucideSparkles className="h-4 w-4 text-indigo-400" />
+              Introducing AI College Copilot v1.0
+            </span>
+          </div>
+
+          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
+            Your Ultimate <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400">
+              Academic Assistant
+            </span>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+
+          <p className="mt-6 text-lg leading-8 text-neutral-400 max-w-xl">
+            Streamline your college experience with AI. Manage schedules, summarize lectures, track assignments, and boost your GPA with intelligent, personalized insights.
           </p>
+
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+            <Link
+              href="/login"
+              className="rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-neutral-900 shadow-sm hover:bg-neutral-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white transition-all transform hover:scale-105"
+            >
+              Get Started Now
+            </Link>
+            <Link
+              href="/student/dashboard"
+              className="group text-sm font-semibold leading-6 text-white flex items-center gap-2 hover:text-indigo-300 transition-colors border border-neutral-800 rounded-full px-6 py-3 bg-neutral-900/60"
+            >
+              Student Portal <LucideArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <Link
+              href="/faculty-dashboard"
+              className="group text-sm font-semibold leading-6 text-neutral-300 flex items-center gap-2 hover:text-purple-300 transition-colors border border-neutral-800 rounded-full px-6 py-3 bg-neutral-900/60"
+            >
+              Faculty Portal
+            </Link>
+            <Link
+              href="/Admin-dashboard"
+              className="group text-sm font-semibold leading-6 text-neutral-300 flex items-center gap-2 hover:text-pink-300 transition-colors border border-neutral-800 rounded-full px-6 py-3 bg-neutral-900/60"
+            >
+              Admin Portal
+            </Link>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+
+        {/* Features Grid */}
+        <div className="mt-24 mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {/* Feature 1 */}
+            <div className="rounded-2xl border border-neutral-800 bg-neutral-900/50 p-8 hover:bg-neutral-900/80 transition-colors backdrop-blur-sm">
+              <div className="h-12 w-12 rounded-xl bg-indigo-500/10 flex items-center justify-center mb-6">
+                <LucideBot className="h-6 w-6 text-indigo-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">AI Tutor</h3>
+              <p className="text-neutral-400">Get instant help with assignments, code debugging, and essay writing from your 24/7 personal AI tutor.</p>
+            </div>
+
+            {/* Feature 2 */}
+            <div className="rounded-2xl border border-neutral-800 bg-neutral-900/50 p-8 hover:bg-neutral-900/80 transition-colors backdrop-blur-sm">
+              <div className="h-12 w-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6">
+                <LucideGraduationCap className="h-6 w-6 text-purple-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Smart Planning</h3>
+              <p className="text-neutral-400">Automatically organize your syllabus, deadline tracking, and exam prep schedules seamlessly.</p>
+            </div>
+
+            {/* Feature 3 */}
+            <div className="rounded-2xl border border-neutral-800 bg-neutral-900/50 p-8 hover:bg-neutral-900/80 transition-colors backdrop-blur-sm sm:col-span-2 lg:col-span-1">
+              <div className="h-12 w-12 rounded-xl bg-pink-500/10 flex items-center justify-center mb-6">
+                <LucideSparkles className="h-6 w-6 text-pink-400" />
+              </div>
+              <h3 className="text-xl font-semibold text-white mb-3">Career Prep</h3>
+              <p className="text-neutral-400">AI-driven resume reviews and mock interviews to prepare you for the post-grad professional world.</p>
+            </div>
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </main>
   );
 }

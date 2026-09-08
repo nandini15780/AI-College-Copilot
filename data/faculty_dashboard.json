@@ -1,0 +1,540 @@
+{
+  "stats": {
+    "totalStudents": 120,
+    "totalCourses": 6,
+    "pendingAssignments": 8,
+    "notices": 4
+  },
+  "courses": [
+    {
+      "id": "c1",
+      "name": "DBMS",
+      "code": "CSE-201",
+      "students": 42,
+      "schedule": "Mon, Wed, Fri • 10:00 AM"
+    },
+    {
+      "id": "c2",
+      "name": "Artificial Intelligence",
+      "code": "CSE-305",
+      "students": 36,
+      "schedule": "Tue, Thu • 11:30 AM"
+    },
+    {
+      "id": "c3",
+      "name": "Machine Learning",
+      "code": "CSE-410",
+      "students": 29,
+      "schedule": "Wed, Fri • 2:00 PM"
+    }
+  ],
+  "students": [
+    {
+      "id": "s1",
+      "name": "Nandini",
+      "roll": "22CS101",
+      "status": "Present"
+    },
+    {
+      "id": "s2",
+      "name": "Aarav",
+      "roll": "22CS102",
+      "status": "On Time"
+    },
+    {
+      "id": "s3",
+      "name": "Meera",
+      "roll": "22CS103",
+      "status": "Needs Review"
+    }
+  ],
+  "assignments": [
+    {
+      "id": "a-1788814117595",
+      "status": "Pending",
+      "students": 5,
+      "createdAt": "2026-09-07T20:48:37.595Z",
+      "title": "Blockchain assignment 1",
+      "department": "",
+      "category": "Academic",
+      "due": "2026-09-08",
+      "type": "PDF",
+      "subject": "",
+      "fileName": "2023(DEC) tcs.pdf",
+      "fileType": "application/pdf",
+      "size": "0.55 MB",
+      "downloadUrl": "/uploads/assignment-8b9ad8a1-796e-4b54-850b-b7b71d516a5b.pdf",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "a-1788812376807",
+      "status": "Pending",
+      "students": 5,
+      "title": "machine learning",
+      "department": "",
+      "category": "Academic",
+      "due": "2026-09-08",
+      "type": "PDF",
+      "subject": "",
+      "fileName": "AOA_Exp1.pdf",
+      "fileType": "application/pdf",
+      "size": "0.33 MB",
+      "downloadUrl": "/uploads/assignment-efa3e06e-18f4-4a05-beca-45c3d725ecbe.pdf",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "a1",
+      "title": "DBMS Mini Project",
+      "due": "15 Sep 2025",
+      "status": "In Progress",
+      "students": 28
+    },
+    {
+      "id": "a2",
+      "title": "AI Research Paper",
+      "due": "20 Sep 2025",
+      "status": "Pending",
+      "students": 31
+    },
+    {
+      "id": "a3",
+      "title": "ML Quiz",
+      "due": "24 Sep 2025",
+      "status": "Draft",
+      "students": 18
+    }
+  ],
+  "notices": [
+    {
+      "id": "n-1788887343160",
+      "read": false,
+      "date": "Today",
+      "createdAt": "2026-09-08T17:09:03.160Z",
+      "title": "Strict Adherence to Assignment Submission Deadline for Ongoing Semester",
+      "department": "Faculty / Academic Cell",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1788887149685",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-08T17:05:49.685Z",
+      "title": "holiday ",
+      "department": "all",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1788879891626",
+      "read": false,
+      "date": "Today",
+      "createdAt": "2026-09-08T15:04:51.626Z",
+      "title": "Annual National-Level Hackathon \"HackNova 2026\"",
+      "department": "Faculty / Academic Cell",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1788878860435",
+      "read": false,
+      "date": "Today",
+      "createdAt": "2026-09-08T14:47:40.435Z",
+      "title": "Mid-Term Examination Schedule & Lab Submission Guidelines",
+      "department": "Faculty / Academic Cell",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1788816307525",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-07T21:25:07.525Z",
+      "title": "vollyball selection",
+      "department": "all",
+      "category": "Urgent",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1788814464760",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-07T20:54:24.760Z",
+      "title": "Hackathon",
+      "department": "all",
+      "category": "Event",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1788814412857",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-07T20:53:32.857Z",
+      "title": "GD",
+      "department": "IT",
+      "category": "General",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1788814224171",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-07T20:50:24.171Z",
+      "title": "placement guidance ",
+      "department": "comp",
+      "category": "Event",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1788813864087",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-07T20:44:24.087Z",
+      "title": "journal checking",
+      "department": "comp A",
+      "category": "Urgent",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1788813467968",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-07T20:37:47.968Z",
+      "title": "Group Discussion ",
+      "department": "comps",
+      "category": "Event",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1788811251186",
+      "read": false,
+      "date": "Just now",
+      "title": "1",
+      "department": "co",
+      "category": "Urgent",
+      "due": "",
+      "students": 0,
+      "type": "PDF",
+      "subject": "",
+      "fileName": "1000033903.jpg.jpeg",
+      "fileType": "image/jpeg",
+      "size": "0.17 MB",
+      "downloadUrl": "/uploads/notice-e004ae51-3a21-4364-8682-42fd70d2083e.jpeg",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1788810203317",
+      "read": false,
+      "date": "Just now",
+      "title": "project presentation",
+      "department": "comps",
+      "category": "Urgent"
+    },
+    {
+      "id": "n1",
+      "title": "Exam timetable released",
+      "department": "Examination Cell",
+      "date": "Today",
+      "read": false,
+      "category": "Urgent"
+    },
+    {
+      "id": "n2",
+      "title": "Workshop on AI tools",
+      "department": "CSE Department",
+      "date": "Yesterday",
+      "read": true,
+      "category": "Event"
+    },
+    {
+      "id": "n3",
+      "title": "Assignment submission window",
+      "department": "Academic Office",
+      "date": "2 days ago",
+      "read": false,
+      "category": "Academic"
+    }
+  ],
+  "materials": [
+    {
+      "id": "m-1788887463853",
+      "uploadedAt": "Just now",
+      "createdAt": "2026-09-08T17:11:03.853Z",
+      "title": "mini project report",
+      "department": "",
+      "category": "Academic",
+      "due": "",
+      "students": 0,
+      "type": "PDF",
+      "subject": "",
+      "fileName": "miniproject report V.pdf",
+      "fileType": "application/pdf",
+      "size": "0.35 MB",
+      "downloadUrl": "/uploads/material-1352fed4-ff69-4c7e-96c8-67d14e0f1316.pdf",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "m-1788887218483",
+      "uploadedAt": "Just now",
+      "createdAt": "2026-09-08T17:06:58.483Z",
+      "title": "aicw",
+      "department": "",
+      "category": "Academic",
+      "due": "",
+      "students": 0,
+      "type": "PDF",
+      "subject": "",
+      "fileName": "miniproject report V.pdf",
+      "fileType": "application/pdf",
+      "size": "0.35 MB",
+      "downloadUrl": "/uploads/material-07e81ef1-48f8-4d50-9c44-4030473f501d.pdf",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "m-1788811348182",
+      "uploadedAt": "Just now",
+      "title": "aicw",
+      "department": "",
+      "category": "Academic",
+      "due": "",
+      "students": 0,
+      "type": "PDF",
+      "subject": "",
+      "fileName": "Achievements - nandinijadhav-0593 _ Microsoft Learn(module1).pdf",
+      "fileType": "application/pdf",
+      "size": "0.25 MB",
+      "downloadUrl": "/uploads/material-67fab590-b7b0-4e33-b221-6cf27a3a416f.pdf",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "m-1788810224865",
+      "uploadedAt": "Just now",
+      "title": "ai",
+      "type": "PDF"
+    },
+    {
+      "id": "m1",
+      "title": "AI lecture notes",
+      "type": "PDF",
+      "uploadedAt": "Today"
+    },
+    {
+      "id": "m2",
+      "title": "DBMS revision set",
+      "type": "Slides",
+      "uploadedAt": "2 days ago"
+    }
+  ],
+  "recentActivity": [
+    {
+      "id": "r-1788887463854",
+      "title": "Material uploaded - mini project report",
+      "time": "Just now",
+      "type": "material"
+    },
+    {
+      "id": "r-1788887343160",
+      "title": "Notice posted - Strict Adherence to Assignment Submission Deadline for Ongoing Semester",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1788887218483",
+      "title": "Material uploaded - aicw",
+      "time": "Just now",
+      "type": "material"
+    },
+    {
+      "id": "r-1788887149686",
+      "title": "Notice posted - holiday ",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1788879891626",
+      "title": "Notice posted - Annual National-Level Hackathon \"HackNova 2026\"",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1788878860435",
+      "title": "Notice posted - Mid-Term Examination Schedule & Lab Submission Guidelines",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1788816307525",
+      "title": "Notice posted - vollyball selection",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1788814464760",
+      "title": "Notice posted - Hackathon",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1788814412857",
+      "title": "Notice posted - GD",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1788814224171",
+      "title": "Notice posted - placement guidance ",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1788814117595",
+      "title": "New assignment created - Blockchain assignment 1",
+      "time": "Just now",
+      "type": "assignment"
+    },
+    {
+      "id": "r-1788813864089",
+      "title": "Notice posted - journal checking",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1788813467969",
+      "title": "Notice posted - Group Discussion ",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1788812376807",
+      "title": "New assignment created - machine learning",
+      "time": "Just now",
+      "type": "assignment"
+    },
+    {
+      "id": "r-1788811348182",
+      "title": "Material uploaded - aicw",
+      "time": "Just now",
+      "type": "material"
+    },
+    {
+      "id": "r-1788811251186",
+      "title": "Notice posted - 1",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1788810224865",
+      "title": "Material uploaded - ai",
+      "time": "Just now",
+      "type": "material"
+    },
+    {
+      "id": "r-1788810203317",
+      "title": "Notice posted - project presentation",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r1",
+      "title": "New assignment created - DBMS Mini Project",
+      "time": "2 hours ago",
+      "type": "assignment"
+    },
+    {
+      "id": "r2",
+      "title": "Material uploaded - AI Notes.pdf",
+      "time": "4 hours ago",
+      "type": "material"
+    },
+    {
+      "id": "r3",
+      "title": "Notice posted - Exam Schedule",
+      "time": "1 day ago",
+      "type": "notice"
+    }
+  ],
+  "timetable": [
+    {
+      "id": "t1",
+      "day": "Monday",
+      "slot": "10:00 AM",
+      "subject": "DBMS",
+      "room": "Room 302"
+    },
+    {
+      "id": "t2",
+      "day": "Tuesday",
+      "slot": "11:30 AM",
+      "subject": "AI",
+      "room": "Lab 4"
+    },
+    {
+      "id": "t-1788810720541",
+      "day": "Monday",
+      "slot": "10:00 AM",
+      "subject": "DBMS",
+      "room": "Room 302"
+    },
+    {
+      "id": "t-1788811314071",
+      "day": "Tuesday",
+      "slot": "11:00 AM",
+      "subject": "PLAT test",
+      "room": "Room 302",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "t-1788812862771",
+      "day": "Tuesday",
+      "slot": "1:30 PM",
+      "subject": "AICW",
+      "room": "Room 402",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "t-1788878510448",
+      "day": "Monday",
+      "slot": "10:00 AM",
+      "subject": "DBMS",
+      "room": "Room 302",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "t-1788878526166",
+      "day": "Monday",
+      "slot": "11:00 AM",
+      "subject": "MIS",
+      "room": "Room 302",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "t-1788878528116",
+      "day": "Monday",
+      "slot": "11:00 AM",
+      "subject": "MIS",
+      "room": "Room 302",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    }
+  ]
+}

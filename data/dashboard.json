@@ -1,0 +1,378 @@
+{
+  "user": {
+    "name": "Student",
+    "role": "Student",
+    "email": "student@college.edu",
+    "profileImage": ""
+  },
+  "stats": {
+    "upcomingClassesCount": 3,
+    "pendingAssignmentsCount": 4,
+    "unreadNoticesCount": 14,
+    "progressPercentage": 78
+  },
+  "upcomingClasses": [
+    {
+      "id": "1",
+      "subject": "DBMS",
+      "time": "10:00 AM – 11:00 AM",
+      "room": "Room 302",
+      "instructor": "Dr. Sharma",
+      "color": "bg-gradient-to-b from-[#8b48f5] to-[#66b3ef]"
+    },
+    {
+      "id": "2",
+      "subject": "AI",
+      "time": "11:30 AM – 12:30 PM",
+      "room": "Lab 4",
+      "instructor": "Prof. Alan",
+      "color": "bg-gradient-to-b from-[#0cb2b7] to-[#71d1e5]"
+    },
+    {
+      "id": "3",
+      "subject": "ML",
+      "time": "02:00 PM – 03:00 PM",
+      "room": "Seminar Hall A",
+      "instructor": "Dr. Mehta",
+      "color": "bg-gradient-to-b from-[#ff303d] to-[#ff9ca4]"
+    }
+  ],
+  "assignments": [
+    {
+      "id": "1",
+      "title": "DBMS Mini Project",
+      "due": "15 Sep 2025",
+      "status": "In Progress",
+      "category": "Submitted"
+    },
+    {
+      "id": "2",
+      "title": "AI Research Paper",
+      "due": "20 Sep 2025",
+      "status": "Completed",
+      "category": "Upcoming"
+    },
+    {
+      "id": "3",
+      "title": "NLP Assignment",
+      "due": "25 Sep 2025",
+      "status": "Not Started",
+      "category": "Submitted"
+    },
+    {
+      "id": "4",
+      "title": "Web Development Project",
+      "due": "30 Sep 2025",
+      "status": "Submitted",
+      "category": "Submitted"
+    },
+    {
+      "id": "a-1788812376807",
+      "status": "Submitted",
+      "title": "machine learning",
+      "department": "",
+      "category": "Submitted",
+      "due": "2026-09-08",
+      "students": 5,
+      "type": "PDF",
+      "subject": "",
+      "fileName": "AOA_Exp1.pdf",
+      "fileType": "application/pdf",
+      "size": "0.33 MB",
+      "downloadUrl": "/uploads/assignment-efa3e06e-18f4-4a05-beca-45c3d725ecbe.pdf",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "a-1788814117595",
+      "status": "Not Started",
+      "createdAt": "2026-09-07T20:48:37.598Z",
+      "title": "Blockchain assignment 1",
+      "department": "",
+      "category": "Academic",
+      "due": "2026-09-08",
+      "students": 5,
+      "type": "PDF",
+      "subject": "",
+      "fileName": "2023(DEC) tcs.pdf",
+      "fileType": "application/pdf",
+      "size": "0.55 MB",
+      "downloadUrl": "/uploads/assignment-8b9ad8a1-796e-4b54-850b-b7b71d516a5b.pdf",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    }
+  ],
+  "notices": [
+    {
+      "id": "n-1788887343160",
+      "read": false,
+      "date": "Today",
+      "createdAt": "2026-09-08T17:09:03.169Z",
+      "title": "Strict Adherence to Assignment Submission Deadline for Ongoing Semester",
+      "department": "Faculty / Academic Cell",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "n-1788887149685",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-08T17:05:49.698Z",
+      "title": "holiday ",
+      "department": "all",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "n-1788879891626",
+      "read": false,
+      "date": "Today",
+      "createdAt": "2026-09-08T15:04:51.628Z",
+      "title": "Annual National-Level Hackathon \"HackNova 2026\"",
+      "department": "Faculty / Academic Cell",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "n-1788878860435",
+      "read": false,
+      "date": "Today",
+      "createdAt": "2026-09-08T14:47:40.437Z",
+      "title": "Mid-Term Examination Schedule & Lab Submission Guidelines",
+      "department": "Faculty / Academic Cell",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "n-1788816307525",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-07T21:25:07.527Z",
+      "title": "vollyball selection",
+      "department": "all",
+      "category": "Urgent",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "n-1788814464760",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-07T20:54:24.762Z",
+      "title": "Hackathon",
+      "department": "all",
+      "category": "Event",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "n-1788814412857",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-07T20:53:32.859Z",
+      "title": "GD",
+      "department": "IT",
+      "category": "General",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "n-1788814224171",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-07T20:50:24.173Z",
+      "title": "placement guidance ",
+      "department": "comp",
+      "category": "Event",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "n-1788813864087",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-07T20:44:24.092Z",
+      "title": "journal checking",
+      "department": "comp A",
+      "category": "Urgent",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "n-1788813467968",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-07T20:37:47.973Z",
+      "title": "Group Discussion ",
+      "department": "comps",
+      "category": "Event",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "1788811251189",
+      "read": false,
+      "date": "Just now",
+      "title": "1",
+      "department": "co",
+      "category": "Urgent",
+      "due": "",
+      "students": 0,
+      "type": "PDF",
+      "subject": "",
+      "fileName": "1000033903.jpg.jpeg",
+      "fileType": "image/jpeg",
+      "size": "0.17 MB",
+      "downloadUrl": "/uploads/notice-e004ae51-3a21-4364-8682-42fd70d2083e.jpeg",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "1",
+      "title": "Exam timetable released",
+      "department": "Examination Cell",
+      "date": "Today",
+      "category": "Urgent",
+      "read": false
+    },
+    {
+      "id": "2",
+      "title": "College event registration",
+      "department": "Student Council",
+      "date": "Yesterday",
+      "category": "Event",
+      "read": false
+    },
+    {
+      "id": "3",
+      "title": "Assignment submission notice",
+      "department": "CSE Department",
+      "date": "2 days ago",
+      "category": "Academic",
+      "read": false
+    },
+    {
+      "id": "4",
+      "title": "Holiday on 5th September",
+      "department": "Admin",
+      "date": "3 days ago",
+      "category": "General",
+      "read": false
+    },
+    {
+      "id": "5",
+      "title": "Library timing extended",
+      "department": "Library",
+      "date": "4 days ago",
+      "category": "Academic",
+      "read": false
+    }
+  ],
+  "timetable": [
+    {
+      "id": "t-1788812862771",
+      "day": "Tuesday",
+      "slot": "1:30 PM",
+      "subject": "AICW",
+      "room": "Room 402",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "time": "1:30 PM",
+      "professor": "Faculty",
+      "iconType": "doc",
+      "iconBg": "bg-[#eee0ff]",
+      "iconColor": "text-[#8635dc]",
+      "source": "faculty"
+    },
+    {
+      "id": "t-1788878510448",
+      "day": "Monday",
+      "slot": "10:00 AM",
+      "subject": "DBMS",
+      "room": "Room 302",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "time": "10:00 AM",
+      "professor": "Faculty",
+      "iconType": "doc",
+      "iconBg": "bg-[#eee0ff]",
+      "iconColor": "text-[#8635dc]",
+      "source": "faculty"
+    },
+    {
+      "id": "t-1788878526166",
+      "day": "Monday",
+      "slot": "11:00 AM",
+      "subject": "MIS",
+      "room": "Room 302",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "time": "11:00 AM",
+      "professor": "Faculty",
+      "iconType": "doc",
+      "iconBg": "bg-[#eee0ff]",
+      "iconColor": "text-[#8635dc]",
+      "source": "faculty"
+    },
+    {
+      "id": "t-1788878528116",
+      "day": "Monday",
+      "slot": "11:00 AM",
+      "subject": "MIS",
+      "room": "Room 302",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "time": "11:00 AM",
+      "professor": "Faculty",
+      "iconType": "doc",
+      "iconBg": "bg-[#eee0ff]",
+      "iconColor": "text-[#8635dc]",
+      "source": "faculty"
+    }
+  ],
+  "materials": [
+    {
+      "id": "m-1788887463853",
+      "title": "mini project report",
+      "subject": "mini project report",
+      "semester": "Sem 7",
+      "type": "PDF",
+      "fileType": "PDF",
+      "author": "Faculty",
+      "size": "0.35 MB",
+      "uploadedDate": "Today",
+      "downloadUrl": "/uploads/material-1352fed4-ff69-4c7e-96c8-67d14e0f1316.pdf",
+      "source": "faculty"
+    },
+    {
+      "id": "m-1788887218483",
+      "title": "aicw",
+      "subject": "aicw",
+      "semester": "Sem 7",
+      "type": "PDF",
+      "fileType": "PDF",
+      "author": "Faculty",
+      "size": "0.35 MB",
+      "uploadedDate": "Today",
+      "downloadUrl": "/uploads/material-07e81ef1-48f8-4d50-9c44-4030473f501d.pdf",
+      "source": "faculty"
+    }
+  ]
+}
