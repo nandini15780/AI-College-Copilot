@@ -15,16 +15,16 @@ export default function Home() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-6 text-sm font-semibold text-neutral-300">
-            <Link href="/student/dashboard" className="hover:text-indigo-400 transition">
+            <Link href="/login?role=Student" className="hover:text-indigo-400 transition">
               Student Portal
             </Link>
-            <Link href="/faculty-dashboard" className="hover:text-purple-400 transition">
+            <Link href="/login?role=Faculty" className="hover:text-purple-400 transition">
               Faculty Portal
             </Link>
-            <Link href="/Admin-dashboard" className="hover:text-pink-400 transition">
+            <Link href="/login?role=Admin" className="hover:text-pink-400 transition">
               Admin Portal
             </Link>
-            <Link href="/student/ai-tutor" className="hover:text-indigo-400 transition">
+            <Link href="/login?role=Student" className="hover:text-indigo-400 transition">
               AI Tutor
             </Link>
           </nav>
@@ -86,19 +86,19 @@ export default function Home() {
               Get Started Now
             </Link>
             <Link
-              href="/student/dashboard"
+              href="/login?role=Student"
               className="group text-sm font-semibold leading-6 text-white flex items-center gap-2 hover:text-indigo-300 transition-colors border border-neutral-800 rounded-full px-6 py-3 bg-neutral-900/60"
             >
               Student Portal <LucideArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
-              href="/faculty-dashboard"
+              href="/login?role=Faculty"
               className="group text-sm font-semibold leading-6 text-neutral-300 flex items-center gap-2 hover:text-purple-300 transition-colors border border-neutral-800 rounded-full px-6 py-3 bg-neutral-900/60"
             >
               Faculty Portal
             </Link>
             <Link
-              href="/Admin-dashboard"
+              href="/login?role=Admin"
               className="group text-sm font-semibold leading-6 text-neutral-300 flex items-center gap-2 hover:text-pink-300 transition-colors border border-neutral-800 rounded-full px-6 py-3 bg-neutral-900/60"
             >
               Admin Portal

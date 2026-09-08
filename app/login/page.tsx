@@ -1,9 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
+import { useState, useEffect, Suspense } from "react";
+import { useRouter, useSearchParams } from "next/navigation";
 
-export default function LoginPage() {
+function LoginContent() {
+  const searchParams = useSearchParams();
+  const initialRoleParam = searchParams.get("role");
+
   const [role, setRole] = useState<"Student" | "Faculty" | "Admin">("Student");
   const [showPassword, setShowPassword] = useState(false);
   const [identifier, setIdentifier] = useState("");
@@ -12,6 +15,16 @@ export default function LoginPage() {
   const [loading, setLoading] = useState(false);
 
   const router = useRouter();
+
+  useEffect(() => {
+    if (initialRoleParam === "Faculty") {
+      setRole("Faculty");
+    } else if (initialRoleParam === "Admin") {
+      setRole("Admin");
+    } else if (initialRoleParam === "Student") {
+      setRole("Student");
+    }
+  }, [initialRoleParam]);
 
   const handleLogin = async () => {
     setError("");
@@ -200,7 +213,7 @@ export default function LoginPage() {
                   text="Personalized Learning"
                 />
 
-              </div>
+                </div>
             </div>
           </section>
 
@@ -350,6 +363,20 @@ export default function LoginPage() {
         </div>
       </div>
     </main>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense
+      fallback={
+        <main className="flex h-screen items-center justify-center bg-[#edf3ff]">
+          <div className="text-xl font-bold text-[#172653]">Loading login page...</div>
+        </main>
+      }
+    >
+      <LoginContent />
+    </Suspense>
   );
 }
 
