@@ -289,7 +289,16 @@ export function downloadNoticePdf(data: NoticePdfData) {
 
   const rawContent = data.content || `Notice regarding ${data.title}.\n\nAll students and faculty members are hereby requested to strictly follow the guidelines detailed in this notice.\nFor further queries, contact the Department Administration office during working hours.`;
 
-  const splitLines = doc.splitTextToSize(rawContent, 170);
+  const cleanBody = rawContent
+    .replace(/^#{1,6}\s+/gm, '')
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/\*(.*?)\*/g, '$1')
+    .replace(/`(.*?)`/g, '$1')
+    .replace(/================================================================================/g, '')
+    .replace(/--------------------------------------------------------------------------------/g, '')
+    .trim();
+
+  const splitLines = doc.splitTextToSize(cleanBody, 170);
   const boxHeight = Math.max(splitLines.length * 4.5 + 10, 60);
 
   doc.setFillColor(248, 250, 252);
@@ -310,7 +319,7 @@ export function downloadNoticePdf(data: NoticePdfData) {
   doc.setFont("helvetica", "bold");
   doc.setFontSize(8.5);
   doc.text("By Order,", 195, footerY - 15, { align: "right" });
-  doc.text("Dean of Academic Affairs", 195, footerY - 10, { align: "right" });
+  doc.text("Dean of Academic Affairs / Head of Department", 195, footerY - 10, { align: "right" });
   doc.text("AI College of Engineering & Technology", 195, footerY - 5, { align: "right" });
 
   doc.text("AI College Official Notice Portal", 15, footerY + 5);

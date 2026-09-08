@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import { useTheme } from "@/app/theme-provider";
 import Link from "next/link";
+import { downloadNoticePdf } from "@/lib/pdfGenerator";
 import {
   Bell,
   Bot,
@@ -183,16 +184,16 @@ export default function FacultyAITutorPage() {
   const handleDownloadNoticePDF = (messageText: string) => {
     const rawContent = cleanMessageContent(messageText);
     const dateStr = new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" });
-    const refNo = `AICET/EXAM/2026/${Math.floor(100 + Math.random() * 900)}`;
+    const refNo = `AICET/CIRCULAR/2026/${Math.floor(100 + Math.random() * 900)}`;
 
-    // Extract Subject or Purpose
-    let purpose = "Filling & submitting Examination Forms / Academic Directives";
-    const subjectMatch = rawContent.match(/SUBJECT:\s*(.*?)(?=\n|$)/i) || rawContent.match(/Purpose:\s*(.*?)(?=\n|$)/i);
-    if (subjectMatch && subjectMatch[1]) {
+    // Extract Notice Heading / Subject dynamically
+    let purpose = extractNoticeTitle(rawContent);
+    const subjectMatch = rawContent.match(/(?:SUBJECT|Subject|PURPOSE|Purpose|REGARDING|Regarding)\s*[:|-]\s*(.+?)(?=\n|$)/i);
+    if (subjectMatch && subjectMatch[1] && subjectMatch[1].trim().length > 3) {
       purpose = subjectMatch[1].replace(/[*#]/g, '').trim();
     }
 
-    // Clean body text by stripping markdown syntax
+    // Clean body text by stripping raw markdown syntax
     const cleanBody = rawContent
       .replace(/^#{1,6}\s+/gm, '')
       .replace(/\*\*(.*?)\*\*/g, '$1')
@@ -202,9 +203,17 @@ export default function FacultyAITutorPage() {
       .replace(/--------------------------------------------------------------------------------/g, '')
       .trim();
 
+    // Direct jsPDF Download
+    downloadNoticePdf({
+      title: purpose,
+      department: "Department of Computer Science & Engineering / Academic Cell",
+      date: dateStr,
+      category: "Academic Notice",
+      content: cleanBody,
+    });
+
     const printWindow = window.open("", "_blank", "width=850,height=1100");
     if (!printWindow) {
-      alert("Please allow popups in your browser to generate and download the PDF notice.");
       return;
     }
 
@@ -213,7 +222,7 @@ export default function FacultyAITutorPage() {
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Official Notice - AI College of Engineering & Technology</title>
+  <title>${purpose} - AI College of Engineering & Technology</title>
   <style>
     @page {
       size: A4 portrait;
@@ -226,7 +235,7 @@ export default function FacultyAITutorPage() {
       margin: 0;
       padding: 30px;
       font-size: 13.5px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
     .college-header {
       text-align: center;
@@ -244,73 +253,65 @@ export default function FacultyAITutorPage() {
       color: #222;
       margin-bottom: 15px;
     }
-    .date-row {
-      text-align: right;
+    .ref-row {
+      display: flex;
+      justify-content: space-between;
       font-size: 13px;
       font-weight: bold;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid #000;
+      padding-bottom: 5px;
     }
     .notice-heading {
       text-align: center;
       font-size: 20px;
       font-weight: bold;
-      margin: 15px 0 20px 0;
+      margin: 15px 0 5px 0;
       letter-spacing: 2px;
+    }
+    .notice-subject {
+      text-align: center;
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #1e1b4b;
+      text-decoration: underline;
     }
     .meta-table {
       width: 100%;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
       border-collapse: collapse;
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
     }
     .meta-table td {
-      padding: 4px 0;
+      padding: 6px 12px;
       vertical-align: top;
     }
     .meta-label {
-      width: 150px;
-      font-weight: normal;
+      width: 160px;
+      font-weight: bold;
+      color: #334155;
     }
     .meta-colon {
-      width: 20px;
+      width: 15px;
     }
     .meta-val {
       font-weight: bold;
-    }
-    .applicable-row {
-      margin-bottom: 15px;
-    }
-    .schedule-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 15px 0 20px 0;
-      font-size: 12px;
-    }
-    .schedule-table th, .schedule-table td {
-      border: 1px solid #000;
-      padding: 6px 8px;
-      text-align: center;
-    }
-    .schedule-table th {
-      background-color: #f8f8f8;
-      font-weight: bold;
+      color: #0f172a;
     }
     .notice-body {
       white-space: pre-wrap;
       text-align: justify;
-      margin: 15px 0;
-    }
-    .docs-section {
-      margin-top: 15px;
-    }
-    .docs-section ol {
-      margin: 5px 0 0 20px;
-      padding: 0;
+      margin: 20px 0;
+      font-size: 14px;
+      line-height: 1.7;
     }
     .footer-signatures {
       display: flex;
       justify-content: space-between;
       align-items: flex-end;
-      margin-top: 70px;
+      margin-top: 60px;
     }
     .sig-box {
       text-align: center;
@@ -351,92 +352,58 @@ export default function FacultyAITutorPage() {
 <body>
   <div class="no-print-bar">
     <div>
-      <strong>Official College Circular PDF Document</strong>
-      <div style="font-size: 11px; color: #64748b;">Click the button to download or print as PDF</div>
+      <strong>Official College Circular / Notice Document</strong>
+      <div style="font-size: 11px; color: #64748b;">PDF downloaded automatically. Click button to print or save another copy.</div>
     </div>
     <button class="btn-pdf" onclick="window.print()">📥 Download / Save as PDF</button>
   </div>
 
   <div class="college-header">
     <div class="college-name">AI COLLEGE OF ENGINEERING & TECHNOLOGY</div>
-    <div class="college-sub">DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING / EXAMINATION CELL<br/>Knowledge City, Sector 10, Airoli, Navi Mumbai - 400708</div>
+    <div class="college-sub">DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING / ACADEMIC CELL<br/>Knowledge City, Sector 10, Airoli, Navi Mumbai - 400708 | Website: www.aicet.edu.in</div>
   </div>
 
-  <div class="date-row">
-    ${dateStr}
+  <div class="ref-row">
+    <div>Ref No: ${refNo}</div>
+    <div>Date: ${dateStr}</div>
   </div>
 
   <div class="notice-heading">
-    NOTICE
+    OFFICIAL CIRCULAR / NOTICE
+  </div>
+
+  <div class="notice-subject">
+    ${purpose.toUpperCase()}
   </div>
 
   <table class="meta-table">
     <tr>
-      <td class="meta-label">1. Notice Type</td>
+      <td class="meta-label">1. Notice Heading</td>
       <td class="meta-colon">:</td>
-      <td class="meta-val">Very important</td>
+      <td class="meta-val">${purpose}</td>
     </tr>
     <tr>
-      <td class="meta-label">2. Purpose</td>
+      <td class="meta-label">2. Issued By</td>
       <td class="meta-colon">:</td>
-      <td class="meta-val"><u>${purpose}</u></td>
+      <td class="meta-val">Department of Computer Science & Engineering / Academic Cell</td>
     </tr>
-  </table>
-
-  <div class="applicable-row">
-    <strong>Concerned to/Applicable to/for :</strong> Students required / willing to appear at the following examinations / academic submissions (Regular & K.T. students under any head)
-  </div>
-
-  <table class="schedule-table">
-    <thead>
-      <tr>
-        <th style="width: 10%;">Year</th>
-        <th style="width: 10%;">Sem</th>
-        <th style="width: 25%;">BRANCH</th>
-        <th style="width: 20%;">DATE TO FILL EXAM FORM</th>
-        <th style="width: 17.5%;">WITH FINE RS. 100/- PER SEMESTER</th>
-        <th style="width: 17.5%;">WITH FINE RS. 500/- PER SEMESTER</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>S.E.<br/>T.E.</td>
-        <td>III IV<br/>V VI</td>
-        <td>COMP, AI&DS</td>
-        <td>15.09.2026 TO 20.09.2026</td>
-        <td>FROM 21.09.2026<br/>TO 25.09.2026</td>
-        <td>FROM 26.09.2026<br/>TO 30.09.2026</td>
-      </tr>
-      <tr>
-        <td>S.E.<br/>T.E.</td>
-        <td>III IV<br/>V VI</td>
-        <td>IT, CIVIL, EXTC</td>
-        <td>21.09.2026 TO 25.09.2026</td>
-        <td>FROM 26.09.2026<br/>TO 29.09.2026</td>
-        <td>FROM 30.09.2026<br/>TO 04.10.2026</td>
-      </tr>
-    </tbody>
+    <tr>
+      <td class="meta-label">3. Target Audience</td>
+      <td class="meta-colon">:</td>
+      <td class="meta-val">All Enrolled Students & Faculty Members</td>
+    </tr>
   </table>
 
   <div class="notice-body">
 ${cleanBody}
   </div>
 
-  <div class="docs-section">
-    <strong>Documents to be attached:</strong>
-    <ol>
-      <li>Photocopy of Student Identity Card & Previous Marksheet</li>
-      <li>Gazette / Result copy of respective semester</li>
-      <li>Copy of ABC ID & Online Fee Payment Receipt</li>
-    </ol>
-  </div>
-
   <div class="footer-signatures">
     <div class="sig-box">
-      <div class="sig-title">Chief Tech. Examination Controller</div>
+      <div class="sig-title">Faculty Coordinator</div>
     </div>
     <div class="sig-box">
-      <div class="sig-title">Principal / Head of Department</div>
+      <div class="sig-title">Head of Department / Dean of Academic Affairs</div>
     </div>
   </div>
 
