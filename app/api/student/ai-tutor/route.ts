@@ -391,7 +391,7 @@ async function fetchGeminiResponse(question: string, history: any[] = []): Promi
     if (!apiKey) return null;
 
     try {
-        const model = process.env.GEMINI_MODEL || "gemini-3.6-flash";
+        const model = process.env.GEMINI_MODEL || "gemini-1.5-flash";
         const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
         // Build conversation history format for Gemini API

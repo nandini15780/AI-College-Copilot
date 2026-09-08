@@ -141,18 +141,62 @@ const defaultAIChats = [
     }
 ];
 
-// Ensure data directory and files exist
-if (!fs.existsSync(dataDir)) {
-    fs.mkdirSync(dataDir, { recursive: true });
+// Default Faculty AI Chat history
+const defaultFacultyAIChats = [
+    {
+        id: "1",
+        role: "user",
+        content: "Draft a 50-minute lesson plan on DBMS Normalization.",
+        timestamp: "09:00 AM"
+    },
+    {
+        id: "2",
+        role: "assistant",
+        content: "Here is a structured 50-minute lesson plan on DBMS Normalization...",
+        keyPoints: [
+            "Introduction (10 mins): Why normalization matters",
+            "1NF & 2NF (15 mins): Functional dependencies",
+            "3NF & BCNF (15 mins): Eliminating transitive dependencies",
+            "Q&A and Quiz (10 mins)"
+        ],
+        sources: ["Faculty_Teaching_Guide.pdf"],
+        timestamp: "09:00 AM"
+    }
+];
+
+// Helper to safely write files without crashing on Vercel read-only filesystem
+function safeWriteFile(filePath: string, content: string) {
+    try {
+        const dir = path.dirname(filePath);
+        if (!fs.existsSync(dir)) {
+            fs.mkdirSync(dir, { recursive: true });
+        }
+        fs.writeFileSync(filePath, content, 'utf8');
+    } catch (e) {
+        // Read-only filesystem on Vercel - silent fallback to in-memory state
+    }
 }
 
-if (!fs.existsSync(usersFile)) {
-    fs.writeFileSync(usersFile, JSON.stringify([]));
-}
+// In-Memory Fallback Stores for Serverless Environments
+let inMemoryUsers: any[] = (() => {
+    try {
+        if (fs.existsSync(usersFile)) {
+            const data = fs.readFileSync(usersFile, 'utf8');
+            return JSON.parse(data) || [];
+        }
+    } catch (e) {}
+    return [];
+})();
 
-if (!fs.existsSync(dashboardFile)) {
-    fs.writeFileSync(dashboardFile, JSON.stringify(defaultDashboardData, null, 2));
-}
+let inMemoryDashboardData: any = (() => {
+    try {
+        if (fs.existsSync(dashboardFile)) {
+            const data = fs.readFileSync(dashboardFile, 'utf8');
+            return JSON.parse(data) || defaultDashboardData;
+        }
+    } catch (e) {}
+    return defaultDashboardData;
+})();
 
 const defaultFacultyDashboardData = {
     stats: {
@@ -196,30 +240,34 @@ const defaultFacultyDashboardData = {
     ],
 };
 
-if (!fs.existsSync(facultyDashboardFile)) {
-    fs.writeFileSync(facultyDashboardFile, JSON.stringify(defaultFacultyDashboardData, null, 2));
-}
+let inMemoryFacultyDashboardData: any = (() => {
+    try {
+        if (fs.existsSync(facultyDashboardFile)) {
+            const data = fs.readFileSync(facultyDashboardFile, 'utf8');
+            return JSON.parse(data) || defaultFacultyDashboardData;
+        }
+    } catch (e) {}
+    return defaultFacultyDashboardData;
+})();
 
-if (!fs.existsSync(aiChatFile)) {
-    fs.writeFileSync(aiChatFile, JSON.stringify(defaultAIChats, null, 2));
-}
-
-if (!fs.existsSync(sharedChatsFile)) {
-    fs.writeFileSync(sharedChatsFile, JSON.stringify([], null, 2));
-}
+let inMemorySharedChats: any[] = (() => {
+    try {
+        if (fs.existsSync(sharedChatsFile)) {
+            const data = fs.readFileSync(sharedChatsFile, 'utf8');
+            return JSON.parse(data) || [];
+        }
+    } catch (e) {}
+    return [];
+})();
 
 // User Helpers
 export function getUsers() {
-    try {
-        const data = fs.readFileSync(usersFile, 'utf8');
-        return JSON.parse(data) || [];
-    } catch {
-        return [];
-    }
+    return inMemoryUsers;
 }
 
 export function saveUsers(users: any[]) {
-    fs.writeFileSync(usersFile, JSON.stringify(users, null, 2));
+    inMemoryUsers = users;
+    safeWriteFile(usersFile, JSON.stringify(users, null, 2));
 }
 
 export function findUserByEmailOrId(identifier: string) {
@@ -242,20 +290,12 @@ export function addUser(user: any) {
 
 // Dashboard Helpers
 export function getRawDashboardData() {
-    try {
-        if (!fs.existsSync(dashboardFile)) {
-            fs.writeFileSync(dashboardFile, JSON.stringify(defaultDashboardData, null, 2));
-            return defaultDashboardData;
-        }
-        const data = fs.readFileSync(dashboardFile, 'utf8');
-        return JSON.parse(data) || defaultDashboardData;
-    } catch {
-        return defaultDashboardData;
-    }
+    return inMemoryDashboardData;
 }
 
 export function saveDashboardData(data: any) {
-    fs.writeFileSync(dashboardFile, JSON.stringify(data, null, 2));
+    inMemoryDashboardData = data;
+    safeWriteFile(dashboardFile, JSON.stringify(data, null, 2));
 }
 
 export function getDashboardData(userId?: string) {
@@ -392,20 +432,12 @@ export function markNoticeRead(noticeId: string) {
 }
 
 export function getRawFacultyDashboardData() {
-    try {
-        if (!fs.existsSync(facultyDashboardFile)) {
-            fs.writeFileSync(facultyDashboardFile, JSON.stringify(defaultFacultyDashboardData, null, 2));
-            return defaultFacultyDashboardData;
-        }
-        const data = fs.readFileSync(facultyDashboardFile, 'utf8');
-        return JSON.parse(data) || defaultFacultyDashboardData;
-    } catch {
-        return defaultFacultyDashboardData;
-    }
+    return inMemoryFacultyDashboardData;
 }
 
 export function saveFacultyDashboardData(data: any) {
-    fs.writeFileSync(facultyDashboardFile, JSON.stringify(data, null, 2));
+    inMemoryFacultyDashboardData = data;
+    safeWriteFile(facultyDashboardFile, JSON.stringify(data, null, 2));
 }
 
 export function getFacultyDashboardData(userId?: string) {
@@ -538,71 +570,56 @@ export function removeFacultyNotice(noticeId: string) {
 const aiChatStudentFile = path.join(dataDir, 'ai_chats_student.json');
 const aiChatFacultyFile = path.join(dataDir, 'ai_chats_faculty.json');
 
-// Default Faculty initial AI message
-const defaultFacultyAIChats = [
-    {
-        id: "1",
-        role: "assistant",
-        content: "Hello Professor! How can I assist with your lesson plans, course rubrics, exam questions, or official circular notices today?",
-        keyPoints: [
-            "Generate official academic notices and circulars",
-            "Draft lesson plans and assignment rubrics",
-            "Create exam quiz questions and explanations"
-        ],
-        sources: ["Faculty_Teaching_Guide.pdf"],
-        timestamp: "10:00 AM"
-    }
-];
+
 
 // AI Tutor Chat Helpers
-export function getAIChatHistory(role: string = "Student"): any[] {
-    try {
-        const file = role === "Faculty" ? aiChatFacultyFile : (fs.existsSync(aiChatStudentFile) ? aiChatStudentFile : aiChatFile);
-        const defaultInitial = role === "Faculty" ? defaultFacultyAIChats : defaultAIChats;
+let studentAIChatMemory: any[] = [...defaultAIChats];
+let facultyAIChatMemory: any[] = [...defaultFacultyAIChats];
 
-        if (!fs.existsSync(file)) {
-            fs.writeFileSync(file, JSON.stringify(defaultInitial, null, 2));
-            return defaultInitial;
-        }
-        const data = fs.readFileSync(file, 'utf8');
-        return JSON.parse(data) || defaultInitial;
-    } catch {
-        return role === "Faculty" ? defaultFacultyAIChats : defaultAIChats;
+export function getAIChatHistory(role: string = "Student"): any[] {
+    return role === "Faculty"
+        ? facultyAIChatMemory
+        : studentAIChatMemory;
+}
+
+export function saveAIChatHistory(
+    messages: any[],
+    role: string = "Student"
+) {
+    if (role === "Faculty") {
+        facultyAIChatMemory = messages;
+    } else {
+        studentAIChatMemory = messages;
     }
 }
 
-export function saveAIChatHistory(messages: any[], role: string = "Student") {
-    const file = role === "Faculty" ? aiChatFacultyFile : aiChatStudentFile;
-    fs.writeFileSync(file, JSON.stringify(messages, null, 2));
-}
-
-export function addAIMessage(msg: any, role: string = "Student") {
+export function addAIMessage(
+    msg: any,
+    role: string = "Student"
+) {
     const history = getAIChatHistory(role);
-    history.push(msg);
-    saveAIChatHistory(history, role);
+    const updatedHistory = [...history, msg];
+
+    saveAIChatHistory(updatedHistory, role);
+
     return msg;
 }
 
-export function clearAIChatHistory(role: string = "Student") {
+export function clearAIChatHistory(
+    role: string = "Student"
+) {
     saveAIChatHistory([], role);
     return true;
 }
 
+
 export function getSharedAIChats(): any[] {
-    try {
-        if (!fs.existsSync(sharedChatsFile)) {
-            fs.writeFileSync(sharedChatsFile, JSON.stringify([], null, 2));
-            return [];
-        }
-        const data = fs.readFileSync(sharedChatsFile, 'utf8');
-        return JSON.parse(data) || [];
-    } catch {
-        return [];
-    }
+    return inMemorySharedChats;
 }
 
 export function saveSharedAIChats(chats: any[]) {
-    fs.writeFileSync(sharedChatsFile, JSON.stringify(chats, null, 2));
+    inMemorySharedChats = chats;
+    safeWriteFile(sharedChatsFile, JSON.stringify(chats, null, 2));
 }
 
 export function createSharedAIChat(shareData: { title?: string; messages: any[]; sharedBy?: string }) {
@@ -630,7 +647,7 @@ export function updateUser(id: string, updates: any) {
     const users = getUsers();
     const index = users.findIndex((u: any) => u.id === id);
     if (index === -1) return null;
-    
+
     users[index] = {
         ...users[index],
         ...updates,
