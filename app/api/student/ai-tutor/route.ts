@@ -453,83 +453,97 @@ async function fetchGeminiResponse(question: string, history: any[] = []): Promi
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) return null;
 
-    try {
-        const model = process.env.GEMINI_MODEL || "gemini-1.5-flash";
-        const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+    // List of candidate Gemini models to try in sequence
+    const preferredModel = (process.env.GEMINI_MODEL || "").trim();
+    const candidateModels = [
+        preferredModel && !preferredModel.includes("3.6") ? preferredModel : null,
+        "gemini-1.5-flash",
+        "gemini-2.0-flash",
+        "gemini-2.5-flash",
+        "gemini-1.5-pro"
+    ].filter(Boolean) as string[];
 
-        // Build conversation history format for Gemini API ensuring alternating roles starting with user
-        const contents: any[] = [];
-        let lastRole = "";
+    const modelsToTry = Array.from(new Set(candidateModels));
 
-        for (const m of history.slice(-8)) {
-            const role = m.role === "user" ? "user" : "model";
-            if (role !== lastRole && (contents.length > 0 || role === "user")) {
-                contents.push({
-                    role,
-                    parts: [{ text: m.content || "" }]
-                });
-                lastRole = role;
-            }
+    // Build conversation history format for Gemini API ensuring alternating roles starting with user
+    const contents: any[] = [];
+    let lastRole = "";
+
+    for (const m of history.slice(-8)) {
+        const role = m.role === "user" ? "user" : "model";
+        if (role !== lastRole && (contents.length > 0 || role === "user")) {
+            contents.push({
+                role,
+                parts: [{ text: m.content || "" }]
+            });
+            lastRole = role;
         }
+    }
 
-        if (lastRole === "user") {
-            contents[contents.length - 1].parts[0].text += `\n\n${question}`;
-        } else {
-            contents.push({ role: "user", parts: [{ text: question }] });
-        }
+    if (lastRole === "user") {
+        contents[contents.length - 1].parts[0].text += `\n\n${question}`;
+    } else {
+        contents.push({ role: "user", parts: [{ text: question }] });
+    }
 
-        const response = await fetch(url, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            signal: AbortSignal.timeout(7000),
-            body: JSON.stringify({
-                systemInstruction: {
-                    parts: [{ text: SYSTEM_PROMPT }]
-                },
-                generationConfig: {
-                    temperature: 0.3
-                },
-                contents
-            })
-        });
-
-        if (!response.ok) {
-            const errorBody = await response.text();
-            console.error(`[AI Tutor API] Gemini API HTTP Error: ${response.status} ${response.statusText}: ${errorBody}`);
-            return null;
-        }
-
-        const data = await response.json();
-        const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
-        if (!text) return null;
-
+    for (const model of modelsToTry) {
         try {
-            const cleanText = text.replace(/```json/g, "").replace(/```/g, "").trim();
-            if (cleanText.startsWith("{") && cleanText.endsWith("}")) {
-                const parsed = JSON.parse(cleanText);
-                const content = parsed.content || parsed.response || parsed.text || parsed.answer || parsed.message || cleanText;
+            const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+
+            const response = await fetch(url, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                signal: AbortSignal.timeout(7000),
+                body: JSON.stringify({
+                    systemInstruction: {
+                        parts: [{ text: SYSTEM_PROMPT }]
+                    },
+                    generationConfig: {
+                        temperature: 0.4
+                    },
+                    contents
+                })
+            });
+
+            if (!response.ok) {
+                const errorBody = await response.text();
+                console.error(`[AI Tutor API] Gemini API Model '${model}' HTTP Error ${response.status}: ${errorBody}`);
+                continue; // Try next model candidate
+            }
+
+            const data = await response.json();
+            const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
+            if (!text) continue;
+
+            try {
+                const cleanText = text.replace(/```json/g, "").replace(/```/g, "").trim();
+                if (cleanText.startsWith("{") && cleanText.endsWith("}")) {
+                    const parsed = JSON.parse(cleanText);
+                    const content = parsed.content || parsed.response || parsed.text || parsed.answer || parsed.message || cleanText;
+                    return {
+                        content: String(content),
+                        keyPoints: Array.isArray(parsed.keyPoints) ? parsed.keyPoints : [],
+                        sources: Array.isArray(parsed.sources) ? parsed.sources : []
+                    };
+                }
                 return {
-                    content: String(content),
-                    keyPoints: Array.isArray(parsed.keyPoints) ? parsed.keyPoints : [],
-                    sources: Array.isArray(parsed.sources) ? parsed.sources : []
+                    content: cleanText,
+                    keyPoints: ["Academic key point", "Core definition & application"],
+                    sources: []
+                };
+            } catch {
+                return {
+                    content: text,
+                    keyPoints: ["Academic key point", "Core definition & application"],
+                    sources: []
                 };
             }
-            return {
-                content: cleanText,
-                keyPoints: ["Academic key point", "Core definition & application"],
-                sources: []
-            };
-        } catch {
-            return {
-                content: text,
-                keyPoints: ["Academic key point", "Core definition & application"],
-                sources: []
-            };
+        } catch (err) {
+            console.error(`[AI Tutor API] Gemini API Exception with model '${model}':`, err);
         }
-    } catch (err) {
-        console.error("[AI Tutor API] Gemini API Exception:", err);
-        return null;
     }
+
+    return null;
 }
 
 // GET /api/student/ai-tutor - Retrieve chat history & suggested questions
