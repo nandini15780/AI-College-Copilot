@@ -448,24 +448,99 @@ AI College of Engineering & Technology
     };
 }
 
+function parseGeminiPayload(text: string): { content: string; keyPoints: string[]; sources: string[] } {
+    const cleanText = text.replace(/```json/g, "").replace(/```/g, "").trim();
+
+    if (cleanText.startsWith("{") && cleanText.endsWith("}")) {
+        try {
+            const parsed = JSON.parse(cleanText);
+
+            if (parsed && typeof parsed.content === "string") {
+                return {
+                    content: parsed.content,
+                    keyPoints: Array.isArray(parsed.keyPoints) ? parsed.keyPoints : [],
+                    sources: Array.isArray(parsed.sources) ? parsed.sources : []
+                };
+            }
+
+            const textVal = parsed.text || parsed.answer || parsed.response || parsed.definition || parsed.explanation;
+            let formattedContent = "";
+            let extractedKeyPoints: string[] = [];
+
+            if (typeof textVal === "string") {
+                formattedContent = textVal;
+                if (parsed.primary_objectives && Array.isArray(parsed.primary_objectives)) {
+                    extractedKeyPoints = parsed.primary_objectives.map((x: any) => typeof x === "string" ? x : String(x));
+                } else if (parsed.key_points && Array.isArray(parsed.key_points)) {
+                    extractedKeyPoints = parsed.key_points.map((x: any) => typeof x === "string" ? x : String(x));
+                }
+            } else {
+                const parts: string[] = [];
+                if (parsed.topic) parts.push(`### ${parsed.topic}\n`);
+                if (parsed.definition) parts.push(`${parsed.definition}\n`);
+                if (parsed.description) parts.push(`${parsed.description}\n`);
+
+                Object.keys(parsed).forEach((key) => {
+                    if (["topic", "definition", "description"].includes(key)) return;
+                    const val = parsed[key];
+                    const heading = key.replace(/_/g, " ").replace(/\b\w/g, (c: string) => c.toUpperCase());
+
+                    if (Array.isArray(val)) {
+                        parts.push(`**${heading}**:`);
+                        val.forEach((item: any) => {
+                            if (typeof item === "string") {
+                                parts.push(`- ${item}`);
+                                if (extractedKeyPoints.length < 4) extractedKeyPoints.push(item);
+                            } else if (typeof item === "object" && item !== null) {
+                                const name = item.name || item.type || item.title || "";
+                                const desc = item.mechanism || item.description || item.detail || "";
+                                parts.push(`- **${name}**: ${desc}`);
+                                if (name && extractedKeyPoints.length < 4) extractedKeyPoints.push(`${name}`);
+                            }
+                        });
+                        parts.push("");
+                    } else if (typeof val === "string") {
+                        parts.push(`**${heading}**: ${val}\n`);
+                    }
+                });
+
+                formattedContent = parts.join("\n").trim();
+            }
+
+            return {
+                content: formattedContent || cleanText,
+                keyPoints: extractedKeyPoints,
+                sources: []
+            };
+        } catch {
+            // Ignore JSON parse error, fall through
+        }
+    }
+
+    return {
+        content: cleanText,
+        keyPoints: [],
+        sources: []
+    };
+}
+
 // Call Gemini API if GEMINI_API_KEY is present in environment
 async function fetchGeminiResponse(question: string, history: any[] = []): Promise<any | null> {
     const apiKey = process.env.GEMINI_API_KEY;
     if (!apiKey) return null;
 
-    // List of candidate Gemini models to try in sequence
     const preferredModel = (process.env.GEMINI_MODEL || "").trim();
     const candidateModels = [
-        preferredModel && !preferredModel.includes("3.6") ? preferredModel : null,
-        "gemini-1.5-flash",
-        "gemini-2.0-flash",
-        "gemini-2.5-flash",
-        "gemini-1.5-pro"
+        preferredModel && !preferredModel.includes("1.5") && !preferredModel.includes("2.5") ? preferredModel : null,
+        "gemini-3.1-flash-lite",
+        "gemini-3.5-flash",
+        "gemini-3.6-flash",
+        "gemini-flash-lite-latest",
+        "gemma-4-26b-a4b-it"
     ].filter(Boolean) as string[];
 
     const modelsToTry = Array.from(new Set(candidateModels));
 
-    // Build conversation history format for Gemini API ensuring alternating roles starting with user
     const contents: any[] = [];
     let lastRole = "";
 
@@ -499,7 +574,7 @@ async function fetchGeminiResponse(question: string, history: any[] = []): Promi
                         parts: [{ text: SYSTEM_PROMPT }]
                     },
                     generationConfig: {
-                        temperature: 0.4
+                        temperature: 0.3
                     },
                     contents
                 })
@@ -508,36 +583,14 @@ async function fetchGeminiResponse(question: string, history: any[] = []): Promi
             if (!response.ok) {
                 const errorBody = await response.text();
                 console.error(`[AI Tutor API] Gemini API Model '${model}' HTTP Error ${response.status}: ${errorBody}`);
-                continue; // Try next model candidate
+                continue;
             }
 
             const data = await response.json();
             const text = data?.candidates?.[0]?.content?.parts?.[0]?.text;
             if (!text) continue;
 
-            try {
-                const cleanText = text.replace(/```json/g, "").replace(/```/g, "").trim();
-                if (cleanText.startsWith("{") && cleanText.endsWith("}")) {
-                    const parsed = JSON.parse(cleanText);
-                    const content = parsed.content || parsed.response || parsed.text || parsed.answer || parsed.message || cleanText;
-                    return {
-                        content: String(content),
-                        keyPoints: Array.isArray(parsed.keyPoints) ? parsed.keyPoints : [],
-                        sources: Array.isArray(parsed.sources) ? parsed.sources : []
-                    };
-                }
-                return {
-                    content: cleanText,
-                    keyPoints: ["Academic key point", "Core definition & application"],
-                    sources: []
-                };
-            } catch {
-                return {
-                    content: text,
-                    keyPoints: ["Academic key point", "Core definition & application"],
-                    sources: []
-                };
-            }
+            return parseGeminiPayload(text);
         } catch (err) {
             console.error(`[AI Tutor API] Gemini API Exception with model '${model}':`, err);
         }
