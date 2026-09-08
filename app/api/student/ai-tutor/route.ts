@@ -67,6 +67,47 @@ function generateConversationalResponse(question: string, history: any[] = []) {
     const { topic: activeTopic, category: activeCategory } = extractActiveTopic(history);
     const lastMsg = history.length > 0 ? history[history.length - 1] : null;
 
+    // Casual Greetings & Conversational Queries
+    if (q === "hi" || q === "hello" || q === "hey" || q.startsWith("hi ") || q.startsWith("hello ") || q.startsWith("hey ") || q.includes("good morning") || q.includes("good afternoon") || q.includes("good evening") || q === "namaste") {
+        return {
+            content: `Hello! 👋 Welcome to your **AI College Copilot & Tutor**!\n\nI am here to assist you with your academic studies, coursework, and exam preparations. How can I help you today? You can ask me to:\n- **Explain concepts** (e.g. DBMS, Operating Systems, Java, Machine Learning)\n- **Give real-world examples & code snippets**\n- **Generate practice MCQs or interactive quizzes**\n- **Draft official notices or lesson plans**`,
+            keyPoints: ["Interactive study assistance", "Instant doubt resolution", "Practice quizzes & exam preparation"],
+            sources: []
+        };
+    }
+
+    if (q.includes("how are you") || q.includes("how r u") || q.includes("what's up") || q.includes("whats up")) {
+        return {
+            content: `I'm doing great and ready to assist you! 🎓 What topic, assignment, or subject would you like to work on right now?`,
+            keyPoints: ["Ready to help with your college studies!"],
+            sources: []
+        };
+    }
+
+    if (q.includes("who are you") || q.includes("what are you") || q.includes("what can you do") || q.includes("help me") || q === "help") {
+        return {
+            content: `I am your **AI College Copilot & Personal AI Tutor** 🤖🎓!\n\nHere is how I can help you:\n1. **Concept Explanations**: Clear, structured breakdowns of engineering & computer science topics.\n2. **Code & Analogies**: Practical programming examples in Java, Python, SQL, C++, and real-world analogies.\n3. **Practice & Revision**: Interactive quizzes, revision notes, and exam prep MCQs.\n4. **Faculty Support**: Lesson plans, syllabus rubrics, and official college circular drafts.\n\nTry asking me a question like *"What is DBMS?"* or *"Explain process vs thread"!*`,
+            keyPoints: ["AI study copilot for students and faculty", "Supports DBMS, OS, AI/ML, Java, Networks & more"],
+            sources: []
+        };
+    }
+
+    if (q.includes("thank") || q.includes("thanks") || q.includes("awesome") || q.includes("great job")) {
+        return {
+            content: `You're very welcome! 🌟 Keep up the fantastic effort with your studies. Feel free to ask whenever you run into any doubt!`,
+            keyPoints: ["Happy learning!"],
+            sources: []
+        };
+    }
+
+    if (q === "bye" || q === "goodbye" || q.includes("see you")) {
+        return {
+            content: `Goodbye! 🙋‍♂️ Best of luck with your studies, and come back anytime you need assistance!`,
+            keyPoints: ["Happy studying!"],
+            sources: []
+        };
+    }
+
     // 0. Official College Notice & Circular Draft Request
     if (q.includes("notice") || q.includes("circular") || q.includes("official message") || q.includes("announcement") || (q.includes("draft") && q.includes("exam"))) {
         const dateStr = new Date().toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' });
@@ -363,10 +404,10 @@ AI College of Engineering & Technology
         };
     }
 
-    // 9. Anti-Hallucination & Ambiguity Guardrail (No generic fill-in-the-blank text!)
-    if (q.length < 3 || /^[^a-zA-Z0-9]+$/.test(q)) {
+    // 9. Anti-Hallucination & Ambiguity Guardrail
+    if (q.length < 2 || /^[^a-zA-Z0-9]+$/.test(q)) {
         return {
-            content: `I want to make sure I give you an accurate academic explanation! 🎓 Could you please clarify your question with a bit more detail?`,
+            content: `I want to make sure I give you an accurate academic explanation! 🎓 Could you please clarify your question with a bit more detail?\n\nExample: *"What is DBMS?"* or *"Explain normalization"*.`,
             keyPoints: [
                 "Please type a full question or academic topic.",
                 "Example: 'What is DBMS?' or 'Explain normalization'."
@@ -375,15 +416,15 @@ AI College of Engineering & Technology
         };
     }
 
-    // Fallback for general unrecognized academic queries: Provide clean, factual structure without bogus claims
+    // Fallback for general unrecognized queries
     return {
         content: `Here is a clear academic overview of **${question}**:\n\nUnderstanding **${question}** involves analyzing its core principles, real-world application, and theoretical foundations.\n\nIf you would like a deeper dive, feel free to ask me to:\n- **Explain in simple language** (with real-world analogies)\n- **Give a practical code or real-world example**\n- **Generate practice MCQs or an interactive quiz**`,
         keyPoints: [
-            "Core Principle: Focus on fundamental concepts and definitions.",
-            "Application: Analyze real-world software & engineering implementations.",
-            "Next Step: Ask for a simplified explanation, example, or quiz."
+            `Core Principle of ${question}`,
+            "Practical engineering & software implementation",
+            "Next Step: Ask for a simplified explanation, example, or quiz"
         ],
-        sources: ["Course_Syllabus_2025.pdf", "Academic_Reference_Notes.pdf"]
+        sources: ["Course_Syllabus_2026.pdf", "Academic_Reference_Notes.pdf"]
     };
 }
 
@@ -396,15 +437,26 @@ async function fetchGeminiResponse(question: string, history: any[] = []): Promi
         const model = process.env.GEMINI_MODEL || "gemini-1.5-flash";
         const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
 
-        // Build conversation history format for Gemini API
+        // Build conversation history format for Gemini API ensuring alternating roles starting with user
         const contents: any[] = [];
-        history.slice(-10).forEach((m) => {
-            contents.push({
-                role: m.role === "user" ? "user" : "model",
-                parts: [{ text: m.content }]
-            });
-        });
-        contents.push({ role: "user", parts: [{ text: question }] });
+        let lastRole = "";
+
+        for (const m of history.slice(-8)) {
+            const role = m.role === "user" ? "user" : "model";
+            if (role !== lastRole && (contents.length > 0 || role === "user")) {
+                contents.push({
+                    role,
+                    parts: [{ text: m.content || "" }]
+                });
+                lastRole = role;
+            }
+        }
+
+        if (lastRole === "user") {
+            contents[contents.length - 1].parts[0].text += `\n\n${question}`;
+        } else {
+            contents.push({ role: "user", parts: [{ text: question }] });
+        }
 
         const response = await fetch(url, {
             method: "POST",
@@ -415,8 +467,7 @@ async function fetchGeminiResponse(question: string, history: any[] = []): Promi
                     parts: [{ text: SYSTEM_PROMPT }]
                 },
                 generationConfig: {
-                    responseMimeType: "application/json",
-                    temperature: 0.2
+                    temperature: 0.3
                 },
                 contents
             })
@@ -434,11 +485,20 @@ async function fetchGeminiResponse(question: string, history: any[] = []): Promi
 
         try {
             const cleanText = text.replace(/```json/g, "").replace(/```/g, "").trim();
-            const parsed = JSON.parse(cleanText);
-            if (parsed && typeof parsed.content === "string") {
-                return parsed;
+            if (cleanText.startsWith("{") && cleanText.endsWith("}")) {
+                const parsed = JSON.parse(cleanText);
+                const content = parsed.content || parsed.response || parsed.text || parsed.answer || parsed.message || cleanText;
+                return {
+                    content: String(content),
+                    keyPoints: Array.isArray(parsed.keyPoints) ? parsed.keyPoints : [],
+                    sources: Array.isArray(parsed.sources) ? parsed.sources : []
+                };
             }
-            return null;
+            return {
+                content: cleanText,
+                keyPoints: ["Academic key point", "Core definition & application"],
+                sources: []
+            };
         } catch {
             return {
                 content: text,
