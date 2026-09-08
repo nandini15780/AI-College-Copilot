@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { NextResponse } from "next/server";
 import { getAIChatHistory, addAIMessage, clearAIChatHistory } from "@/lib/db";
 
@@ -407,6 +409,7 @@ async function fetchGeminiResponse(question: string, history: any[] = []): Promi
         const response = await fetch(url, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
+            signal: AbortSignal.timeout(7000),
             body: JSON.stringify({
                 systemInstruction: {
                     parts: [{ text: SYSTEM_PROMPT }]

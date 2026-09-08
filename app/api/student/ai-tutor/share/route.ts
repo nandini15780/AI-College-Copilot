@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { NextResponse } from "next/server";
 import { createSharedAIChat, getAIChatHistory } from "@/lib/db";
 import os from "os";
