@@ -67,8 +67,20 @@ function generateConversationalResponse(question: string, history: any[] = []) {
     const { topic: activeTopic, category: activeCategory } = extractActiveTopic(history);
     const lastMsg = history.length > 0 ? history[history.length - 1] : null;
 
-    // Casual Greetings & Conversational Queries
-    if (q === "hi" || q === "hello" || q === "hey" || q.startsWith("hi ") || q.startsWith("hello ") || q.startsWith("hey ") || q.includes("good morning") || q.includes("good afternoon") || q.includes("good evening") || q === "namaste") {
+    // Casual Greetings & Conversational Queries (Handles "hii", "hiii", "heyy", "hellooo", etc.)
+    const cleanAlpha = q.replace(/[^a-z]/g, "");
+    const isGreeting = /^h+i+$/i.test(cleanAlpha) ||
+                       /^h+e+y+$/i.test(cleanAlpha) ||
+                       /^h+e+l+o+$/i.test(cleanAlpha) ||
+                       /^h+e+l+l+o+$/i.test(cleanAlpha) ||
+                       /^y+o+$/i.test(cleanAlpha) ||
+                       /^s+u+p+$/i.test(cleanAlpha) ||
+                       q.startsWith("hi ") || q.startsWith("hii ") || q.startsWith("hiii ") ||
+                       q.startsWith("hello ") || q.startsWith("hey ") || q.startsWith("heyy ") ||
+                       q.includes("good morning") || q.includes("good afternoon") ||
+                       q.includes("good evening") || q.includes("namaste") || q === "hola";
+
+    if (isGreeting) {
         return {
             content: `Hello! 👋 Welcome to your **AI College Copilot & Tutor**!\n\nI am here to assist you with your academic studies, coursework, and exam preparations. How can I help you today? You can ask me to:\n- **Explain concepts** (e.g. DBMS, Operating Systems, Java, Machine Learning)\n- **Give real-world examples & code snippets**\n- **Generate practice MCQs or interactive quizzes**\n- **Draft official notices or lesson plans**`,
             keyPoints: ["Interactive study assistance", "Instant doubt resolution", "Practice quizzes & exam preparation"],
@@ -104,6 +116,14 @@ function generateConversationalResponse(question: string, history: any[] = []) {
         return {
             content: `Goodbye! 🙋‍♂️ Best of luck with your studies, and come back anytime you need assistance!`,
             keyPoints: ["Happy studying!"],
+            sources: []
+        };
+    }
+
+    if (q === "ok" || q === "okay" || q === "sure" || q === "got it" || q === "cool" || q === "alright") {
+        return {
+            content: `Great! Let me know if you have any questions or if you want to explore a new topic! 🎓`,
+            keyPoints: ["Ready for your next question!"],
             sources: []
         };
     }

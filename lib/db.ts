@@ -184,7 +184,7 @@ let inMemoryUsers: any[] = (() => {
             const data = fs.readFileSync(usersFile, 'utf8');
             return JSON.parse(data) || [];
         }
-    } catch (e) {}
+    } catch (e) { }
     return [];
 })();
 
@@ -194,7 +194,7 @@ let inMemoryDashboardData: any = (() => {
             const data = fs.readFileSync(dashboardFile, 'utf8');
             return JSON.parse(data) || defaultDashboardData;
         }
-    } catch (e) {}
+    } catch (e) { }
     return defaultDashboardData;
 })();
 
@@ -246,7 +246,7 @@ let inMemoryFacultyDashboardData: any = (() => {
             const data = fs.readFileSync(facultyDashboardFile, 'utf8');
             return JSON.parse(data) || defaultFacultyDashboardData;
         }
-    } catch (e) {}
+    } catch (e) { }
     return defaultFacultyDashboardData;
 })();
 
@@ -256,7 +256,7 @@ let inMemorySharedChats: any[] = (() => {
             const data = fs.readFileSync(sharedChatsFile, 'utf8');
             return JSON.parse(data) || [];
         }
-    } catch (e) {}
+    } catch (e) { }
     return [];
 })();
 
