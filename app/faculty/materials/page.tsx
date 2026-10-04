@@ -101,30 +101,38 @@ export default function FacultyMaterialsPage() {
     if (!title.trim()) return;
     setSaving(true);
 
-    const localFileUrl = file ? URL.createObjectURL(file) : null;
+    // Read file as base64 data URL so it persists without a blob URL
+    const readFileAsDataUrl = (f: File): Promise<string> =>
+      new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result as string);
+        reader.readAsDataURL(f);
+      });
+
+    const fileDataUrl = file ? await readFileAsDataUrl(file) : null;
     const localFileName = file ? file.name : `${title}.pdf`;
-    const localFileSize = file ? `${(file.size / 1024 / 1024).toFixed(2)} MB` : "2.1 MB";
+    const localFileSize = file ? `${(file.size / 1024 / 1024).toFixed(2)} MB` : "—";
 
     try {
       const formData = new FormData();
       formData.append("type", "material");
       formData.append("title", title);
       formData.append("materialType", type);
+      if (fileDataUrl) formData.append("fileDataUrl", fileDataUrl);
       if (file) formData.append("file", file);
       const res = await fetch("/api/faculty/dashboard", { method: "POST", body: formData });
-
       const data = await res.json();
-      const serverUrl = data.item?.downloadUrl || localFileUrl;
 
       const newItem = {
         id: data.item?.id || Date.now().toString(),
         title: title.trim(),
-        type: type,
+        type,
         uploadedAt: "Just now",
         size: localFileSize,
         author: userName,
         fileName: localFileName,
-        downloadUrl: serverUrl || "#",
+        fileDataUrl,          // base64 data URL of the actual file
+        downloadUrl: data.item?.downloadUrl || null,
       };
 
       setTitle("");
@@ -135,14 +143,14 @@ export default function FacultyMaterialsPage() {
       const newItem = {
         id: Date.now().toString(),
         title: title.trim(),
-        type: type,
+        type,
         uploadedAt: "Just now",
         size: localFileSize,
         author: userName,
         fileName: localFileName,
-        downloadUrl: localFileUrl || "#",
+        fileDataUrl,
+        downloadUrl: null,
       };
-
       setTitle("");
       setType("PDF");
       setFile(null);
@@ -423,25 +431,41 @@ This document serves as the official study guide, reference notes, and lecture r
             </div>
 
             {/* DOCUMENT PREVIEW */}
-            <div className="flex-1 overflow-y-auto p-4 sm:p-8 bg-slate-950 flex justify-center items-start">
-              {selectedMaterial.downloadUrl && selectedMaterial.downloadUrl !== "#" ? (
+            <div className="flex-1 overflow-y-auto p-4 sm:p-6 bg-slate-950 flex justify-center items-start">
+              {selectedMaterial.fileDataUrl ? (
+                /* ── Actual uploaded file ── */
+                <div className="w-full flex flex-col gap-3">
+                  <div className="flex items-center gap-2 text-xs text-slate-400 px-1">
+                    <span className="font-semibold text-slate-300">{selectedMaterial.fileName}</span>
+                    {selectedMaterial.size && selectedMaterial.size !== "—" && <span>• {selectedMaterial.size}</span>}
+                  </div>
+                  <iframe
+                    src={selectedMaterial.fileDataUrl}
+                    className="w-full rounded-xl border border-slate-700 bg-white"
+                    style={{ minHeight: "680px" }}
+                    title={selectedMaterial.title}
+                  />
+                </div>
+              ) : selectedMaterial.downloadUrl && selectedMaterial.downloadUrl !== "#" ? (
+                /* ── Server-hosted file URL ── */
                 <iframe
                   src={selectedMaterial.downloadUrl}
                   className="w-full h-[650px] rounded-lg border border-slate-700 bg-white"
                   title={selectedMaterial.title}
                 />
               ) : (
+                /* ── Fallback generated document (no file uploaded) ── */
                 <div id="printable-material-document" className="w-full max-w-3xl bg-white text-slate-900 shadow-2xl rounded-2xl p-8 sm:p-12 border border-slate-200 font-serif leading-relaxed text-left relative my-4">
-                  
+
                   <div className="text-center border-b-2 border-slate-900 pb-4 mb-6 font-sans">
                     <div className="flex justify-center items-center gap-3 mb-2">
                       <Building2 className="h-9 w-9 text-slate-900" />
                       <h1 className="text-xl sm:text-2xl font-black tracking-wider text-slate-900 uppercase">
-                        AI COLLEGE OF ENGINEERING & TECHNOLOGY
+                        DATTA MEGHE COLLEGE OF ENGINEERING
                       </h1>
                     </div>
                     <p className="text-[11px] font-bold text-slate-700 uppercase tracking-widest">
-                      Department of Computer Engineering & Information Technology
+                      Department of Computer Engineering
                     </p>
                     <p className="text-[11px] text-slate-600">
                       Faculty Uploaded Course Resource | Academic Session 2026

@@ -52,6 +52,8 @@ export default function Assignments() {
             extra: dueLabel(a.due, a.status),
             status: a.status,
             downloadUrl: a.downloadUrl,
+            fileName: a.fileName,
+            fileDataUrl: a.fileDataUrl,
             statusType: a.status === "In Progress" ? "progress" : a.status === "Submitted" ? "submitted" : a.status === "Overdue" ? "overdue" : "notstarted",
             icon: a.status === "Submitted" ? "check" : a.status === "Overdue" ? "alert" : "file",
             iconBg: a.status === "Submitted" ? "bg-[#e4f8ed]" : a.status === "Overdue" ? "bg-[#ffe6e9]" : "bg-[#eee7ff]",
@@ -374,22 +376,41 @@ export default function Assignments() {
             </div>
 
             <div className="flex-1 overflow-y-auto p-4 sm:p-8 bg-slate-950 flex justify-center items-start">
-              <div id="printable-assignment-sheet" className="w-full max-w-3xl bg-white text-slate-900 shadow-2xl rounded-2xl p-8 sm:p-12 border border-slate-200 font-serif leading-relaxed text-left relative my-4">
-                
-                <div className="text-center border-b-2 border-slate-900 pb-4 mb-6 font-sans">
-                  <div className="flex justify-center items-center gap-3 mb-2">
-                    <Building2 className="h-9 w-9 text-slate-900" />
-                    <h1 className="text-xl sm:text-2xl font-black tracking-wider text-slate-900 uppercase">
-                      AI COLLEGE OF ENGINEERING & TECHNOLOGY
-                    </h1>
+              {selectedAssignment.fileDataUrl ? (
+                <div className="w-full flex flex-col gap-3">
+                  <div className="flex items-center gap-2 text-xs text-slate-400 px-1">
+                    <span className="font-semibold text-slate-300">{selectedAssignment.fileName || selectedAssignment.title}</span>
                   </div>
-                  <p className="text-[11px] font-bold text-slate-700 uppercase tracking-widest">
-                    Department of Computer Engineering & Information Technology
-                  </p>
-                  <p className="text-[11px] text-slate-600">
-                    Official Student Course Assignment Sheet | Term 2026
-                  </p>
+                  <iframe
+                    src={selectedAssignment.fileDataUrl}
+                    className="w-full rounded-xl border border-slate-700 bg-white"
+                    style={{ minHeight: "680px" }}
+                    title={selectedAssignment.title}
+                  />
                 </div>
+              ) : selectedAssignment.downloadUrl && selectedAssignment.downloadUrl !== "#" ? (
+                <iframe
+                  src={selectedAssignment.downloadUrl}
+                  className="w-full h-[650px] rounded-lg border border-slate-700 bg-white"
+                  title={selectedAssignment.title}
+                />
+              ) : (
+                <div id="printable-assignment-sheet" className="w-full max-w-3xl bg-white text-slate-900 shadow-2xl rounded-2xl p-8 sm:p-12 border border-slate-200 font-serif leading-relaxed text-left relative my-4">
+                  
+                  <div className="text-center border-b-2 border-slate-900 pb-4 mb-6 font-sans">
+                    <div className="flex justify-center items-center gap-3 mb-2">
+                      <Building2 className="h-9 w-9 text-slate-900" />
+                      <h1 className="text-xl sm:text-2xl font-black tracking-wider text-slate-900 uppercase">
+                        DATTA MEGHE COLLEGE OF ENGINEERING
+                      </h1>
+                    </div>
+                    <p className="text-[11px] font-bold text-slate-700 uppercase tracking-widest">
+                      Department of Computer Engineering
+                    </p>
+                    <p className="text-[11px] text-slate-600">
+                      Official Student Course Assignment Sheet | Term 2026
+                    </p>
+                  </div>
 
                 <div className="my-6 border-y border-slate-300 py-4 text-center font-sans">
                   <span className="text-xs font-extrabold text-purple-700 uppercase tracking-wider block mb-1">
@@ -447,11 +468,12 @@ Complete the technical exercises and problem statements outlined for ${selectedA
                 </div>
 
               </div>
-            </div>
-
+            )}
           </div>
+
         </div>
-      )}
+      </div>
+    )}
     </main>
   );
 }

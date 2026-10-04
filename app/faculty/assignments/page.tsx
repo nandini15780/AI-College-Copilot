@@ -87,6 +87,18 @@ export default function FacultyAssignmentsPage() {
     if (!title.trim()) return;
     setSaving(true);
 
+    // Read file as base64 data URL so it persists without a blob URL
+    const readFileAsDataUrl = (f: File): Promise<string> =>
+      new Promise((resolve) => {
+        const reader = new FileReader();
+        reader.onload = () => resolve(reader.result as string);
+        reader.readAsDataURL(f);
+      });
+
+    const fileDataUrl = file ? await readFileAsDataUrl(file) : null;
+    const localFileName = file ? file.name : null;
+    const localFileSize = file ? `${(file.size / 1024 / 1024).toFixed(2)} MB` : "—";
+
     try {
       const formData = new FormData();
       formData.append("type", "assignment");
@@ -97,23 +109,45 @@ export default function FacultyAssignmentsPage() {
 
       const res = await fetch("/api/faculty/dashboard", { method: "POST", body: formData });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Create failed");
+
+      const newItem = {
+        id: data.item?.id || Date.now().toString(),
+        title: title.trim(),
+        due: due || "2026-09-25",
+        students: Number(students) || 45,
+        status: "Active",
+        course: "Computer Engineering",
+        marks: "100 Marks",
+        fileName: localFileName,
+        fileSize: localFileSize,
+        fileDataUrl,          // base64 data URL of the actual file
+        instructor: userName,
+      };
 
       setTitle("");
       setDue("");
       setStudents("45");
       setFile(null);
-      const refreshed = await fetch("/api/faculty/dashboard");
-      const result = await refreshed.json();
-      setAssignments(result.assignments?.length ? result.assignments : [
-        { id: Date.now().toString(), title, due: due || "2026-09-25", students: Number(students) || 45, status: "Active", course: "Computer Engineering", marks: "100 Marks" },
-        ...assignments,
-      ]);
+      setAssignments((prev) => [newItem, ...prev]);
     } catch (e) {
-      setAssignments([
-        { id: Date.now().toString(), title, due: due || "2026-09-25", students: Number(students) || 45, status: "Active", course: "Computer Engineering", marks: "100 Marks" },
-        ...assignments,
-      ]);
+      const newItem = {
+        id: Date.now().toString(),
+        title: title.trim(),
+        due: due || "2026-09-25",
+        students: Number(students) || 45,
+        status: "Active",
+        course: "Computer Engineering",
+        marks: "100 Marks",
+        fileName: localFileName,
+        fileSize: localFileSize,
+        fileDataUrl,
+        instructor: userName,
+      };
+      setTitle("");
+      setDue("");
+      setStudents("45");
+      setFile(null);
+      setAssignments((prev) => [newItem, ...prev]);
     } finally {
       setSaving(false);
     }
@@ -370,72 +404,89 @@ Task 3: Performance Analysis & Conclusion [30 Marks]
             </div>
 
             {/* DOCUMENT PREVIEW */}
-            <div className="flex-1 overflow-y-auto p-4 sm:p-8 bg-slate-950 flex justify-center items-start">
-              <div id="printable-assignment-sheet" className="w-full max-w-3xl bg-white text-slate-900 shadow-2xl rounded-2xl p-8 sm:p-12 border border-slate-200 font-serif leading-relaxed text-left relative my-4">
-                
-                <div className="text-center border-b-2 border-slate-900 pb-4 mb-6 font-sans">
-                  <div className="flex justify-center items-center gap-3 mb-2">
-                    <Building2 className="h-9 w-9 text-slate-900" />
-                    <h1 className="text-xl sm:text-2xl font-black tracking-wider text-slate-900 uppercase">
-                      AI COLLEGE OF ENGINEERING & TECHNOLOGY
-                    </h1>
+            <div className="flex-1 overflow-y-auto p-4 sm:p-6 bg-slate-950 flex justify-center items-start">
+              {selectedAssignment.fileDataUrl ? (
+                /* ── Actual uploaded file ── */
+                <div className="w-full flex flex-col gap-3">
+                  <div className="flex items-center gap-2 text-xs text-slate-400 px-1">
+                    <span className="font-semibold text-slate-300">{selectedAssignment.fileName}</span>
+                    {selectedAssignment.fileSize && <span>• {selectedAssignment.fileSize}</span>}
                   </div>
-                  <p className="text-[11px] font-bold text-slate-700 uppercase tracking-widest">
-                    Department of Computer Engineering & Information Technology
-                  </p>
-                  <p className="text-[11px] text-slate-600">
-                    Official Course Assignment Sheet | Academic Year 2026-2027
-                  </p>
+                  <iframe
+                    src={selectedAssignment.fileDataUrl}
+                    className="w-full rounded-xl border border-slate-700 bg-white"
+                    style={{ minHeight: "680px" }}
+                    title={selectedAssignment.title}
+                  />
                 </div>
+              ) : (
+                /* ── Fallback generated sheet (no file uploaded) ── */
+                <div id="printable-assignment-sheet" className="w-full max-w-3xl bg-white text-slate-900 shadow-2xl rounded-2xl p-8 sm:p-12 border border-slate-200 font-serif leading-relaxed text-left relative my-4">
 
-                <div className="my-6 border-y border-slate-300 py-4 text-center font-sans">
-                  <span className="text-xs font-extrabold text-purple-700 uppercase tracking-wider block mb-1">
-                    STUDENT EVALUATION TASK
-                  </span>
-                  <h2 className="text-xl font-black text-slate-900 uppercase">
-                    {selectedAssignment.title}
-                  </h2>
+                  <div className="text-center border-b-2 border-slate-900 pb-4 mb-6 font-sans">
+                    <div className="flex justify-center items-center gap-3 mb-2">
+                      <Building2 className="h-9 w-9 text-slate-900" />
+                      <h1 className="text-xl sm:text-2xl font-black tracking-wider text-slate-900 uppercase">
+                        DATTA MEGHE COLLEGE OF ENGINEERING
+                      </h1>
+                    </div>
+                    <p className="text-[11px] font-bold text-slate-700 uppercase tracking-widest">
+                      Department of Computer Engineering
+                    </p>
+                    <p className="text-[11px] text-slate-600">
+                      Official Course Assignment Sheet | Academic Year 2026-2027
+                    </p>
+                  </div>
+
+                  <div className="my-6 border-y border-slate-300 py-4 text-center font-sans">
+                    <span className="text-xs font-extrabold text-purple-700 uppercase tracking-wider block mb-1">
+                      STUDENT EVALUATION TASK
+                    </span>
+                    <h2 className="text-xl font-black text-slate-900 uppercase">
+                      {selectedAssignment.title}
+                    </h2>
+                  </div>
+
+                  <div className="bg-slate-50 border border-slate-300 rounded-md p-4 mb-6 text-xs font-sans space-y-1.5">
+                    <div className="grid grid-cols-[140px_10px_1fr]">
+                      <span className="font-bold text-slate-700">Course / Subject</span>
+                      <span>:</span>
+                      <span className="font-bold text-slate-900">{selectedAssignment.course || "Computer Engineering"}</span>
+                    </div>
+                    <div className="grid grid-cols-[140px_10px_1fr]">
+                      <span className="font-bold text-slate-700">Faculty Instructor</span>
+                      <span>:</span>
+                      <span className="text-slate-900">{userName}</span>
+                    </div>
+                    <div className="grid grid-cols-[140px_10px_1fr]">
+                      <span className="font-bold text-slate-700">Deadline</span>
+                      <span>:</span>
+                      <span className="font-bold text-red-600">{selectedAssignment.due || "End of Semester"} (11:59 PM)</span>
+                    </div>
+                    <div className="grid grid-cols-[140px_10px_1fr]">
+                      <span className="font-bold text-slate-700">Evaluation Weightage</span>
+                      <span>:</span>
+                      <span className="text-slate-900">{selectedAssignment.marks || "100 Marks"}</span>
+                    </div>
+                  </div>
+
+                  <div className="my-8 text-sm text-slate-800 space-y-4 font-mono whitespace-pre-line leading-relaxed border border-slate-300 p-6 bg-slate-50 rounded-lg">
+                    {getAssignmentSheet(selectedAssignment)}
+                  </div>
+
+                  <div className="mt-12 pt-6 border-t border-slate-300 flex justify-between items-end font-sans text-xs text-slate-600">
+                    <div>
+                      <p className="font-bold text-slate-800">Academic Assessment Portal</p>
+                      <p>Verified Faculty Course Work</p>
+                    </div>
+                    <div className="text-right">
+                      <p className="font-bold text-slate-900 uppercase">{userName}</p>
+                      <p>Department Incharge</p>
+                    </div>
+                  </div>
+
                 </div>
-
-                <div className="bg-slate-50 border border-slate-300 rounded-md p-4 mb-6 text-xs font-sans space-y-1.5">
-                  <div className="grid grid-cols-[140px_10px_1fr]">
-                    <span className="font-bold text-slate-700">Course / Subject</span>
-                    <span>:</span>
-                    <span className="font-bold text-slate-900">{selectedAssignment.course || "Computer Engineering"}</span>
-                  </div>
-                  <div className="grid grid-cols-[140px_10px_1fr]">
-                    <span className="font-bold text-slate-700">Faculty Instructor</span>
-                    <span>:</span>
-                    <span className="text-slate-900">{userName}</span>
-                  </div>
-                  <div className="grid grid-cols-[140px_10px_1fr]">
-                    <span className="font-bold text-slate-700">Deadline</span>
-                    <span>:</span>
-                    <span className="font-bold text-red-600">{selectedAssignment.due || "End of Semester"} (11:59 PM)</span>
-                  </div>
-                  <div className="grid grid-cols-[140px_10px_1fr]">
-                    <span className="font-bold text-slate-700">Evaluation Weightage</span>
-                    <span>:</span>
-                    <span className="text-slate-900">{selectedAssignment.marks || "100 Marks"}</span>
-                  </div>
-                </div>
-
-                <div className="my-8 text-sm text-slate-800 space-y-4 font-mono whitespace-pre-line leading-relaxed border border-slate-300 p-6 bg-slate-50 rounded-lg">
-                  {getAssignmentSheet(selectedAssignment)}
-                </div>
-
-                <div className="mt-12 pt-6 border-t border-slate-300 flex justify-between items-end font-sans text-xs text-slate-600">
-                  <div>
-                    <p className="font-bold text-slate-800">Academic Assessment Portal</p>
-                    <p>Verified Faculty Course Work</p>
-                  </div>
-                  <div className="text-right">
-                    <p className="font-bold text-slate-900 uppercase">{userName}</p>
-                    <p>Department Incharge</p>
-                  </div>
-                </div>
-
-              </div>
+              )}
             </div>
 
           </div>

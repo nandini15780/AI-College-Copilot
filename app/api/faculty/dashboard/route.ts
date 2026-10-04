@@ -119,6 +119,7 @@ export async function POST(req: Request) {
         students: Number(formData.get("students") || 0),
         type: String(formData.get("materialType") || "PDF"),
         subject: String(formData.get("subject") || ""),
+        fileDataUrl: String(formData.get("fileDataUrl") || ""),
       };
     } else {
       const body = await req.json();

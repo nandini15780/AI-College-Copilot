@@ -53,12 +53,15 @@ export default function Materials() {
           const mapped = data.materials.map((m: any, idx: number) => ({
             id: m.id || `mat-${idx}`,
             subject: m.title || m.subject,
+            title: m.title || m.subject,
             semester: m.semester || "Sem 7",
             type: String(m.fileType || m.type || "PDF").toLowerCase().includes("ppt") ? "PPT" : "PDF",
             size: m.size || "2.4 MB",
             uploaded: m.createdAt ? formatTimestamp(m.createdAt) : m.uploadedDate || "10 Aug 2025",
             icon: String(m.fileType || m.type || "PDF").toLowerCase().includes("ppt") ? "ppt" : (idx % 2 === 0 ? "pdf-purple" : "pdf-blue"),
             downloadUrl: m.downloadUrl,
+            fileName: m.fileName,
+            fileDataUrl: m.fileDataUrl,
             author: m.author || "Dr. S. Sharma",
           }));
           setMaterialsList(mapped);
@@ -518,7 +521,20 @@ This document contains detailed lecture notes, core architectural diagrams, key 
 
             {/* PRINTABLE STUDY MATERIAL DOCUMENT / EMBEDDED FILE VIEWER */}
             <div className="flex-1 overflow-y-auto p-4 sm:p-8 bg-slate-950 flex justify-center items-start">
-              {selectedMaterial.downloadUrl && selectedMaterial.downloadUrl !== "#" ? (
+              {selectedMaterial.fileDataUrl ? (
+                <div className="w-full flex flex-col gap-3">
+                  <div className="flex items-center gap-2 text-xs text-slate-400 px-1">
+                    <span className="font-semibold text-slate-300">{selectedMaterial.fileName || selectedMaterial.subject}</span>
+                    {selectedMaterial.size && selectedMaterial.size !== "—" && <span>• {selectedMaterial.size}</span>}
+                  </div>
+                  <iframe
+                    src={selectedMaterial.fileDataUrl}
+                    className="w-full rounded-xl border border-slate-700 bg-white"
+                    style={{ minHeight: "680px" }}
+                    title={selectedMaterial.subject}
+                  />
+                </div>
+              ) : selectedMaterial.downloadUrl && selectedMaterial.downloadUrl !== "#" ? (
                 <iframe
                   src={selectedMaterial.downloadUrl}
                   className="w-full h-[650px] rounded-lg border border-slate-700 bg-white"
@@ -534,11 +550,11 @@ This document contains detailed lecture notes, core architectural diagrams, key 
                     <div className="flex justify-center items-center gap-3 mb-2">
                       <Building2 className="h-9 w-9 text-slate-900" />
                       <h1 className="text-xl sm:text-2xl font-black tracking-wider text-slate-900 uppercase">
-                        AI COLLEGE OF ENGINEERING & TECHNOLOGY
+                        DATTA MEGHE COLLEGE OF ENGINEERING
                       </h1>
                     </div>
                     <p className="text-[11px] font-bold text-slate-700 uppercase tracking-widest">
-                      Department of Computer Engineering & Information Technology
+                      Department of Computer Engineering
                     </p>
                     <p className="text-[11px] text-slate-600">
                       Official Course Notes & Reference Document | Academic Term 2026-2027

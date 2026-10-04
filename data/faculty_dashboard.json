@@ -50,6 +50,52 @@
   ],
   "assignments": [
     {
+      "id": "a-1791123584869",
+      "status": "Pending",
+      "students": 25,
+      "createdAt": "2026-10-04T14:19:44.869Z",
+      "title": "ML A!",
+      "department": "",
+      "category": "Academic",
+      "due": "2026-10-05",
+      "type": "PDF",
+      "subject": "",
+      "fileName": "Machine_Learning__CS_401__Notice.pdf",
+      "fileType": "application/pdf",
+      "size": "0.01 MB",
+      "downloadUrl": "/uploads/assignment-86f6e525-d398-4d62-87d3-62659d7adcb9.pdf",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "a-1791123220828",
+      "status": "Pending",
+      "students": 5,
+      "createdAt": "2026-10-04T14:13:40.828Z",
+      "title": "ML Assignment 1 ",
+      "department": "",
+      "category": "Academic",
+      "due": "2026-10-05",
+      "type": "PDF",
+      "subject": "",
+      "fileName": "Machine_Learning__CS_401__Notice.pdf",
+      "fileType": "application/pdf",
+      "size": "0.01 MB",
+      "downloadUrl": "/uploads/assignment-11078f9b-0d4a-4b73-8ae1-2d22208164eb.pdf",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "a-1788966159899",
+      "status": "Pending",
+      "students": 5,
+      "createdAt": "2026-09-09T15:02:39.899Z",
+      "title": "ML",
+      "due": "2026-09-09",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
       "id": "a-1788814117595",
       "status": "Pending",
       "students": 5,
@@ -107,6 +153,83 @@
     }
   ],
   "notices": [
+    {
+      "id": "n-1791125599106",
+      "read": false,
+      "date": "Today",
+      "createdAt": "2026-10-04T14:53:19.106Z",
+      "title": "DECLARATION OF HOLIDAY ON 12TH OCTOBER 2024",
+      "department": "Faculty / Academic Cell",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1790690740796",
+      "read": false,
+      "date": "Today",
+      "createdAt": "2026-09-29T14:05:40.796Z",
+      "title": "Here is a structured 50-minute lesson plan on DBMS Normalization...",
+      "department": "Faculty / Academic Cell",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1789029986058",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-10T08:46:26.058Z",
+      "title": "submission",
+      "department": "IT",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1789029746710",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-10T08:42:26.710Z",
+      "title": "presentation",
+      "department": "comps",
+      "category": "Urgent",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1788966221872",
+      "read": false,
+      "date": "Today",
+      "createdAt": "2026-09-09T15:03:41.872Z",
+      "title": "Call for Papers: Annual Technical Paper Presentation 2026",
+      "department": "Faculty / Academic Cell",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1788966080091",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-09T15:01:20.091Z",
+      "title": "Hackathon",
+      "department": "comps, IT",
+      "category": "Event",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "n-1788964952632",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-09T14:42:32.632Z",
+      "title": "paper presentation",
+      "department": "all",
+      "category": "Event",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
     {
       "id": "n-1788887343160",
       "read": false,
@@ -270,6 +393,52 @@
   ],
   "materials": [
     {
+      "id": "m-1791125526585",
+      "uploadedAt": "Just now",
+      "createdAt": "2026-10-04T14:52:06.585Z",
+      "title": "HOLIDAY",
+      "department": "",
+      "category": "Academic",
+      "due": "",
+      "students": 0,
+      "type": "PDF",
+      "subject": "",
+      "fileDataUrl": "data:application/pdf;base64,JVBERi0xLjMKJbrfrOAKMyAwIG9iago8PC9UeXBlIC9QYWdlCi9QYXJlbnQgMSAwIFIKL1Jlc291cmNlcyAyIDAgUgovTWVkaWFCb3ggWzAgMCA1OTUuMjc5OTk5OTk5OTk5OTcyNyA4NDEuODg5OTk5OTk5OTk5OTg2NF0KL0NvbnRlbnRzIDQgMCBSCj4+CmVuZG9iago0IDAgb2JqCjw8Ci9MZW5ndGggMzYyMAo+PgpzdHJlYW0KMC41NjcwMDAwMDAwMDAwMDAxIHcKMCBHCkJUCi9GMiAxNSBUZgoxNy4yNSBUTAowLjA1OSAwLjA5IDAuMTY1IHJnCjEzNy41ODc3OTUyNzU1OTA2MjIyIDc5MC44NjYzNzc5NTI3NTU4OTcyIFRkCihEQVRUQSBNRUdIRSBDT0xMRUdFIE9GIEVOR0lORUVSSU5HKSBUagpFVApCVAovRjEgOCBUZgo5LjE5OTk5OTk5OTk5OTk5OTMgVEwKMC4yNzggMC4zMzMgMC40MTIgcmcKMTg4LjQ3Nzc5NTI3NTU5MDU4MDEgNzc2LjY5MzE0OTYwNjI5OTEzIFRkCihcKEFmZmlsaWF0ZWQgdG8gUmFzaHRyYXNhbnQgVHVrYWRvamkgTWFoYXJhaiBOYWdwdXIgVW5pdmVyc2l0eVwpKSBUagpFVApCVAovRjEgOCBUZgo5LjE5OTk5OTk5OTk5OTk5OTMgVEwKMC4yNzggMC4zMzMgMC40MTIgcmcKMjE0LjUxNzc5NTI3NTU5MDYwMDYgNzY1LjM1NDU2NjkyOTEzMzg1MjcgVGQKKEFpcm9saSwgTmF2aSBNdW1iYWkgfCBXZWJzaXRlOiB3d3cuZG1jZS5hYy5pbikgVGoKRVQKMC4wNiAwLjA5IDAuMTYgUkcKMS43MDA3ODc0MDE1NzQ4MDMyIHcKNDIuNTE5Njg1MDM5MzcwMDgxNCA3NTQuMDE1OTg0MjUxOTY4NDYxNiBtCjU1Mi43NTU5MDU1MTE4MTEwNzkxIDc1NC4wMTU5ODQyNTE5Njg0NjE2IGwKUwpCVAovRjIgOSBUZgoxMC4zNDk5OTk5OTk5OTk5OTk2IFRMCjAuMiAwLjI1NSAwLjMzMyByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDczNy4wMDgxMTAyMzYyMjA0MzE5IFRkCihSZWYgTm86IERNQ0UvQ0lSQ1VMQVIvMjAyNi8wMSkgVGoKRVQKQlQKL0YyIDkgVGYKMTAuMzQ5OTk5OTk5OTk5OTk5NiBUTAowLjIgMC4yNTUgMC4zMzMgcmcKNDgzLjI3NTkwNTUxMTgxMTA2MDkgNzM3LjAwODExMDIzNjIyMDQzMTkgVGQKKERhdGU6IDA0LzEwLzIwMjYpIFRqCkVUCkJUCi9GMiAxMyBUZgoxNC45NDk5OTk5OTk5OTk5OTkzIFRMCjAuMDU5IDAuMDkgMC4xNjUgcmcKMjAyLjAyMjc5NTI3NTU5MDU2NzYgNzExLjQ5NjI5OTIxMjU5ODM4NzQgVGQKKE9GRklDSUFMIENJUkNVTEFSIC8gTk9USUNFKSBUagpFVApCVAovRjIgMTEgVGYKMTIuNjQ5OTk5OTk5OTk5OTk4NiBUTAowLjI2MyAwLjIyIDAuNzkyIHJnCjE1NC45Njc3OTUyNzU1OTA1NjA4IDY5MS42NTM3Nzk1Mjc1NTg5ODE1IFRkCihERUNMQVJBVElPTiBPRiBIT0xJREFZIE9OIDEyVEggT0NUT0JFUiAyMDI0KSBUagpFVApCVAovRjIgOSBUZgoxMC4zNDk5OTk5OTk5OTk5OTk2IFRMCjAuMiAwLjI1NSAwLjMzMyByZwo0Mi41MTk2ODUwMzkzNzAwODE0IDY2Ni4xNDE5Njg1MDM5MzY5MzY5IFRkCihJU1NVRUQgQlk6IERFUEFSVE1FTlQgT0YgQ09NUFVURVIgRU5HSU5FRVJJTkcpIFRqCkVUCjAuOTcgMC45OCAwLjk5IHJnCjQyLjUxOTY4NTAzOTM3MDA4MTQgNjUxLjk2ODc0MDE1NzQ4MDI4MzQgNTEwLjIzNjIyMDQ3MjQ0MTAwNDkgLTM3Mi43NTU5MDU1MTE4MTEwNzkxIHJlCmYKMC44IDAuODQgMC44OCBSRwo0Mi41MTk2ODUwMzkzNzAwODE0IDY1MS45Njg3NDAxNTc0ODAyODM0IDUxMC4yMzYyMjA0NzI0NDEwMDQ5IC0zNzIuNzU1OTA1NTExODExMDc5MSByZQpTCkJUCi9GMSA5LjUgVGYKMTAuOTI0OTk5OTk5OTk5OTk4OSBUTAowLjA1OSAwLjA5IDAuMTY1IHJnCjU2LjY5MjkxMzM4NTgyNjc3NzUgNjI5LjI5MTU3NDgwMzE0OTYxNSBUZAooQUkgQ09MTEVHRSBPRiBFTkdJTkVFUklORyAmIFRFQ0hOT0xPR1kpIFRqClQqICgpIFRqClQqIChDaXJjdWxhciBSZWYgTm86IEFJQ0VUL0FETUlOLzIwMjQvSC0xMiAgKSBUagpUKiAoRGF0ZTogT2N0b2JlciAxMCwgMjAyNCAgKSBUagpUKiAoVGFyZ2V0IEF1ZGllbmNlOiBBbGwgU3R1ZGVudHMsIEZhY3VsdHksIGFuZCBTdGFmZiAgKSBUagpUKiAoKSBUagpUKiAoTk9USUNFOiBERUNMQVJBVElPTiBPRiBIT0xJREFZIE9OIDEyVEggT0NUT0JFUiAyMDI0KSBUagpUKiAoKSBUagpUKiAoVGhpcyBpcyB0byBpbmZvcm0gYWxsIHN0dWRlbnRzLCBmYWN1bHR5LCBhbmQgc3RhZmYgbWVtYmVycyB0aGF0IHRoZSBjb2xsZWdlIHdpbGwgcmVtYWluIGNsb3NlZCBvbiBTYXR1cmRheSwgMTJ0aCkgVGoKVCogKE9jdG9iZXIgMjAyNCwgb24gYWNjb3VudCBvZiB0aGUgcHVibGljIGhvbGlkYXkuKSBUagpUKiAoKSBUagpUKiAoUGxlYXNlIG5vdGUgdGhlIGZvbGxvd2luZyBkaXJlY3RpdmVzOikgVGoKVCogKDEuIEFjYWRlbWljIEFjdGl2aXRpZXM6IEFsbCBzY2hlZHVsZWQgbGVjdHVyZXMsIHByYWN0aWNhbCBzZXNzaW9ucywgYW5kIGludGVybmFsIGV4YW1pbmF0aW9ucyBmb3IgdGhpcyBkYXkgc3RhbmQpIFRqClQqIChwb3N0cG9uZWQuIFJlc2NoZWR1bGVkIGRhdGVzIHdpbGwgYmUgbm90aWZpZWQgYnkgdGhlIHJlc3BlY3RpdmUgRGVwYXJ0bWVudCBIZWFkcy4pIFRqClQqICgyLiBBZG1pbmlzdHJhdGl2ZSBPZmZpY2VzOiBUaGUgYWRtaW5pc3RyYXRpdmUgb2ZmaWNlcywgbGlicmFyeSwgYW5kIGxhYm9yYXRvcnkgZmFjaWxpdGllcyB3aWxsIHJlbWFpbiBjbG9zZWQuKSBUagpUKiAoMy4gSG9zdGVsICYgRXNzZW50aWFsIFNlcnZpY2VzOiBIb3N0ZWwgbWVzcyBhbmQgY2FtcHVzIHNlY3VyaXR5IHNlcnZpY2VzIHdpbGwgY29udGludWUgdG8gb3BlcmF0ZSBhcyBwZXIpIFRqClQqIChzdGFuZGFyZCBob2xpZGF5IHNjaGVkdWxlcy4pIFRqClQqICg0LiBSZXN1bXB0aW9uOiBUaGUgY29sbGVnZSB3aWxsIHJlb3BlbiBhbmQgcmVzdW1lIHJlZ3VsYXIgYWNhZGVtaWMgYW5kIGFkbWluaXN0cmF0aXZlIG9wZXJhdGlvbnMgb24gTW9uZGF5LCkgVGoKVCogKDE0dGggT2N0b2JlciAyMDI0LikgVGoKVCogKCkgVGoKVCogKFdlIHdpc2ggZXZlcnlvbmUgYSBzYWZlIGFuZCBwbGVhc2FudCBob2xpZGF5LikgVGoKVCogKCkgVGoKVCogKEJ5IE9yZGVyIG9mIHRoZSBNYW5hZ2VtZW50LCkgVGoKVCogKCkgVGoKVCogKERyLiBBcmlzIFRob3JuZSAgKSBUagpUKiAoRGVhbiBvZiBBY2FkZW1pY3MgICkgVGoKVCogKEFJIENvbGxlZ2Ugb2YgRW5naW5lZXJpbmcgJiBUZWNobm9sb2d5KSBUagpFVAowLjggMC44NCAwLjg4IFJHCjEuMTMzODU4MjY3NzE2NTM1NiB3CjQyLjUxOTY4NTAzOTM3MDA4MTQgMTk0LjE3MzQ2NDU2NjkyOTAyNzMgbQo1NTIuNzU1OTA1NTExODExMDc5MSAxOTQuMTczNDY0NTY2OTI5MDI3MyBsClMKQlQKL0YyIDguNSBUZgo5Ljc3NDk5OTk5OTk5OTk5ODYgVEwKMC4wNTkgMC4wOSAwLjE2NSByZwo1MTQuMDgwOTA1NTExODExMDEwOSAyMzYuNjkzMTQ5NjA2Mjk5MTMgVGQKKEJ5IE9yZGVyLCkgVGoKRVQKQlQKL0YyIDguNSBUZgo5Ljc3NDk5OTk5OTk5OTk5ODYgVEwKMC4wNTkgMC4wOSAwLjE2NSByZwo0NzIuMzQ1OTA1NTExODExMDU0MSAyMjIuNTE5OTIxMjU5ODQyNDc2NSBUZAooSGVhZCBvZiBEZXBhcnRtZW50KSBUagpFVApCVAovRjIgOC41IFRmCjkuNzc0OTk5OTk5OTk5OTk4NiBUTAowLjA1OSAwLjA5IDAuMTY1IHJnCjQwNy44MzA5MDU1MTE4MTEwNjc4IDIwOC4zNDY2OTI5MTMzODU3MDkzIFRkCihEYXR0YSBNZWdoZSBDb2xsZWdlIG9mIEVuZ2luZWVyaW5nKSBUagpFVApCVAovRjIgOC41IFRmCjkuNzc0OTk5OTk5OTk5OTk4NiBUTAowLjA1OSAwLjA5IDAuMTY1IHJnCjQyLjUxOTY4NTAzOTM3MDA4MTQgMTgwLjAwMDIzNjIyMDQ3MjQwMjIgVGQKKERNQ0UgT2ZmaWNpYWwgTm90aWNlIFBvcnRhbCkgVGoKRVQKZW5kc3RyZWFtCmVuZG9iagoxIDAgb2JqCjw8L1R5cGUgL1BhZ2VzCi9LaWRzIFszIDAgUiBdCi9Db3VudCAxCj4+CmVuZG9iago1IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EtQm9sZAovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iago3IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvSGVsdmV0aWNhLU9ibGlxdWUKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKOCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iago5IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvQ291cmllcgovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXItQm9sZAovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMSAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXItT2JsaXF1ZQovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxMiAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL0NvdXJpZXItQm9sZE9ibGlxdWUKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTMgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1Sb21hbgovU3VidHlwZSAvVHlwZTEKL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcKL0ZpcnN0Q2hhciAzMgovTGFzdENoYXIgMjU1Cj4+CmVuZG9iagoxNCAwIG9iago8PAovVHlwZSAvRm9udAovQmFzZUZvbnQgL1RpbWVzLUJvbGQKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTUgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1JdGFsaWMKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCi9GaXJzdENoYXIgMzIKL0xhc3RDaGFyIDI1NQo+PgplbmRvYmoKMTYgMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9UaW1lcy1Cb2xkSXRhbGljCi9TdWJ0eXBlIC9UeXBlMQovRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZwovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE3IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvWmFwZkRpbmdiYXRzCi9TdWJ0eXBlIC9UeXBlMQovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjE4IDAgb2JqCjw8Ci9UeXBlIC9Gb250Ci9CYXNlRm9udCAvU3ltYm9sCi9TdWJ0eXBlIC9UeXBlMQovRmlyc3RDaGFyIDMyCi9MYXN0Q2hhciAyNTUKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL1Byb2NTZXQgWy9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUldCi9Gb250IDw8Ci9GMSA1IDAgUgovRjIgNiAwIFIKL0YzIDcgMCBSCi9GNCA4IDAgUgovRjUgOSAwIFIKL0Y2IDEwIDAgUgovRjcgMTEgMCBSCi9GOCAxMiAwIFIKL0Y5IDEzIDAgUgovRjEwIDE0IDAgUgovRjExIDE1IDAgUgovRjEyIDE2IDAgUgovRjEzIDE3IDAgUgovRjE0IDE4IDAgUgo+PgovWE9iamVjdCA8PAo+Pgo+PgplbmRvYmoKMTkgMCBvYmoKPDwKL1Byb2R1Y2VyIChqc1BERiA0LjIuMSkKL0NyZWF0aW9uRGF0ZSAoRDoyMDI2MTAwNDE5NDEyNyswNSczMCcpCj4+CmVuZG9iagoyMCAwIG9iago8PAovVHlwZSAvQ2F0YWxvZwovUGFnZXMgMSAwIFIKL09wZW5BY3Rpb24gWzMgMCBSIC9GaXRIIG51bGxdCi9QYWdlTGF5b3V0IC9PbmVDb2x1bW4KPj4KZW5kb2JqCnhyZWYKMCAyMQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDM4MjQgMDAwMDAgbiAKMDAwMDAwNTY0MSAwMDAwMCBuIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDAxNTIgMDAwMDAgbiAKMDAwMDAwMzg4MSAwMDAwMCBuIAowMDAwMDA0MDA2IDAwMDAwIG4gCjAwMDAwMDQxMzYgMDAwMDAgbiAKMDAwMDAwNDI2OSAwMDAwMCBuIAowMDAwMDA0NDA2IDAwMDAwIG4gCjAwMDAwMDQ1MjkgMDAwMDAgbiAKMDAwMDAwNDY1OCAwMDAwMCBuIAowMDAwMDA0NzkwIDAwMDAwIG4gCjAwMDAwMDQ5MjYgMDAwMDAgbiAKMDAwMDAwNTA1NCAwMDAwMCBuIAowMDAwMDA1MTgxIDAwMDAwIG4gCjAwMDAwMDUzMTAgMDAwMDAgbiAKMDAwMDAwNTQ0MyAwMDAwMCBuIAowMDAwMDA1NTQ1IDAwMDAwIG4gCjAwMDAwMDU4ODkgMDAwMDAgbiAKMDAwMDAwNTk3NSAwMDAwMCBuIAp0cmFpbGVyCjw8Ci9TaXplIDIxCi9Sb290IDIwIDAgUgovSW5mbyAxOSAwIFIKL0lEIFsgPDg5NjI4NUQ2NUUwMDU3Q0M0QkJEODBFQzcyQTEyREREPiA8ODk2Mjg1RDY1RTAwNTdDQzRCQkQ4MEVDNzJBMTJEREQ+IF0KPj4Kc3RhcnR4cmVmCjYwNzkKJSVFT0Y=",
+      "fileName": "DECLARATION_OF_HOLIDAY_ON_12TH_OCTOBER_2024_Notice (1).pdf",
+      "fileType": "application/pdf",
+      "size": "0.01 MB",
+      "downloadUrl": "/uploads/material-a2e6ab3c-4077-40c3-a1e8-a070abba5720.pdf",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "m-1788971637109",
+      "uploadedAt": "Just now",
+      "createdAt": "2026-09-09T16:33:57.109Z",
+      "title": "a1",
+      "type": "PDF",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "m-1788966121306",
+      "uploadedAt": "Just now",
+      "createdAt": "2026-09-09T15:02:01.306Z",
+      "title": "experiment 1",
+      "department": "",
+      "category": "Academic",
+      "due": "",
+      "students": 0,
+      "type": "PDF",
+      "subject": "",
+      "fileName": "Exp-4-Wup.pdf",
+      "fileType": "application/pdf",
+      "size": "1.00 MB",
+      "downloadUrl": "/uploads/material-d1be5a9f-1243-4ee0-8aed-0830a42fa6dc.pdf",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
       "id": "m-1788887463853",
       "uploadedAt": "Just now",
       "createdAt": "2026-09-08T17:11:03.853Z",
@@ -342,6 +511,84 @@
     }
   ],
   "recentActivity": [
+    {
+      "id": "r-1791125599106",
+      "title": "Notice posted - DECLARATION OF HOLIDAY ON 12TH OCTOBER 2024",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1791125526586",
+      "title": "Material uploaded - HOLIDAY",
+      "time": "Just now",
+      "type": "material"
+    },
+    {
+      "id": "r-1791123584869",
+      "title": "New assignment created - ML A!",
+      "time": "Just now",
+      "type": "assignment"
+    },
+    {
+      "id": "r-1791123220828",
+      "title": "New assignment created - ML Assignment 1 ",
+      "time": "Just now",
+      "type": "assignment"
+    },
+    {
+      "id": "r-1790690740796",
+      "title": "Notice posted - Here is a structured 50-minute lesson plan on DBMS Normalization...",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1789029986058",
+      "title": "Notice posted - submission",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1789029746710",
+      "title": "Notice posted - presentation",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1788971637109",
+      "title": "Material uploaded - a1",
+      "time": "Just now",
+      "type": "material"
+    },
+    {
+      "id": "r-1788966221872",
+      "title": "Notice posted - Call for Papers: Annual Technical Paper Presentation 2026",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1788966159900",
+      "title": "New assignment created - ML",
+      "time": "Just now",
+      "type": "assignment"
+    },
+    {
+      "id": "r-1788966121306",
+      "title": "Material uploaded - experiment 1",
+      "time": "Just now",
+      "type": "material"
+    },
+    {
+      "id": "r-1788966080091",
+      "title": "Notice posted - Hackathon",
+      "time": "Just now",
+      "type": "notice"
+    },
+    {
+      "id": "r-1788964952632",
+      "title": "Notice posted - paper presentation",
+      "time": "Just now",
+      "type": "notice"
+    },
     {
       "id": "r-1788887463854",
       "title": "Material uploaded - mini project report",
@@ -533,6 +780,16 @@
       "slot": "11:00 AM",
       "subject": "MIS",
       "room": "Room 302",
+      "author": "Faculty",
+      "postedBy": "1788810093322"
+    },
+    {
+      "id": "t-1788966303198",
+      "day": "Thursday",
+      "slot": "1:00 PM – 2:00 PM",
+      "subject": "AICW",
+      "room": "Room 402",
+      "batch": "CSE-7A",
       "author": "Faculty",
       "postedBy": "1788810093322"
     }

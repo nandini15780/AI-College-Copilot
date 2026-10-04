@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import nodemailer from "nodemailer";
 import { getUsers } from "@/lib/db";
 
@@ -15,18 +17,47 @@ type FacultyUpdate = {
 };
 
 function getTransporter() {
-  const host = process.env.SMTP_HOST;
-  const port = Number(process.env.SMTP_PORT || 587);
-  const user = process.env.SMTP_USER?.trim();
-  const pass = process.env.SMTP_PASSWORD?.replace(/\s+/g, "").trim();
+  let host = process.env.SMTP_HOST;
+  let port = Number(process.env.SMTP_PORT || 465);
+  let user = process.env.SMTP_USER?.trim();
+  let pass = process.env.SMTP_PASSWORD?.replace(/\s+/g, "").trim();
+
+  if (!host || !user || !pass || user.includes("your-") || pass.includes("your-") || pass === "your-gmail-app-password") {
+    try {
+      const envLocalPath = path.join(process.cwd(), ".env.local");
+      if (fs.existsSync(envLocalPath)) {
+        const envContent = fs.readFileSync(envLocalPath, "utf8");
+        const parsed: Record<string, string> = {};
+        envContent.split("\n").forEach((line: string) => {
+          const match = line.match(/^\s*([\w.-]+)\s*=\s*(.*)?\s*$/);
+          if (match) {
+            let val = (match[2] || "").trim();
+            if (val.startsWith('"') && val.endsWith('"')) val = val.substring(1, val.length - 1);
+            parsed[match[1]] = val;
+          }
+        });
+        if (parsed.SMTP_HOST) host = parsed.SMTP_HOST;
+        if (parsed.SMTP_PORT) port = Number(parsed.SMTP_PORT);
+        if (parsed.SMTP_USER) user = parsed.SMTP_USER.trim();
+        if (parsed.SMTP_PASSWORD) pass = parsed.SMTP_PASSWORD.replace(/\s+/g, "").trim();
+      }
+    } catch (e) {
+      // Ignore reading error
+    }
+  }
 
   if (!host || !user || !pass || user.includes("your-") || pass.includes("your-") || pass === "your-gmail-app-password") return null;
+
+  const isSecure = process.env.SMTP_SECURE === "true" || port === 465;
 
   return nodemailer.createTransport({
     host,
     port,
-    secure: process.env.SMTP_SECURE === "true",
+    secure: isSecure,
     auth: { user, pass },
+    connectionTimeout: 8000,
+    greetingTimeout: 8000,
+    socketTimeout: 10000,
   });
 }
 
@@ -76,8 +107,8 @@ export async function sendFacultyUpdateEmails(type: FacultyUpdateType, update: F
     .map((user: any) => user.email);
 
   if (!transporter) {
-    console.warn("Student email notifications skipped: SMTP_HOST, SMTP_USER, and SMTP_PASSWORD are required.");
-    return { sent: false, configured: false, recipientCount: recipients.length, reason: "Replace the placeholder SMTP_USER and SMTP_PASSWORD values in .env.local." };
+    console.warn("Student email notifications skipped: SMTP credentials missing or placeholder used.");
+    return { sent: false, configured: false, recipientCount: recipients.length, reason: "Configure SMTP_HOST, SMTP_USER, and SMTP_PASSWORD in Vercel Environment Variables." };
   }
 
   if (recipients.length === 0) {
@@ -86,7 +117,7 @@ export async function sendFacultyUpdateEmails(type: FacultyUpdateType, update: F
 
   const details = getUpdateDetails(type, update);
   const from = process.env.SMTP_FROM || process.env.SMTP_USER;
-  const portalUrl = process.env.APP_URL || "http://localhost:3000";
+  const portalUrl = process.env.APP_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
   const safeDetails = escapeHtml(details.details).replace(/\n/g, "<br />");
 
   try {
@@ -104,10 +135,10 @@ export async function sendFacultyUpdateEmails(type: FacultyUpdateType, update: F
     console.error("Student email notification failed:", error);
     const code = (error as { code?: string })?.code;
     const reason = code === "EAUTH"
-      ? "SMTP authentication failed. Use a Gmail App Password, not your normal Gmail password."
-      : code === "ECONNECTION" || code === "ETIMEDOUT"
-      ? "SMTP connection failed. Check SMTP_HOST, SMTP_PORT, and SMTP_SECURE."
-      : "SMTP rejected the message. Check the sender address and SMTP credentials.";
+      ? "SMTP authentication failed. Check your Gmail App Password in Vercel settings."
+      : code === "ECONNECTION" || code === "ETIMEDOUT" || code === "ESOCKET"
+      ? "SMTP connection failed. On Vercel, use SMTP_PORT=465 and SMTP_SECURE=true."
+      : "SMTP rejected the message. Check sender email and credentials.";
     return { sent: false, configured: true, recipientCount: recipients.length, reason };
   }
 }
@@ -123,7 +154,7 @@ export async function sendAssignmentReminderEmails(assignment: FacultyUpdate) {
   }
 
   const from = process.env.SMTP_FROM || process.env.SMTP_USER;
-  const portalUrl = process.env.APP_URL || "http://localhost:3000";
+  const portalUrl = process.env.APP_URL || (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "http://localhost:3000");
   const title = assignment.title || "Assignment";
   const due = assignment.due || "soon";
 

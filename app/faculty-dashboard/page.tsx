@@ -141,6 +141,15 @@ export default function FacultyDashboard() {
 
     try {
       const selectedFile = type === "notice" ? noticeFile : type === "assignment" ? assignmentFile : materialFile;
+      let fileDataUrl: string | null = null;
+      if (selectedFile) {
+        fileDataUrl = await new Promise<string>((resolve) => {
+          const reader = new FileReader();
+          reader.onload = () => resolve(reader.result as string);
+          reader.readAsDataURL(selectedFile);
+        });
+      }
+
       const requestBody = selectedFile
         ? (() => {
             const formData = new FormData();
@@ -151,6 +160,7 @@ export default function FacultyDashboard() {
             if (payload.due) formData.append("due", payload.due);
             if (payload.students !== undefined) formData.append("students", String(payload.students));
             if (payload.type) formData.append("materialType", payload.type);
+            if (fileDataUrl) formData.append("fileDataUrl", fileDataUrl);
             formData.append("file", selectedFile);
             return formData;
           })()

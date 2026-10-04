@@ -70,5 +70,14 @@
     "password": "$2b$10$Z3vwFYuU8CJiij/5jKcZCuyrglK6qsVb6giQ3E69BY.lM/C95CNCC",
     "role": "Admin",
     "createdAt": "2026-09-08T13:49:20.310Z"
+  },
+  {
+    "id": "1789029950965",
+    "name": "rutuja",
+    "email": "kisanbhangare21@gmail.com",
+    "collegeId": "r123",
+    "password": "$2b$10$3ggJHNtoXVXKoACKInWvJeYSLYcFYdNhRBA5xT4.jDngsIprO8kKu",
+    "role": "Student",
+    "createdAt": "2026-09-10T08:45:50.965Z"
   }
 ]

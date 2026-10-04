@@ -2013,5 +2013,221 @@
     ],
     "createdAt": "2026-09-08T16:07:06.345Z",
     "sharedBy": "nandini"
+  },
+  {
+    "id": "share_1788965909036_z65683",
+    "title": "AI Tutor: Explain operating system scheduling in s...",
+    "messages": [
+      {
+        "id": "1",
+        "role": "user",
+        "content": "Explain operating system scheduling in simple words.",
+        "timestamp": "10:34 AM"
+      },
+      {
+        "id": "2",
+        "role": "assistant",
+        "content": "Operating System scheduling is the process of deciding which process should get the CPU at a particular time. It helps in efficient use of system resources and improves performance, fairness and responsiveness.",
+        "keyPoints": [
+          "FCFS (First Come First Serve)",
+          "SJF (Shortest Job First)",
+          "Priority Scheduling",
+          "Round Robin (time sharing)"
+        ],
+        "sources": [
+          "OS_Unit1.pdf",
+          "Notes.pdf",
+          "Faculty_Notes.pdf"
+        ],
+        "timestamp": "10:34 AM"
+      },
+      {
+        "id": "1788965796407",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "08:26 pm"
+      },
+      {
+        "id": "1788965814394",
+        "role": "assistant",
+        "content": "Hello! How can I help you today? Do you want to continue with Operating Systems or work on something else?",
+        "keyPoints": [],
+        "sources": [],
+        "timestamp": "08:26 pm"
+      },
+      {
+        "id": "1788965885297",
+        "role": "user",
+        "content": "make a schedule to prepare for placements",
+        "timestamp": "08:28 pm"
+      },
+      {
+        "id": "1788965898047",
+        "role": "assistant",
+        "content": "Preparing for placements can feel overwhelming, but breaking it down into a structured plan makes it much more manageable. Here is a 4-week roadmap to get you interview-ready:\n\n### **Phase 1: Foundations (Week 1)**\n*   **Data Structures & Algorithms (DSA):** Focus on Arrays, Strings, and Linked Lists. Practice at least 2-3 problems daily on platforms like LeetCode or GeeksforGeeks.\n*   **Core Subjects:** Revise Operating Systems (scheduling, deadlocks), DBMS (SQL queries, normalization), and Computer Networks (OSI model, TCP/IP).\n\n### **Phase 2: Deep Dive (Week 2)**\n*   **DSA:** Move to Trees, Graphs, and Dynamic Programming. These are high-frequency topics in technical rounds.\n*   **Projects:** Polish your resume projects. Be ready to explain the 'Why' and 'How' behind your tech stack choices.\n\n### **Phase 3: Technical & Aptitude (Week 3)**\n*   **Aptitude:** Practice quantitative aptitude, logical reasoning, and verbal ability (essential for the first round of most companies).\n*   **Mock Interviews:** Start doing mock interviews with peers or use platforms like Pramp to get comfortable explaining your thought process out loud.\n\n### **Phase 4: Final Review (Week 4)**\n*   **Company Specifics:** Research the companies you are targeting. Look at their past interview experiences on platforms like Glassdoor.\n*   **Behavioral Prep:** Prepare answers for \"Tell me about yourself,\" \"Biggest challenge,\" and \"Why this company?\" using the STAR method (Situation, Task, Action, Result).\n\n**Pro-tip:** Consistency is key. It's better to solve 2 problems every day than 10 problems once a week!",
+        "keyPoints": [
+          "Focus on DSA fundamentals first.",
+          "Don't neglect core CS subjects (OS, DBMS, CN).",
+          "Practice Aptitude for the screening rounds.",
+          "Use the STAR method for behavioral questions."
+        ],
+        "sources": [],
+        "timestamp": "08:28 pm"
+      }
+    ],
+    "createdAt": "2026-09-09T14:58:29.036Z",
+    "sharedBy": "Nandini"
+  },
+  {
+    "id": "share_1791123163525_wei1m0",
+    "title": "Faculty AI Tutor: Draft a 50-minute lesson plan on DBMS No",
+    "messages": [
+      {
+        "id": "1",
+        "role": "user",
+        "content": "Draft a 50-minute lesson plan on DBMS Normalization.",
+        "timestamp": "09:00 AM"
+      },
+      {
+        "id": "2",
+        "role": "assistant",
+        "content": "Here is a structured 50-minute lesson plan on DBMS Normalization...",
+        "keyPoints": [
+          "Introduction (10 mins): Why normalization matters",
+          "1NF & 2NF (15 mins): Functional dependencies",
+          "3NF & BCNF (15 mins): Eliminating transitive dependencies",
+          "Q&A and Quiz (10 mins)"
+        ],
+        "sources": [
+          "Faculty_Teaching_Guide.pdf"
+        ],
+        "timestamp": "09:00 AM"
+      },
+      {
+        "id": "1791122369833",
+        "role": "user",
+        "content": "hii",
+        "timestamp": "07:29 pm"
+      },
+      {
+        "id": "1791122372813",
+        "role": "assistant",
+        "content": "Hi there! How can I help you with your classes, projects, or anything else today?",
+        "keyPoints": [],
+        "sources": [],
+        "timestamp": "07:29 pm"
+      },
+      {
+        "id": "1791122439756",
+        "role": "user",
+        "content": "generate a pdf for assignment 1 of machine learning subject heading should be Assignment 1 and it should have these 5 questions What is the fundamental difference between supervised and unsupervised learning? Provide one real-world example for each. 2  Explain the bias-variance tradeoff. How does a model with high bias and high variance affect the performance of a machine learning algorithm? 3  Define overfitting and underfitting. What techniques (like regularization or cross-validation) can be used to prevent them? 4 Why is 'Accuracy' not always a reliable metric for classification problems, especially when dealing with imbalanced datasets? What are Precision, Recall, and the F1-Score? 5 Briefly explain how the Gradient Descent algorithm works. What is the role of the 'learning rate' in this process?",
+        "timestamp": "07:30 pm"
+      },
+      {
+        "id": "1791122449061",
+        "role": "assistant",
+        "content": "I cannot directly generate a downloadable PDF file, but I have formatted your assignment below so you can easily copy and paste it into a document editor (like Word or Google Docs) and save it as a PDF.\n\n***\n\n# Assignment 1: Machine Learning\n\n**Q1. What is the fundamental difference between supervised and unsupervised learning? Provide one real-world example for each.**\n\n**Q2. Explain the bias-variance tradeoff. How does a model with high bias and high variance affect the performance of a machine learning algorithm?**\n\n**Q3. Define overfitting and underfitting. What techniques (like regularization or cross-validation) can be used to prevent them?**\n\n**Q4. Why is 'Accuracy' not always a reliable metric for classification problems, especially when dealing with imbalanced datasets? What are Precision, Recall, and the F1-Score?**\n\n**Q5. Briefly explain how the Gradient Descent algorithm works. What is the role of the 'learning rate' in this process?**\n\n***\n\n**Pro-tip:** To turn this into a PDF, simply copy the text above, paste it into your preferred word processor, and select **File > Export > PDF** (or **Save As > PDF**).",
+        "keyPoints": [
+          "Supervised vs. Unsupervised learning differences",
+          "Bias-Variance tradeoff mechanics",
+          "Overfitting/Underfitting mitigation strategies",
+          "Performance metrics beyond accuracy",
+          "Gradient Descent and learning rate optimization"
+        ],
+        "sources": [],
+        "timestamp": "07:30 pm"
+      },
+      {
+        "id": "1791122709565",
+        "role": "user",
+        "content": "generate a pdf for holiday on 12th oct",
+        "timestamp": "07:35 pm"
+      },
+      {
+        "id": "1791122715650",
+        "role": "assistant",
+        "content": "# AI COLLEGE OF ENGINEERING & TECHNOLOGY\n\n**Circular Ref No:** AICET/ADMIN/2024/H-12  \n**Date:** October 10, 2024  \n**Target Audience:** All Students, Faculty, and Non-Teaching Staff  \n\n### **Subject: Declaration of Holiday on 12th October 2024**\n\nDear Students and Staff,\n\nThis is to inform everyone that the college will remain officially closed on **Saturday, 12th October 2024**, in observance of the public holiday / festive occasion.\n\nPlease note the following directives regarding this closure:\n1. **Academic Operations:** All regular classes, laboratory sessions, and internal examinations scheduled for this day stand postponed. Rescheduled dates (if applicable) will be communicated by the respective department heads.\n2. **Administrative Services:** The administrative office, library, and central computer center will remain closed.\n3. **Essential Services:** Hostel facilities, including the mess and campus security, will continue to operate under standard holiday timings.\n4. **Resumption of Classes:** The college will reopen, and regular academic activities will resume, on **Monday, 14th October 2024**.\n\nWe wish all our students and staff a safe and restful holiday.\n\nSincerely,\n\n**Dr. Aris Thorne**  \nDean of Academics  \nAI College of Engineering & Technology  \n\n***\n\n*Note: To save this notice as a PDF, copy the text above, paste it into a word processor (like MS Word or Google Docs), and select **Save As > PDF**.*",
+        "keyPoints": [
+          "Official holiday declared for Saturday, 12th October 2024.",
+          "All classes, labs, and exams scheduled for this day are postponed.",
+          "The college will reopen and resume normal operations on Monday, 14th October 2024."
+        ],
+        "sources": [],
+        "timestamp": "07:35 pm"
+      },
+      {
+        "id": "1791122966904",
+        "role": "user",
+        "content": "generate a pdf for assignment 1 of machine learning subject heading should be Assignment 1 and it should have these 5 questions What is the fundamental difference between supervised and unsupervised learning? Provide one real-world example for each. 2  Explain the bias-variance tradeoff. How does a model with high bias and high variance affect the performance of a machine learning algorithm? 3  Define overfitting and underfitting. What techniques (like regularization or cross-validation) can be used to prevent them? 4 Why is 'Accuracy' not always a reliable metric for classification problems, especially when dealing with imbalanced datasets? What are Precision, Recall, and the F1-Score? 5 Briefly explain how the Gradient Descent algorithm works. What is the role of the 'learning rate' in this process?",
+        "timestamp": "07:39 pm"
+      },
+      {
+        "id": "1791122978487",
+        "role": "assistant",
+        "content": "# Assignment 1: Machine Learning\n\n**Instructions:** Answer all questions clearly and concisely. Submit your responses in the prescribed format by the due date.\n\n**Q1. What is the fundamental difference between supervised and unsupervised learning? Provide one real-world example for each.**\n\n**Q2. Explain the bias-variance tradeoff. How does a model with high bias and high variance affect the performance of a machine learning algorithm?**\n\n**Q3. Define overfitting and underfitting. What techniques (like regularization or cross-validation) can be used to prevent them?**\n\n**Q4. Why is 'Accuracy' not always a reliable metric for classification problems, especially when dealing with imbalanced datasets? What are Precision, Recall, and the F1-Score?**\n\n**Q5. Briefly explain how the Gradient Descent algorithm works. What is the role of the 'learning rate' in this process?**\n\n***\n*Faculty of Computer Science & Engineering*",
+        "keyPoints": [
+          "Assignment 1 covers core Machine Learning concepts: Supervised vs Unsupervised learning, Bias-Variance tradeoff, Overfitting/Underfitting, Evaluation Metrics, and Optimization.",
+          "The document is structured for immediate printing or PDF conversion."
+        ],
+        "sources": [],
+        "timestamp": "07:39 pm"
+      },
+      {
+        "id": "1791123027812",
+        "role": "user",
+        "content": "generate a pdf for assignment 1 of machine learning subject heading should be Assignment 1 and it should have these 5 questions What is the fundamental difference between supervised and unsupervised learning? Provide one real-world example for each. 2  Explain the bias-variance tradeoff. How does a model with high bias and high variance affect the performance of a machine learning algorithm? 3  Define overfitting and underfitting. What techniques (like regularization or cross-validation) can be used to prevent them? 4 Why is 'Accuracy' not always a reliable metric for classification problems, especially when dealing with imbalanced datasets? What are Precision, Recall, and the F1-Score? 5 Briefly explain how the Gradient Descent algorithm works. What is the role of the 'learning rate' in this process? targeted audience is only students",
+        "timestamp": "07:40 pm"
+      },
+      {
+        "id": "1791123034236",
+        "role": "assistant",
+        "content": "# AI COLLEGE OF ENGINEERING & TECHNOLOGY\n\n**Course:** B.Tech Computer Science & Engineering  \n**Subject:** Machine Learning (CS-401)  \n**Semester:** V / VII  \n**Assignment No:** 1  \n**Max Marks:** 25  \n**Target Audience:** Students  \n\n---\n\n### **Instructions:**\n1. Answer all questions clearly, providing diagrams or mathematical formulations where necessary.\n2. Support your answers with relevant examples.\n3. Submission Deadline: As communicated by the department portal.\n\n---\n\n### **Questions**\n\n#### **Q1. Supervised vs. Unsupervised Learning (5 Marks)**\nWhat is the fundamental difference between supervised and unsupervised learning? Provide one real-world example for each to illustrate how they are applied in practice.\n\n#### **Q2. Bias-Variance Tradeoff (5 Marks)**\nExplain the bias-variance tradeoff. How does a model with high bias and high variance affect the overall performance of a machine learning algorithm?\n\n#### **Q3. Overfitting and Underfitting (5 Marks)**\nDefine overfitting and underfitting in the context of model training. What specific techniques (such as regularization or cross-validation) can be used to prevent these issues?\n\n#### **Q4. Classification Metrics & Imbalanced Datasets (5 Marks)**\nWhy is 'Accuracy' not always a reliable metric for classification problems, especially when dealing with highly imbalanced datasets? Define and explain the significance of **Precision**, **Recall**, and the **F1-Score**.\n\n#### **Q5. Gradient Descent Optimization (5 Marks)**\nBriefly explain how the Gradient Descent algorithm works. What is the role of the 'learning rate' in this optimization process, and what happens if it is set too high or too low?\n\n---\n**Issued By:**  \nDepartment of Computer Science & Engineering  \nAI College of Engineering & Technology",
+        "keyPoints": [
+          "Machine Learning Assignment 1 for B.Tech students.",
+          "Covers fundamental ML concepts: Supervised/Unsupervised learning, Bias-Variance, Overfitting/Underfitting, Classification Metrics, and Gradient Descent.",
+          "Formatted cleanly for direct PDF generation."
+        ],
+        "sources": [],
+        "timestamp": "07:40 pm"
+      },
+      {
+        "id": "1791123076588",
+        "role": "user",
+        "content": "generate a pdf for holiday on 12th oct",
+        "timestamp": "07:41 pm"
+      },
+      {
+        "id": "1791123082978",
+        "role": "assistant",
+        "content": "# AI COLLEGE OF ENGINEERING & TECHNOLOGY\n\n**Circular Ref No:** AICET/ADMIN/2024/H-12  \n**Date:** October 10, 2024  \n**Target Audience:** All Students, Faculty, and Staff  \n\n### **NOTICE: DECLARATION OF HOLIDAY ON 12TH OCTOBER 2024**\n\nThis is to inform all students, faculty, and staff members that the college will remain closed on **Saturday, 12th October 2024**, on account of the public holiday.\n\nPlease note the following directives:\n1. **Academic Activities:** All scheduled lectures, practical sessions, and internal examinations for this day stand postponed. Rescheduled dates will be notified by the respective Department Heads.\n2. **Administrative Offices:** The administrative offices, library, and laboratory facilities will remain closed.\n3. **Hostel & Essential Services:** Hostel mess and campus security services will continue to operate as per standard holiday schedules.\n4. **Resumption:** The college will reopen and resume regular academic and administrative operations on **Monday, 14th October 2024**.\n\nWe wish everyone a safe and pleasant holiday.\n\n**By Order of the Management,**\n\n**Dr. Aris Thorne**  \nDean of Academics  \nAI College of Engineering & Technology",
+        "keyPoints": [
+          "Official holiday declared for Saturday, 12th October 2024.",
+          "All academic classes, labs, and exams scheduled for this day are postponed.",
+          "The college will resume regular operations on Monday, 14th October 2024."
+        ],
+        "sources": [],
+        "timestamp": "07:41 pm"
+      },
+      {
+        "id": "1791123125322",
+        "role": "user",
+        "content": "generate a pdf for assignment 1 of machine learning subject heading should be Assignment 1 and it should have these 5 questions What is the fundamental difference between supervised and unsupervised learning? Provide one real-world example for each. 2  Explain the bias-variance tradeoff. How does a model with high bias and high variance affect the performance of a machine learning algorithm? 3  Define overfitting and underfitting. What techniques (like regularization or cross-validation) can be used to prevent them? 4 Why is 'Accuracy' not always a reliable metric for classification problems, especially when dealing with imbalanced datasets? What are Precision, Recall, and the F1-Score? 5 Briefly explain how the Gradient Descent algorithm works. What is the role of the 'learning rate' in this process? targeted audience is only students",
+        "timestamp": "07:42 pm"
+      },
+      {
+        "id": "1791123131578",
+        "role": "assistant",
+        "content": "# Assignment 1\n\n**Subject:** Machine Learning (CS-401)  \n**Target Audience:** Students  \n**Max Marks:** 25 (5 Marks per question)  \n**Submission Deadline:** As notified by the Department  \n\n---\n\n### **Instructions:**\n- Answer all five questions in detail.\n- Support your answers with relevant mathematical formulations, diagrams, or examples where applicable.\n- Submissions must be uploaded to the student portal before the deadline.\n\n---\n\n### **Questions**\n\n#### **Q1. Supervised vs. Unsupervised Learning**\nWhat is the fundamental difference between supervised and unsupervised learning? Provide one real-world example for each. *(5 Marks)*\n\n#### **Q2. Bias-Variance Tradeoff**\nExplain the bias-variance tradeoff. How does a model with high bias and high variance affect the performance of a machine learning algorithm? *(5 Marks)*\n\n#### **Q3. Overfitting and Underfitting**\nDefine overfitting and underfitting. What techniques (like regularization or cross-validation) can be used to prevent them? *(5 Marks)*\n\n#### **Q4. Classification Metrics & Imbalanced Datasets**\nWhy is 'Accuracy' not always a reliable metric for classification problems, especially when dealing with imbalanced datasets? What are Precision, Recall, and the F1-Score? *(5 Marks)*\n\n#### **Q5. Gradient Descent Optimization**\nBriefly explain how the Gradient Descent algorithm works. What is the role of the 'learning rate' in this process? *(5 Marks)*",
+        "keyPoints": [
+          "Assignment 1 for Machine Learning containing 5 core questions.",
+          "Formatted cleanly for student distribution and PDF rendering.",
+          "Covers supervised/unsupervised learning, bias-variance tradeoff, overfitting/underfitting, classification metrics, and gradient descent."
+        ],
+        "sources": [],
+        "timestamp": "07:42 pm"
+      }
+    ],
+    "createdAt": "2026-10-04T14:12:43.525Z",
+    "sharedBy": "J Mathew"
   }
 ]

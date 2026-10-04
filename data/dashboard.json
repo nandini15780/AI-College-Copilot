@@ -8,7 +8,7 @@
   "stats": {
     "upcomingClassesCount": 3,
     "pendingAssignmentsCount": 4,
-    "unreadNoticesCount": 14,
+    "unreadNoticesCount": 17,
     "progressPercentage": 78
   },
   "upcomingClasses": [
@@ -42,7 +42,7 @@
       "id": "1",
       "title": "DBMS Mini Project",
       "due": "15 Sep 2025",
-      "status": "In Progress",
+      "status": "Completed",
       "category": "Submitted"
     },
     {
@@ -56,7 +56,7 @@
       "id": "3",
       "title": "NLP Assignment",
       "due": "25 Sep 2025",
-      "status": "Not Started",
+      "status": "Submitted",
       "category": "Submitted"
     },
     {
@@ -102,9 +102,142 @@
       "author": "Faculty",
       "postedBy": "1788810093322",
       "source": "faculty"
+    },
+    {
+      "id": "a-1788966159899",
+      "status": "Not Started",
+      "createdAt": "2026-09-09T15:02:39.902Z",
+      "title": "ML",
+      "due": "2026-09-09",
+      "students": 5,
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "a-1791123220828",
+      "status": "Not Started",
+      "createdAt": "2026-10-04T14:13:40.831Z",
+      "title": "ML Assignment 1 ",
+      "department": "",
+      "category": "Academic",
+      "due": "2026-10-05",
+      "students": 5,
+      "type": "PDF",
+      "subject": "",
+      "fileName": "Machine_Learning__CS_401__Notice.pdf",
+      "fileType": "application/pdf",
+      "size": "0.01 MB",
+      "downloadUrl": "/uploads/assignment-11078f9b-0d4a-4b73-8ae1-2d22208164eb.pdf",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "a-1791123584869",
+      "status": "Not Started",
+      "createdAt": "2026-10-04T14:19:44.871Z",
+      "title": "ML A!",
+      "department": "",
+      "category": "Academic",
+      "due": "2026-10-05",
+      "students": 25,
+      "type": "PDF",
+      "subject": "",
+      "fileName": "Machine_Learning__CS_401__Notice.pdf",
+      "fileType": "application/pdf",
+      "size": "0.01 MB",
+      "downloadUrl": "/uploads/assignment-86f6e525-d398-4d62-87d3-62659d7adcb9.pdf",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
     }
   ],
   "notices": [
+    {
+      "id": "n-1791125599106",
+      "read": false,
+      "date": "Today",
+      "createdAt": "2026-10-04T14:53:19.108Z",
+      "title": "DECLARATION OF HOLIDAY ON 12TH OCTOBER 2024",
+      "department": "Faculty / Academic Cell",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "n-1790690740796",
+      "read": false,
+      "date": "Today",
+      "createdAt": "2026-09-29T14:05:40.798Z",
+      "title": "Here is a structured 50-minute lesson plan on DBMS Normalization...",
+      "department": "Faculty / Academic Cell",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "n-1789029986058",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-10T08:46:26.060Z",
+      "title": "submission",
+      "department": "IT",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "n-1789029746710",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-10T08:42:26.713Z",
+      "title": "presentation",
+      "department": "comps",
+      "category": "Urgent",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "n-1788966221872",
+      "read": false,
+      "date": "Today",
+      "createdAt": "2026-09-09T15:03:41.874Z",
+      "title": "Call for Papers: Annual Technical Paper Presentation 2026",
+      "department": "Faculty / Academic Cell",
+      "category": "Academic",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "n-1788966080091",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-09T15:01:20.094Z",
+      "title": "Hackathon",
+      "department": "comps, IT",
+      "category": "Event",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
+    {
+      "id": "n-1788964952632",
+      "read": false,
+      "date": "Just now",
+      "createdAt": "2026-09-09T14:42:32.637Z",
+      "title": "paper presentation",
+      "department": "all",
+      "category": "Event",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "source": "faculty"
+    },
     {
       "id": "n-1788887343160",
       "read": false,
@@ -345,33 +478,62 @@
       "iconBg": "bg-[#eee0ff]",
       "iconColor": "text-[#8635dc]",
       "source": "faculty"
+    },
+    {
+      "id": "t-1788966303198",
+      "day": "Thursday",
+      "slot": "1:00 PM – 2:00 PM",
+      "subject": "AICW",
+      "room": "Room 402",
+      "batch": "CSE-7A",
+      "author": "Faculty",
+      "postedBy": "1788810093322",
+      "time": "1:00 PM – 2:00 PM",
+      "professor": "Faculty",
+      "iconType": "doc",
+      "iconBg": "bg-[#eee0ff]",
+      "iconColor": "text-[#8635dc]",
+      "source": "faculty"
     }
   ],
   "materials": [
     {
-      "id": "m-1788887463853",
-      "title": "mini project report",
-      "subject": "mini project report",
+      "id": "m-1791125526585",
+      "title": "HOLIDAY",
+      "subject": "HOLIDAY",
       "semester": "Sem 7",
       "type": "PDF",
       "fileType": "PDF",
       "author": "Faculty",
-      "size": "0.35 MB",
+      "size": "0.01 MB",
       "uploadedDate": "Today",
-      "downloadUrl": "/uploads/material-1352fed4-ff69-4c7e-96c8-67d14e0f1316.pdf",
+      "downloadUrl": "/uploads/material-a2e6ab3c-4077-40c3-a1e8-a070abba5720.pdf",
       "source": "faculty"
     },
     {
-      "id": "m-1788887218483",
-      "title": "aicw",
-      "subject": "aicw",
+      "id": "m-1788971637109",
+      "title": "a1",
+      "subject": "a1",
       "semester": "Sem 7",
       "type": "PDF",
       "fileType": "PDF",
       "author": "Faculty",
-      "size": "0.35 MB",
+      "size": "",
       "uploadedDate": "Today",
-      "downloadUrl": "/uploads/material-07e81ef1-48f8-4d50-9c44-4030473f501d.pdf",
+      "downloadUrl": "#",
+      "source": "faculty"
+    },
+    {
+      "id": "m-1788966121306",
+      "title": "experiment 1",
+      "subject": "experiment 1",
+      "semester": "Sem 7",
+      "type": "PDF",
+      "fileType": "PDF",
+      "author": "Faculty",
+      "size": "1.00 MB",
+      "uploadedDate": "Today",
+      "downloadUrl": "/uploads/material-d1be5a9f-1243-4ee0-8aed-0830a42fa6dc.pdf",
       "source": "faculty"
     }
   ]

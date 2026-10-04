@@ -181,10 +181,43 @@ export default function FacultyAITutorPage() {
     return content;
   };
 
+  // Strip AI disclaimer sentences that should never appear in a generated PDF
+  const stripAiDisclaimers = (text: string): string => {
+    const disclaimerPatterns = [
+      /I cannot directly (generate|create|produce|make) a (downloadable |printable )?PDF( file)?[^.]*\./gi,
+      /I (am not able|cannot|can't|don't have the ability) to (directly |automatically )?(generate|create|produce|download|save)[^.]*PDF[^.]*\./gi,
+      /but I have formatted your[^.]*\./gi,
+      /you can (easily )?copy and paste it into[^.]*\./gi,
+      /into a document editor[^.]*\./gi,
+      /\(like Word or Google Docs\)[^.]*\./gi,
+      /save it as a PDF[^.]*\./gi,
+      /Here(?: is| are) the formatted[^.]*\./gi,
+      /Below is the formatted[^.]*\./gi,
+      /Here's the formatted[^.]*\./gi,
+      /I've formatted[^.]*\./gi,
+      /\*+\s*$/gm,  // trailing asterisks on their own line
+    ];
+
+    let cleaned = text;
+    for (const pattern of disclaimerPatterns) {
+      cleaned = cleaned.replace(pattern, '');
+    }
+    // Collapse multiple blank lines left behind
+    cleaned = cleaned.replace(/\n{3,}/g, '\n\n').trim();
+    return cleaned;
+  };
+
   const handleDownloadNoticePDF = (messageText: string) => {
     const rawContent = cleanMessageContent(messageText);
     const dateStr = new Date().toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" });
-    const refNo = `AICET/CIRCULAR/2026/${Math.floor(100 + Math.random() * 900)}`;
+    const refNo = `DMCE/CIRCULAR/2026/${Math.floor(100 + Math.random() * 900)}`;
+
+    // Extract department from the AI response (e.g. "Department: Civil Engineering")
+    let department = "Department of Computer Engineering";
+    const deptMatch = rawContent.match(/(?:Department|Dept|DEPARTMENT|DEPT)\s*(?:of)?\s*[:|-]?\s*([A-Za-z &]+Engineering[A-Za-z &]*|[A-Za-z &]+Technology[A-Za-z &]*|[A-Za-z &]+Science[A-Za-z &]*)(?=\n|,|\.|$)/i);
+    if (deptMatch && deptMatch[1] && deptMatch[1].trim().length > 3) {
+      department = `Department of ${deptMatch[1].trim()}`;
+    }
 
     // Extract Notice Heading / Subject dynamically
     let purpose = extractNoticeTitle(rawContent);
@@ -193,20 +226,22 @@ export default function FacultyAITutorPage() {
       purpose = subjectMatch[1].replace(/[*#]/g, '').trim();
     }
 
-    // Clean body text by stripping raw markdown syntax
-    const cleanBody = rawContent
-      .replace(/^#{1,6}\s+/gm, '')
-      .replace(/\*\*(.*?)\*\*/g, '$1')
-      .replace(/\*(.*?)\*/g, '$1')
-      .replace(/`(.*?)`/g, '$1')
-      .replace(/================================================================================/g, '')
-      .replace(/--------------------------------------------------------------------------------/g, '')
-      .trim();
+    // Clean body text: strip markdown syntax AND AI disclaimer phrases
+    const cleanBody = stripAiDisclaimers(
+      rawContent
+        .replace(/^#{1,6}\s+/gm, '')
+        .replace(/\*\*(.*?)\*\*/g, '$1')
+        .replace(/\*(.*?)\*/g, '$1')
+        .replace(/`(.*?)`/g, '$1')
+        .replace(/================================================================================/g, '')
+        .replace(/--------------------------------------------------------------------------------/g, '')
+        .trim()
+    );
 
     // Direct jsPDF Download
     downloadNoticePdf({
       title: purpose,
-      department: "Department of Computer Science & Engineering / Academic Cell",
+      department,
       date: dateStr,
       category: "Academic Notice",
       content: cleanBody,
@@ -359,8 +394,8 @@ export default function FacultyAITutorPage() {
   </div>
 
   <div class="college-header">
-    <div class="college-name">AI COLLEGE OF ENGINEERING & TECHNOLOGY</div>
-    <div class="college-sub">DEPARTMENT OF COMPUTER SCIENCE & ENGINEERING / ACADEMIC CELL<br/>Knowledge City, Sector 10, Airoli, Navi Mumbai - 400708 | Website: www.aicet.edu.in</div>
+    <div class="college-name">DATTA MEGHE COLLEGE OF ENGINEERING</div>
+    <div class="college-sub">DEPARTMENT OF COMPUTER ENGINEERING<br/>Airoli, Navi Mumbai | Website: www.dmce.ac.in</div>
   </div>
 
   <div class="ref-row">
@@ -385,7 +420,7 @@ export default function FacultyAITutorPage() {
     <tr>
       <td class="meta-label">2. Issued By</td>
       <td class="meta-colon">:</td>
-      <td class="meta-val">Department of Computer Science & Engineering / Academic Cell</td>
+      <td class="meta-val">${department}</td>
     </tr>
     <tr>
       <td class="meta-label">3. Target Audience</td>

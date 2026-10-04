@@ -40,12 +40,12 @@ export function downloadAssignmentPdf(data: AssignmentPdfData) {
   doc.setFont("helvetica", "bold");
   doc.setFontSize(15);
   doc.setTextColor(15, 23, 42); // slate-900
-  doc.text("AI COLLEGE OF ENGINEERING & TECHNOLOGY", 105, 18, { align: "center" });
+  doc.text("DATTA MEGHE COLLEGE OF ENGINEERING", 105, 18, { align: "center" });
 
   doc.setFontSize(8.5);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(71, 85, 105); // slate-600
-  doc.text("Department of Computer Engineering & Information Technology", 105, 23, { align: "center" });
+  doc.text("Department of Computer Engineering", 105, 23, { align: "center" });
   doc.text("Official Student Course Assignment Sheet | Academic Year 2026", 105, 27, { align: "center" });
 
   // Divider Line
@@ -141,7 +141,7 @@ Complete all problem statements, algorithms, and implementation tasks outlined f
   doc.setFont("helvetica", "bold");
   doc.setFontSize(8);
   doc.setTextColor(71, 85, 105);
-  doc.text("AI College Student Portal", 15, footerY + 5);
+  doc.text("Datta Meghe College of Engineering", 15, footerY + 5);
   doc.setFont("helvetica", "normal");
   doc.text("Official Verified Academic Assignment Document", 15, footerY + 9);
 
@@ -161,12 +161,12 @@ export function downloadMaterialPdf(data: MaterialPdfData) {
   doc.setFont("helvetica", "bold");
   doc.setFontSize(15);
   doc.setTextColor(15, 23, 42);
-  doc.text("AI COLLEGE OF ENGINEERING & TECHNOLOGY", 105, 18, { align: "center" });
+  doc.text("DATTA MEGHE COLLEGE OF ENGINEERING", 105, 18, { align: "center" });
 
   doc.setFontSize(8.5);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(71, 85, 105);
-  doc.text("Department of Computer Engineering & Information Technology", 105, 23, { align: "center" });
+  doc.text("Department of Computer Engineering", 105, 23, { align: "center" });
   doc.text("Official Course Study Resource | Academic Year 2026", 105, 27, { align: "center" });
 
   doc.setDrawColor(30, 41, 59);
@@ -238,7 +238,7 @@ export function downloadMaterialPdf(data: MaterialPdfData) {
   doc.setFont("helvetica", "bold");
   doc.setFontSize(8);
   doc.setTextColor(71, 85, 105);
-  doc.text("AI College Library & Course Materials", 15, footerY + 5);
+  doc.text("Datta Meghe College of Engineering", 15, footerY + 5);
 
   doc.text("Department of Computer Engineering", 195, footerY + 5, { align: "right" });
 
@@ -255,13 +255,13 @@ export function downloadNoticePdf(data: NoticePdfData) {
   doc.setFont("helvetica", "bold");
   doc.setFontSize(15);
   doc.setTextColor(15, 23, 42);
-  doc.text("AI COLLEGE OF ENGINEERING & TECHNOLOGY", 105, 18, { align: "center" });
+  doc.text("DATTA MEGHE COLLEGE OF ENGINEERING", 105, 18, { align: "center" });
 
   doc.setFontSize(8);
   doc.setFont("helvetica", "normal");
   doc.setTextColor(71, 85, 105);
-  doc.text("(Approved by AICTE, New Delhi & Affiliated to University of Mumbai)", 105, 23, { align: "center" });
-  doc.text("Knowledge City, Sector 10, Airoli, Navi Mumbai - 400708 | Website: www.aicet.edu.in", 105, 27, { align: "center" });
+  doc.text("(Affiliated to Rashtrasant Tukadoji Maharaj Nagpur University)", 105, 23, { align: "center" });
+  doc.text("Airoli, Navi Mumbai | Website: www.dmce.ac.in", 105, 27, { align: "center" });
 
   doc.setDrawColor(15, 23, 42);
   doc.setLineWidth(0.6);
@@ -270,7 +270,7 @@ export function downloadNoticePdf(data: NoticePdfData) {
   doc.setFontSize(9);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(51, 65, 85);
-  doc.text(`Ref No: AICET/CIRCULAR/2026/${(data.id || "01").replace(/[^a-zA-Z0-9]/g, "").toUpperCase()}`, 15, 37);
+  doc.text(`Ref No: DMCE/CIRCULAR/2026/${(data.id || "01").replace(/[^a-zA-Z0-9]/g, "").toUpperCase()}`, 15, 37);
   doc.text(`Date: ${data.date || "2026-09-08"}`, 195, 37, { align: "right" });
 
   doc.setFontSize(13);
@@ -285,7 +285,7 @@ export function downloadNoticePdf(data: NoticePdfData) {
   doc.setFontSize(9);
   doc.setFont("helvetica", "bold");
   doc.setTextColor(51, 65, 85);
-  doc.text(`ISSUED BY: ${(data.department || "Dean of Academic Affairs").toUpperCase()}`, 15, 62);
+  doc.text(`ISSUED BY: ${(data.department || "Department of Computer Engineering").toUpperCase()}`, 15, 62);
 
   const rawContent = data.content || `Notice regarding ${data.title}.\n\nAll students and faculty members are hereby requested to strictly follow the guidelines detailed in this notice.\nFor further queries, contact the Department Administration office during working hours.`;
 
@@ -319,10 +319,10 @@ export function downloadNoticePdf(data: NoticePdfData) {
   doc.setFont("helvetica", "bold");
   doc.setFontSize(8.5);
   doc.text("By Order,", 195, footerY - 15, { align: "right" });
-  doc.text("Dean of Academic Affairs / Head of Department", 195, footerY - 10, { align: "right" });
-  doc.text("AI College of Engineering & Technology", 195, footerY - 5, { align: "right" });
+  doc.text("Head of Department", 195, footerY - 10, { align: "right" });
+  doc.text("Datta Meghe College of Engineering", 195, footerY - 5, { align: "right" });
 
-  doc.text("AI College Official Notice Portal", 15, footerY + 5);
+  doc.text("DMCE Official Notice Portal", 15, footerY + 5);
 
   doc.save(`${data.title.replace(/[^a-zA-Z0-9]/g, "_")}_Notice.pdf`);
 }

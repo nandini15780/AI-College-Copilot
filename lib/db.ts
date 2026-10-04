@@ -119,50 +119,10 @@ const defaultDashboardData = {
 };
 
 // Default AI Chat history
-const defaultAIChats = [
-    {
-        id: "1",
-        role: "user",
-        content: "Explain operating system scheduling in simple words.",
-        timestamp: "10:34 AM"
-    },
-    {
-        id: "2",
-        role: "assistant",
-        content: "Operating System scheduling is the process of deciding which process should get the CPU at a particular time. It helps in efficient use of system resources and improves performance, fairness and responsiveness.",
-        keyPoints: [
-            "FCFS (First Come First Serve)",
-            "SJF (Shortest Job First)",
-            "Priority Scheduling",
-            "Round Robin (time sharing)"
-        ],
-        sources: ["OS_Unit1.pdf", "Notes.pdf", "Faculty_Notes.pdf"],
-        timestamp: "10:34 AM"
-    }
-];
+const defaultAIChats: any[] = [];
 
 // Default Faculty AI Chat history
-const defaultFacultyAIChats = [
-    {
-        id: "1",
-        role: "user",
-        content: "Draft a 50-minute lesson plan on DBMS Normalization.",
-        timestamp: "09:00 AM"
-    },
-    {
-        id: "2",
-        role: "assistant",
-        content: "Here is a structured 50-minute lesson plan on DBMS Normalization...",
-        keyPoints: [
-            "Introduction (10 mins): Why normalization matters",
-            "1NF & 2NF (15 mins): Functional dependencies",
-            "3NF & BCNF (15 mins): Eliminating transitive dependencies",
-            "Q&A and Quiz (10 mins)"
-        ],
-        sources: ["Faculty_Teaching_Guide.pdf"],
-        timestamp: "09:00 AM"
-    }
-];
+const defaultFacultyAIChats: any[] = [];
 
 // Helper to safely write files without crashing on Vercel read-only filesystem
 function safeWriteFile(filePath: string, content: string) {
@@ -573,8 +533,25 @@ const aiChatFacultyFile = path.join(dataDir, 'ai_chats_faculty.json');
 
 
 // AI Tutor Chat Helpers
-let studentAIChatMemory: any[] = [...defaultAIChats];
-let facultyAIChatMemory: any[] = [...defaultFacultyAIChats];
+let studentAIChatMemory: any[] = (() => {
+    try {
+        if (fs.existsSync(aiChatStudentFile)) {
+            const data = fs.readFileSync(aiChatStudentFile, 'utf8');
+            return JSON.parse(data) || [];
+        }
+    } catch (e) { }
+    return [];
+})();
+
+let facultyAIChatMemory: any[] = (() => {
+    try {
+        if (fs.existsSync(aiChatFacultyFile)) {
+            const data = fs.readFileSync(aiChatFacultyFile, 'utf8');
+            return JSON.parse(data) || [];
+        }
+    } catch (e) { }
+    return [];
+})();
 
 export function getAIChatHistory(role: string = "Student"): any[] {
     return role === "Faculty"
@@ -588,8 +565,10 @@ export function saveAIChatHistory(
 ) {
     if (role === "Faculty") {
         facultyAIChatMemory = messages;
+        safeWriteFile(aiChatFacultyFile, JSON.stringify(messages, null, 2));
     } else {
         studentAIChatMemory = messages;
+        safeWriteFile(aiChatStudentFile, JSON.stringify(messages, null, 2));
     }
 }
 
